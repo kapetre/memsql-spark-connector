@@ -17,7 +17,7 @@ import com.memsql.spark.interface.api.PipelineBatchType.PipelineBatchType
 import com.memsql.spark.interface.util.ErrorUtils._
 import com.memsql.spark.util.StringConversionUtils
 import ApiActor._
-import com.memsql.spark.interface.util.{PipelineLogger, BaseException}
+import com.memsql.spark.interface.util.{Checkpoint, PipelineLogger, BaseException}
 import org.apache.spark.SparkContext
 import org.apache.spark.sql.{DataFrame, Row, SQLContext}
 import org.apache.spark.streaming.StreamingContext
@@ -144,6 +144,8 @@ class DefaultPipelineMonitor(override val api: ActorRef,
     val transformLogger = getPhaseLogger("transform", trackEntries=false)
 
     try {
+      initializeExtractorCheckpoint
+
       logDebug(s"Initializing extractor for pipeline $pipeline_id")
       pipelineInstance.extractor.initialize(streamingContext, sqlContext, pipelineInstance.extractConfig, batchIntervalMillis, extractLogger)
       extractorInitialized = true
@@ -159,12 +161,12 @@ class DefaultPipelineMonitor(override val api: ActorRef,
         event_id = UUID.randomUUID.toString)
       pipeline.enqueueMetricRecord(pipelineStartEvent)
 
-     if (singleStep) {
-       stepPipeline(extractLogger, transformLogger, System.currentTimeMillis)
+      if (singleStep) {
+        stepPipeline(extractLogger, transformLogger, System.currentTimeMillis)
 
-       (api ? PipelineUpdate(pipeline_id,
-         state = Some(PipelineState.FINISHED))).mapTo[Try[Boolean]]
-     } else {
+        (api ? PipelineUpdate(pipeline_id,
+          state = Some(PipelineState.FINISHED))).mapTo[Try[Boolean]]
+      } else {
         while (!isStopping.get) {
           time = System.currentTimeMillis
 
@@ -174,7 +176,7 @@ class DefaultPipelineMonitor(override val api: ActorRef,
           logDebug(s"Sleeping for $sleepTimeMillis milliseconds for pipeline $pipeline_id")
           Thread.sleep(sleepTimeMillis)
         }
-     }
+      }
     } catch {
       case e: ControlThrowable => {
         enqueueCancelEvent()
@@ -372,6 +374,8 @@ class DefaultPipelineMonitor(override val api: ActorRef,
         task_errors.isEmpty
       )
 
+    saveExtractorCheckpoint(batch_id, success)
+
     val batchEndEvent = BatchEndEvent(
       batch_id = batch_id,
       batch_type = batch_type,
@@ -436,6 +440,32 @@ class DefaultPipelineMonitor(override val api: ActorRef,
       records = phaseResult.records,
       logs = logs
     ))
+  }
+
+  private[interface] def initializeExtractorCheckpoint: Unit = {
+    if (config.enable_checkpointing.getOrElse(false)) {
+      logDebug(s"Retrieving checkpoint data for pipeline $pipeline_id")
+      val checkpointData = Checkpoint.getCheckpointData(pipeline_id)
+      extractor.lastCheckpoint = checkpointData
+    }
+  }
+
+  private[interface] def saveExtractorCheckpoint(batchId: String, success: Boolean): Unit = {
+    if (config.enable_checkpointing.getOrElse(false)) {
+      //NOTE: if we error because of malformed data, the batch will be retried indefinitely
+      if (success) {
+        extractor.batchCheckpoint match {
+          case Some(checkpointData) => {
+            logDebug(s"Checkpointing data for batch $batchId from pipeline $pipeline_id")
+            Checkpoint.setCheckpointData(pipeline_id, checkpointData)
+          }
+          case None => logWarn(s"No checkpoint data for batch $batchId from pipeline $pipeline_id")
+        }
+      } else {
+        logInfo(s"Retrying batch $batchId from pipeline $pipeline_id")
+        extractor.batchRetry
+      }
+    }
   }
 
   private[interface] def getPhaseLogger(phaseName: String, trackEntries: Boolean=true): PipelineLogger = {

@@ -3,6 +3,8 @@ import time
 import pytest
 import requests
 import json
+from pykafka import KafkaClient
+from pykafka.exceptions import KafkaException
 from contextlib import contextmanager
 
 from dockertest.utils.shell import LocalShell, SSHShell, NoSuchCommandError
@@ -247,6 +249,12 @@ class LocalContext:
             print "Deploying MemSQL child agg to %d" % port
             self._shell.run(["memsql-ops", "memsql-deploy", "--community-edition", "--role", "aggregator", "--port", str(port)])
 
+    def kill_memsql_leaf(self):
+        print "Killing MemSQL leaf"
+        output = self._shell.run(["memsql-ops", "memsql-list", "--memsql-role", "leaf", "-q"]).output
+        self._shell.run(["memsql-ops", "memsql-stop", output.split()[0]])
+        self._shell.run(["memsql-ops", "memsql-stop", output.split()[1]])
+
     def run_ops(self):
         print "Running MemSQL Ops"
         return self._shell.sudo(["memsql-ops", "start"], None)
@@ -254,6 +262,42 @@ class LocalContext:
     def stop_ops(self):
         print "Stopping MemSQL Ops"
         return self._shell.sudo(["memsql-ops", "stop"], None)
+
+    def run_kafka(self, broker_id=0, port=9092):
+        print "Running zookeeper"
+        self._shell.sudo(["/storage/testroot/zookeeper/bin/zkServer.sh", "start"], DockerFactory.password)
+        print "Running kafka"
+        return self._shell.spawn(["/storage/testroot/kafka/start.sh"], update_env={
+            "EXPOSED_HOST": self.external_ip,
+            "EXPOSED_PORT": str(port),
+            "ZOOKEEPER_IP": self.external_ip,
+            "BROKER_ID": str(broker_id)
+        })
+
+    def create_kafka_topic(self, topic, num_partitions=1):
+        return self._shell.run([
+            "/storage/testroot/kafka/bin/kafka-topics.sh",
+            "--create", "--topic", topic,
+            "--zookeeper", "%s:2181" % self.external_ip,
+            "--partitions", str(num_partitions),
+            "--replication-factor", "1"], update_env={
+
+        })
+
+    def get_kafka_topic(self, topic, port=9092, timeout=30):
+        start = time.time()
+        last_exception = None
+        while time.time() < start + timeout:
+            try:
+                kc = KafkaClient("%s:%d" % (self.external_ip, port))
+                return kc.topics[topic]
+            except KafkaException as e:
+                last_exception = e
+        else:
+            message = "timed out after %s seconds connecting to kafka" % timeout
+            if last_exception is not None:
+                message = "%s: %s" % (message, str(last_exception))
+            assert False, message
 
     def spark_submit(self, className, jar=MEMSQL_JAR_PATH, extra_args=[]):
         cmd = [

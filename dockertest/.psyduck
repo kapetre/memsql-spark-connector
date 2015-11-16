@@ -20,3 +20,7 @@
  -s dockertest/pystreamliner_test.py::test_pystreamliner_transformer_initialize_exception --psyduck-time-limit=16
  -s dockertest/pystreamliner_test.py::test_pystreamliner_transformer_transform_exception --psyduck-time-limit=16
  -s dockertest/pystreamliner_test.py::test_pystreamliner_transformer_cleanup_exception --psyduck-time-limit=16
+ -s dockertest/pipeline_test.py::test_kafka_checkpointing_multiple_partitions --psyduck-time-limit=16
+ -s dockertest/pipeline_test.py::test_kafka_checkpointing_single_partition --psyduck-time-limit=16
+ -s dockertest/pipeline_test.py::test_kafka_checkpointing_single_agg --psyduck-time-limit=16
+ -s dockertest/pipeline_test.py::test_kafka_checkpointing_with_kill --psyduck-time-limit=16
