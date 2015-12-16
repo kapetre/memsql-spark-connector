@@ -58,42 +58,16 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.memsql.spark.etl.api.ByteArrayExtractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ByteArrayExtractorextendsExtractor[Array[Byte]]"></a>
-      <a id="ByteArrayExtractor:ByteArrayExtractor"></a>
+              <ol><li name="com.memsql.spark.etl.api.Extractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ExtractorextendsSerializable"></a>
+      <a id="Extractor:Extractor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="ByteArrayExtractor.html"><span class="name">ByteArrayExtractor</span></a><span class="result"> extends <a href="Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Byte" class="extype" target="_top">Byte</a>]]</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Pipeline Extractor interface for byte arrays.</p>
-    </li><li name="com.memsql.spark.etl.api.ByteArrayTransformer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="ByteArrayTransformerextendsTransformer[Array[Byte]]"></a>
-      <a id="ByteArrayTransformer:ByteArrayTransformer"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="ByteArrayTransformer.html"><span class="name">ByteArrayTransformer</span></a><span class="result"> extends <a href="Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Byte" class="extype" target="_top">Byte</a>]]</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Pipeline Transformer interface for byte arrays.</p>
-    </li><li name="com.memsql.spark.etl.api.Extractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Extractor[S]extendsSerializable"></a>
-      <a id="Extractor[S]:Extractor[S]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="Extractor.html"><span class="name">Extractor</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="Extractor.html"><span class="name">Extractor</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       <p class="comment cmt">Pipeline Extractor interface.</p>
@@ -123,42 +97,16 @@
       </span>
       </h4>
       
-    </li><li name="com.memsql.spark.etl.api.SimpleByteArrayExtractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="SimpleByteArrayExtractorextendsByteArrayExtractor"></a>
-      <a id="SimpleByteArrayExtractor:SimpleByteArrayExtractor"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="SimpleByteArrayExtractor.html"><span class="name">SimpleByteArrayExtractor</span></a><span class="result"> extends <a href="ByteArrayExtractor.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayExtractor">ByteArrayExtractor</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Convenience wrapper around ByteArrayExtractor for initialization, iteration, and cleanup of simple data sources.</p>
-    </li><li name="com.memsql.spark.etl.api.SimpleByteArrayTransformer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="SimpleByteArrayTransformerextendsByteArrayTransformer"></a>
-      <a id="SimpleByteArrayTransformer:SimpleByteArrayTransformer"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="SimpleByteArrayTransformer.html"><span class="name">SimpleByteArrayTransformer</span></a><span class="result"> extends <a href="ByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayTransformer">ByteArrayTransformer</a></span>
-      </span>
-      </h4>
-      <p class="comment cmt">Convenience wrapper around ByteArrayExtractor for initialization and transformation of extracted <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a>s.</p>
     </li><li name="com.memsql.spark.etl.api.Transformer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="Transformer[S]extendsSerializable"></a>
-      <a id="Transformer[S]:Transformer[S]"></a>
+      <a id="TransformerextendsSerializable"></a>
+      <a id="Transformer:Transformer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Transformer.html"><span class="name">Transformer</span></a><span class="tparams">[<span name="S">S</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="Transformer.html"><span class="name">Transformer</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       <p class="comment cmt">Pipeline Transformer interface.</p>
@@ -201,6 +149,71 @@
       </span>
       </h4>
       <p class="comment cmt">User defined configuration passed <a href="SimpleByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.SimpleByteArrayTransformer">com.memsql.spark.etl.api.SimpleByteArrayTransformer</a>.</p>
+    </li><li name="com.memsql.spark.etl.api.ByteArrayExtractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ByteArrayExtractorextendsExtractor"></a>
+      <a id="ByteArrayExtractor:ByteArrayExtractor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ByteArrayExtractor.html"><span class="name deprecated" title="Deprecated: (Since version 1.2.0) Extractor interface supports DataFrames">ByteArrayExtractor</span></a><span class="result"> extends <a href="Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Pipeline Extractor interface for byte arrays.</p>
+    </li><li name="com.memsql.spark.etl.api.ByteArrayTransformer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ByteArrayTransformerextendsTransformer"></a>
+      <a id="ByteArrayTransformer:ByteArrayTransformer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ByteArrayTransformer.html"><span class="name deprecated" title="Deprecated: (Since version 1.2.0) Transformer interface supports DataFrames">ByteArrayTransformer</span></a><span class="result"> extends <a href="Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Pipeline Transformer interface for byte arrays.</p>
+    </li><li name="com.memsql.spark.etl.api.SimpleByteArrayExtractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SimpleByteArrayExtractorextendsByteArrayExtractor"></a>
+      <a id="SimpleByteArrayExtractor:SimpleByteArrayExtractor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SimpleByteArrayExtractor.html"><span class="name deprecated" title="Deprecated: (Since version 1.2.0) Extractor interface supports DataFrames">SimpleByteArrayExtractor</span></a><span class="result"> extends <a href="ByteArrayExtractor.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayExtractor">ByteArrayExtractor</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Convenience wrapper around ByteArrayExtractor for initialization, iteration, and cleanup of simple data sources.</p>
+    </li><li name="com.memsql.spark.etl.api.SimpleByteArrayTransformer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SimpleByteArrayTransformerextendsByteArrayTransformer"></a>
+      <a id="SimpleByteArrayTransformer:SimpleByteArrayTransformer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SimpleByteArrayTransformer.html"><span class="name deprecated" title="Deprecated: (Since version 1.2.0) Transformer interface supports DataFrames">SimpleByteArrayTransformer</span></a><span class="result"> extends <a href="ByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayTransformer">ByteArrayTransformer</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Convenience wrapper around ByteArrayExtractor for initialization and transformation of extracted <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a>s.</p>
+    </li><li name="com.memsql.spark.etl.api.StringTransformer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StringTransformerextendsTransformer"></a>
+      <a id="StringTransformer:StringTransformer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="StringTransformer.html"><span class="name deprecated" title="Deprecated: (Since version 1.2.0) Transformer interface supports DataFrames">StringTransformer</span></a><span class="result"> extends <a href="Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Pipeline Transformer interface for strings, that internally also manages byte arrays.</p>
     </li></ol>
             </div>
 
@@ -208,7 +221,21 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="com.memsql.spark.etl.api.configs" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="com.memsql.spark.etl.api.ExtractFirstStructField" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExtractFirstStructField"></a>
+      <a id="ExtractFirstStructField:ExtractFirstStructField"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ExtractFirstStructField$.html"><span class="name">ExtractFirstStructField</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">A helper object to extract the first column of a schema
+</p>
+    </li><li name="com.memsql.spark.etl.api.configs" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="configs"></a>
       <a id="configs:configs"></a>
       <h4 class="signature">

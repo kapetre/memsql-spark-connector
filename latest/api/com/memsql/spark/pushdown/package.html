@@ -1,0 +1,305 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>pushdown - com.memsql.spark.pushdown</title>
+          <meta name="description" content="pushdown - com.memsql.spark.pushdown" />
+          <meta name="keywords" content="pushdown com.memsql.spark.pushdown" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'com.memsql.spark.pushdown.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.memsql">memsql</a>.<a href="../package.html" class="extype" name="com.memsql.spark">spark</a></p>
+        <h1>pushdown</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pushdown</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="com.memsql.spark.pushdown.AbstractQuery" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AbstractQueryextendsAnyRef"></a>
+      <a id="AbstractQuery:AbstractQuery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AbstractQuery.html"><span class="name">AbstractQuery</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.BaseQuery" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BaseQueryextendsAbstractQuerywithProductwithSerializable"></a>
+      <a id="BaseQuery:BaseQuery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="BaseQuery.html"><span class="name">BaseQuery</span></a><span class="params">(<span name="alias">alias: <a href="QueryAlias.html" class="extype" name="com.memsql.spark.pushdown.QueryAlias">QueryAlias</a></span>, <span name="relation">relation: <a href="../../../../org/apache/spark/sql/memsql/MemSQLRelation.html" class="extype" name="org.apache.spark.sql.memsql.MemSQLRelation">MemSQLRelation</a></span>, <span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Attribute" class="extype" target="_top">Attribute</a>]</span>)</span><span class="result"> extends <a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.JoinQuery" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JoinQueryextendsAbstractQuerywithProductwithSerializable"></a>
+      <a id="JoinQuery:JoinQuery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="JoinQuery.html"><span class="name">JoinQuery</span></a><span class="params">(<span name="alias">alias: <a href="QueryAlias.html" class="extype" name="com.memsql.spark.pushdown.QueryAlias">QueryAlias</a></span>, <span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Attribute" class="extype" target="_top">Attribute</a>]</span>, <span name="projection">projection: <a href="SQLBuilder.html" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>, <span name="condition">condition: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="SQLBuilder.html" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a>]</span>, <span name="left">left: <a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a></span>, <span name="right">right: <a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a></span>)</span><span class="result"> extends <a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.LazySQL" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LazySQLextendsLeafExpressionwithUnevaluablewithProductwithSerializable"></a>
+      <a id="LazySQL:LazySQL"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LazySQL.html"><span class="name">LazySQL</span></a><span class="params">(<span name="block">block: (<a href="SQLBuilder.html" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a>) ⇒ <a href="SQLBuilder.html" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>)</span><span class="result"> extends <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.LeafExpression" class="extype" target="_top">LeafExpression</a> with <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Unevaluable" class="extype" target="_top">Unevaluable</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.MemSQLPhysicalRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLPhysicalRDDextendsSparkPlanwithProductwithSerializable"></a>
+      <a id="MemSQLPhysicalRDD:MemSQLPhysicalRDD"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLPhysicalRDD.html"><span class="name">MemSQLPhysicalRDD</span></a><span class="params">(<span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Attribute" class="extype" target="_top">Attribute</a>]</span>, <span name="rdd">rdd: <a href="../connector/rdd/MemSQLRDD.html" class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD">MemSQLRDD</a>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.Row" class="extype" target="_top">Row</a>]</span>, <span name="tree">tree: <a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a></span>)</span><span class="result"> extends <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.execution.SparkPlan" class="extype" target="_top">SparkPlan</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">MemSQLPhysicalRDD represents a node in the final plan we pass back to Spark.</p>
+    </li><li name="com.memsql.spark.pushdown.MemSQLPushdownException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLPushdownExceptionextendsException"></a>
+      <a id="MemSQLPushdownException:MemSQLPushdownException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLPushdownException.html"><span class="name">MemSQLPushdownException</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.MemSQLPushdownStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLPushdownStrategyextendsorg.apache.spark.sql.StrategywithLogging"></a>
+      <a id="MemSQLPushdownStrategy:MemSQLPushdownStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLPushdownStrategy.html"><span class="name">MemSQLPushdownStrategy</span></a><span class="result"> extends <a href="../../../../org/apache/spark/sql/package.html#Strategy=org.apache.spark.sql.catalyst.planning.GenericStrategy[org.apache.spark.sql.execution.SparkPlan]" class="extmbr" name="org.apache.spark.sql.Strategy">Strategy</a> with <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.PartialQuery" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PartialQueryextendsAbstractQuerywithProductwithSerializable"></a>
+      <a id="PartialQuery:PartialQuery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="PartialQuery.html"><span class="name">PartialQuery</span></a><span class="params">(<span name="alias">alias: <a href="QueryAlias.html" class="extype" name="com.memsql.spark.pushdown.QueryAlias">QueryAlias</a></span>, <span name="output">output: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Attribute" class="extype" target="_top">Attribute</a>]</span>, <span name="prefix">prefix: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="SQLBuilder.html" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a>] = <span class="symbol">scala.None</span></span>, <span name="suffix">suffix: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="SQLBuilder.html" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a>] = <span class="symbol">scala.None</span></span>, <span name="inner">inner: <a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a></span>)</span><span class="result"> extends <a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.QueryAlias" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QueryAliasextendsProductwithSerializable"></a>
+      <a id="QueryAlias:QueryAlias"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="QueryAlias.html"><span class="name">QueryAlias</span></a><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="height">height: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a> = <span class="symbol">0</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SQLBuilderextendsAnyRef"></a>
+      <a id="SQLBuilder:SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SQLBuilder.html"><span class="name">SQLBuilder</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">SQLBuilder is a mutable object for efficiently building up complex SQL expressions.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="com.memsql.spark.pushdown.MemSQLPhysicalRDD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLPhysicalRDD"></a>
+      <a id="MemSQLPhysicalRDD:MemSQLPhysicalRDD"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLPhysicalRDD$.html"><span class="name">MemSQLPhysicalRDD</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Convenience methods for creating a MemSQLPhysicalRDD
+</p>
+    </li><li name="com.memsql.spark.pushdown.MemSQLPushdownStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLPushdownStrategy"></a>
+      <a id="MemSQLPushdownStrategy:MemSQLPushdownStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLPushdownStrategy$.html"><span class="name">MemSQLPushdownStrategy</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SQLBuilder"></a>
+      <a id="SQLBuilder:SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SQLBuilder$.html"><span class="name">SQLBuilder</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Convenience methods for creating a SQLBuilder
+</p>
+    </li><li name="com.memsql.spark.pushdown.SimpleBinaryExpression" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleBinaryExpression"></a>
+      <a id="SimpleBinaryExpression:SimpleBinaryExpression"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SimpleBinaryExpression$.html"><span class="name">SimpleBinaryExpression</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.SimpleUnaryExpression" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleUnaryExpression"></a>
+      <a id="SimpleUnaryExpression:SimpleUnaryExpression"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SimpleUnaryExpression$.html"><span class="name">SimpleUnaryExpression</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.StringBuilderImplicits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StringBuilderImplicits"></a>
+      <a id="StringBuilderImplicits:StringBuilderImplicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StringBuilderImplicits$.html"><span class="name">StringBuilderImplicits</span></a>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../lib/template.js"></script>
+    </body>
+      </html>

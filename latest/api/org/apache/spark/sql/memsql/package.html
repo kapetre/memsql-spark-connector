@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>memsql - org.apache.spark.sql.memsql</title>
+          <meta name="description" content="memsql - org.apache.spark.sql.memsql" />
+          <meta name="keywords" content="memsql org.apache.spark.sql.memsql" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'org.apache.spark.sql.memsql.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.spark">spark</a>.<a href="../package.html" class="extype" name="org.apache.spark.sql">sql</a></p>
+        <h1>memsql</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">memsql</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.spark.sql.memsql.DefaultSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultSourceextendsRelationProviderwithCreatableRelationProviderwithLogging"></a>
+      <a id="DefaultSource:DefaultSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DefaultSource.html"><span class="name">DefaultSource</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.sources.RelationProvider" class="extype" target="_top">RelationProvider</a> with <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.sources.CreatableRelationProvider" class="extype" target="_top">CreatableRelationProvider</a> with <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.IngestStrategy" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="IngestStrategyextendsAnyRef"></a>
+      <a id="IngestStrategy:IngestStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IngestStrategy.html"><span class="name">IngestStrategy</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.InsertStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InsertStrategyextendsIngestStrategywithProductwithSerializable"></a>
+      <a id="InsertStrategy:InsertStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="InsertStrategy.html"><span class="name">InsertStrategy</span></a><span class="params">(<span name="tableFragment">tableFragment: <a href="../../../../../com/memsql/spark/connector/sql/QueryFragment.html" class="extype" name="com.memsql.spark.connector.sql.QueryFragment">QueryFragment</a></span>, <span name="conf">conf: <a href="SaveToMemSQLConf.html" class="extype" name="org.apache.spark.sql.memsql.SaveToMemSQLConf">SaveToMemSQLConf</a></span>)</span><span class="result"> extends <a href="IngestStrategy.html" class="extype" name="org.apache.spark.sql.memsql.IngestStrategy">IngestStrategy</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.LoadDataStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LoadDataStrategyextendsIngestStrategywithProductwithSerializable"></a>
+      <a id="LoadDataStrategy:LoadDataStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LoadDataStrategy.html"><span class="name">LoadDataStrategy</span></a><span class="params">(<span name="tableFragment">tableFragment: <a href="../../../../../com/memsql/spark/connector/sql/QueryFragment.html" class="extype" name="com.memsql.spark.connector.sql.QueryFragment">QueryFragment</a></span>, <span name="conf">conf: <a href="SaveToMemSQLConf.html" class="extype" name="org.apache.spark.sql.memsql.SaveToMemSQLConf">SaveToMemSQLConf</a></span>)</span><span class="result"> extends <a href="IngestStrategy.html" class="extype" name="org.apache.spark.sql.memsql.IngestStrategy">IngestStrategy</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.MemSQLCatalog" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLCatalogextendsSimpleCatalogwithLogging"></a>
+      <a id="MemSQLCatalog:MemSQLCatalog"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLCatalog.html"><span class="name">MemSQLCatalog</span></a><span class="result"> extends <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.analysis.SimpleCatalog" class="extype" target="_top">SimpleCatalog</a> with <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.MemSQLContext" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLContextextendsSQLContext"></a>
+      <a id="MemSQLContext:MemSQLContext"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLContext.html"><span class="name">MemSQLContext</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.MemSQLQueryRelation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLQueryRelationextendsMemSQLRelationwithProductwithSerializable"></a>
+      <a id="MemSQLQueryRelation:MemSQLQueryRelation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLQueryRelation.html"><span class="name">MemSQLQueryRelation</span></a><span class="params">(<span name="cluster">cluster: <a href="../../../../../com/memsql/spark/connector/MemSQLCluster.html" class="extype" name="com.memsql.spark.connector.MemSQLCluster">MemSQLCluster</a></span>, <span name="database">database: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="query">query: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>)</span><span class="result"> extends <a href="MemSQLRelation.html" class="extype" name="org.apache.spark.sql.memsql.MemSQLRelation">MemSQLRelation</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.MemSQLRelation" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MemSQLRelationextendsBaseRelationwithTableScan"></a>
+      <a id="MemSQLRelation:MemSQLRelation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLRelation.html"><span class="name">MemSQLRelation</span></a><span class="result"> extends <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.sources.BaseRelation" class="extype" target="_top">BaseRelation</a> with <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.sources.TableScan" class="extype" target="_top">TableScan</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.MemSQLTableRelation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLTableRelationextendsMemSQLRelationwithInsertableRelationwithProductwithSerializable"></a>
+      <a id="MemSQLTableRelation:MemSQLTableRelation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLTableRelation.html"><span class="name">MemSQLTableRelation</span></a><span class="params">(<span name="cluster">cluster: <a href="../../../../../com/memsql/spark/connector/MemSQLCluster.html" class="extype" name="com.memsql.spark.connector.MemSQLCluster">MemSQLCluster</a></span>, <span name="tableIdentifier">tableIdentifier: <a href="../../../../../com/memsql/spark/connector/sql/TableIdentifier.html" class="extype" name="com.memsql.spark.connector.sql.TableIdentifier">TableIdentifier</a></span>, <span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>)</span><span class="result"> extends <a href="MemSQLRelation.html" class="extype" name="org.apache.spark.sql.memsql.MemSQLRelation">MemSQLRelation</a> with <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.sources.InsertableRelation" class="extype" target="_top">InsertableRelation</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.SaveToMemSQLConf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SaveToMemSQLConfextendsProductwithSerializable"></a>
+      <a id="SaveToMemSQLConf:SaveToMemSQLConf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SaveToMemSQLConf.html"><span class="name">SaveToMemSQLConf</span></a><span class="params">(<span name="saveMode">saveMode: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SaveMode" class="extype" target="_top">SaveMode</a></span>, <span name="createMode">createMode: <a href="CreateMode$.html#CreateMode=org.apache.spark.sql.memsql.CreateMode.Value" class="extmbr" name="org.apache.spark.sql.memsql.CreateMode.CreateMode">CreateMode.CreateMode</a></span>, <span name="onDuplicateKeySQL">onDuplicateKeySQL: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="insertBatchSize">insertBatchSize: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="loadDataCompression">loadDataCompression: <a href="CompressionType$.html#CompressionType=org.apache.spark.sql.memsql.CompressionType.Value" class="extmbr" name="org.apache.spark.sql.memsql.CompressionType.CompressionType">CompressionType.CompressionType</a></span>, <span name="useKeylessShardingOptimization">useKeylessShardingOptimization: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="extraColumns">extraColumns: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../../../../com/memsql/spark/connector/sql/ColumnDefinition.html" class="extype" name="com.memsql.spark.connector.sql.ColumnDefinition">ColumnDefinition</a>]</span>, <span name="extraKeys">extraKeys: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../../../../com/memsql/spark/connector/sql/MemSQLKey.html" class="extype" name="com.memsql.spark.connector.sql.MemSQLKey">MemSQLKey</a>]</span>, <span name="dryRun">dryRun: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="org.apache.spark.sql.memsql.CompressionType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CompressionType"></a>
+      <a id="CompressionType:CompressionType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CompressionType$.html"><span class="name">CompressionType</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Enumeration" class="extype" target="_top">Enumeration</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.CreateMode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CreateMode"></a>
+      <a id="CreateMode:CreateMode"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CreateMode$.html"><span class="name">CreateMode</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Enumeration" class="extype" target="_top">Enumeration</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.DefaultSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultSource"></a>
+      <a id="DefaultSource:DefaultSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DefaultSource$.html"><span class="name">DefaultSource</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.MemSQLCatalog" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLCatalog"></a>
+      <a id="MemSQLCatalog:MemSQLCatalog"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLCatalog$.html"><span class="name">MemSQLCatalog</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.SaveToMemSQLConf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SaveToMemSQLConf"></a>
+      <a id="SaveToMemSQLConf:SaveToMemSQLConf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SaveToMemSQLConf$.html"><span class="name">SaveToMemSQLConf</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.SparkImplicits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SparkImplicits"></a>
+      <a id="SparkImplicits:SparkImplicits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SparkImplicits$.html"><span class="name">SparkImplicits</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.sql.memsql.UnpackLogicalRelation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnpackLogicalRelation"></a>
+      <a id="UnpackLogicalRelation:UnpackLogicalRelation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="UnpackLogicalRelation$.html"><span class="name">UnpackLogicalRelation</span></a>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
+    </body>
+      </html>

@@ -35,26 +35,24 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">MemSQLRDD</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="sc">sc: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>, <span name="dbHost">dbHost: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dbPort">dbPort: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dbName">dbName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sql">sql: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="mapRow">mapRow: (<span class="extype" name="java.sql.ResultSet">ResultSet</span>) ⇒ <span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span> = <span class="defval" name="{<br/>&amp;nbsp;&amp;nbsp;  ((rs: java.sql.ResultSet) =&gt; MemSQLRDD.resultSetToObjectArray(rs))<br/>&amp;nbsp;&amp;nbsp;}">...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$1">evidence$1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result"> extends <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>] with <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <span class="name">MemSQLRDD</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="sc">sc: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>, <span name="cluster">cluster: <a href="../MemSQLCluster.html" class="extype" name="com.memsql.spark.connector.MemSQLCluster">MemSQLCluster</a></span>, <span name="sql">sql: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sqlParams">sqlParams: <span class="extype" name="scala.Seq">Seq</span>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a>] = <span class="symbol">immutable.this.Nil</span></span>, <span name="databaseName">databaseName: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>, <span name="mapRow">mapRow: (<span class="extype" name="java.sql.ResultSet">ResultSet</span>) ⇒ <span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span> = <span class="defval" name="((x$1: java.sql.ResultSet) =&gt; MemSQLRDD.resultSetToArray(x$1))">...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$1">evidence$1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result"> extends <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>] with <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> that can read data from a MemSQL database based on a SQL query.</p><p>If the given query supports it, this RDD will read data directly from the
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> that can read data from a MemSQL database based on a SQL query.</p><p>If the given query supports it, this RDD will read data directly from the
 MemSQL cluster's leaf nodes rather than from the master aggregator, which
 typically results in much faster reads.  However, if the given query does
 not support this (e.g. queries involving joins or GROUP BY operations), the
 results will be returned in a single partition.
-</p></div><dl class="paramcmts block"><dt class="param">dbHost</dt><dd class="cmt"><p>The host to connect to for the master aggregator of the MemSQL
-  cluster.</p></dd><dt class="param">dbPort</dt><dd class="cmt"><p>The port to connect to for the master aggregator of the MemSQL
-  cluster.</p></dd><dt class="param">user</dt><dd class="cmt"><p>The username to use when connecting to the databases in the
-  MemSQL cluster.  All the nodes in the cluster should use the same user.</p></dd><dt class="param">password</dt><dd class="cmt"><p>The password to use when connecting to the databases in the
-  MemSQL cluster.  All the nodes in the cluster should use the same password.</p></dd><dt class="param">dbName</dt><dd class="cmt"><p>The name of the database we're working in.</p></dd><dt class="param">sql</dt><dd class="cmt"><p>The text of the query.</p></dd><dt class="param">mapRow</dt><dd class="cmt"><p>A function from a ResultSet to a single row of the desired
+</p></div><dl class="paramcmts block"><dt class="param">cluster</dt><dd class="cmt"><p>A connected MemSQLCluster instance.</p></dd><dt class="param">sql</dt><dd class="cmt"><p>The text of the query. Can be a prepared statement template,
+   in which case parameters from sqlParams are substituted.</p></dd><dt class="param">sqlParams</dt><dd class="cmt"><p>The parameters of the query if sql is a template.</p></dd><dt class="param">databaseName</dt><dd class="cmt"><p>Optionally provide a database name for this RDD.
+                    This is required for Partition Pushdown</p></dd><dt class="param">mapRow</dt><dd class="cmt"><p>A function from a ResultSet to a single row of the desired
   result type(s).  This should only call getInt, getString, etc; the RDD
   takes care of calling next.  The default maps a ResultSet to an array of
-  Object.
+  Any.
 </p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Equals" class="extype" target="_top">Equals</a>, <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Equals" class="extype" target="_top">Equals</a>, <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -93,7 +91,7 @@ results will be returned in a single partition.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.memsql.spark.connector.rdd.MemSQLRDD#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(sc:org.apache.spark.SparkContext,dbHost:String,dbPort:Int,user:String,password:String,dbName:String,sql:String,mapRow:java.sql.ResultSet=&gt;T)(implicitevidence$1:scala.reflect.ClassTag[T]):com.memsql.spark.connector.rdd.MemSQLRDD[T]"></a>
+      <a id="&lt;init&gt;(sc:org.apache.spark.SparkContext,cluster:com.memsql.spark.connector.MemSQLCluster,sql:String,sqlParams:Seq[Any],databaseName:Option[String],mapRow:java.sql.ResultSet=&gt;T)(implicitevidence$1:scala.reflect.ClassTag[T]):com.memsql.spark.connector.rdd.MemSQLRDD[T]"></a>
       <a id="&lt;init&gt;:MemSQLRDD[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -101,17 +99,15 @@ results will be returned in a single partition.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">MemSQLRDD</span><span class="params">(<span name="sc">sc: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>, <span name="dbHost">dbHost: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dbPort">dbPort: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dbName">dbName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sql">sql: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="mapRow">mapRow: (<span class="extype" name="java.sql.ResultSet">ResultSet</span>) ⇒ <span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span> = <span class="defval" name="{<br/>&amp;nbsp;&amp;nbsp;  ((rs: java.sql.ResultSet) =&gt; MemSQLRDD.resultSetToObjectArray(rs))<br/>&amp;nbsp;&amp;nbsp;}">...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span>
+        <span class="name">MemSQLRDD</span><span class="params">(<span name="sc">sc: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>, <span name="cluster">cluster: <a href="../MemSQLCluster.html" class="extype" name="com.memsql.spark.connector.MemSQLCluster">MemSQLCluster</a></span>, <span name="sql">sql: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sqlParams">sqlParams: <span class="extype" name="scala.Seq">Seq</span>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a>] = <span class="symbol">immutable.this.Nil</span></span>, <span name="databaseName">databaseName: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>, <span name="mapRow">mapRow: (<span class="extype" name="java.sql.ResultSet">ResultSet</span>) ⇒ <span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span> = <span class="defval" name="((x$1: java.sql.ResultSet) =&gt; MemSQLRDD.resultSetToArray(x$1))">...</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">dbHost</dt><dd class="cmt"><p>The host to connect to for the master aggregator of the MemSQL
-  cluster.</p></dd><dt class="param">dbPort</dt><dd class="cmt"><p>The port to connect to for the master aggregator of the MemSQL
-  cluster.</p></dd><dt class="param">user</dt><dd class="cmt"><p>The username to use when connecting to the databases in the
-  MemSQL cluster.  All the nodes in the cluster should use the same user.</p></dd><dt class="param">password</dt><dd class="cmt"><p>The password to use when connecting to the databases in the
-  MemSQL cluster.  All the nodes in the cluster should use the same password.</p></dd><dt class="param">dbName</dt><dd class="cmt"><p>The name of the database we're working in.</p></dd><dt class="param">sql</dt><dd class="cmt"><p>The text of the query.</p></dd><dt class="param">mapRow</dt><dd class="cmt"><p>A function from a ResultSet to a single row of the desired
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">cluster</dt><dd class="cmt"><p>A connected MemSQLCluster instance.</p></dd><dt class="param">sql</dt><dd class="cmt"><p>The text of the query. Can be a prepared statement template,
+   in which case parameters from sqlParams are substituted.</p></dd><dt class="param">sqlParams</dt><dd class="cmt"><p>The parameters of the query if sql is a template.</p></dd><dt class="param">databaseName</dt><dd class="cmt"><p>Optionally provide a database name for this RDD.
+                    This is required for Partition Pushdown</p></dd><dt class="param">mapRow</dt><dd class="cmt"><p>A function from a ResultSet to a single row of the desired
   result type(s).  This should only call getInt, getString, etc; the RDD
   takes care of calling next.  The default maps a ResultSet to an array of
-  Object.
+  Any.
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -170,7 +166,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $plus$plus" class="name">++</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span title="gt4s: $plus$plus" class="name">++</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -248,7 +244,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">cartesian</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.cartesian.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.cartesian.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD.cartesian.U">U</span>)]</span>
+        <span class="name">cartesian</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.cartesian.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.cartesian.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD.cartesian.U">U</span>)]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -297,6 +293,19 @@ results will be returned in a single partition.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#cluster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cluster:com.memsql.spark.connector.MemSQLCluster"></a>
+      <a id="cluster:MemSQLCluster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cluster</span><span class="result">: <a href="../MemSQLCluster.html" class="extype" name="com.memsql.spark.connector.MemSQLCluster">MemSQLCluster</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A connected MemSQLCluster instance.</p>
     </li><li name="org.apache.spark.rdd.RDD#coalesce" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="coalesce(numPartitions:&lt;?&gt;,shuffle:&lt;?&gt;)(implicitord:&lt;?&gt;):org.apache.spark.rdd.RDD[T]"></a>
       <a id="coalesce(Int,Boolean)(Ordering[T]):RDD[T]"></a>
@@ -306,7 +315,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">coalesce</span><span class="params">(<span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="shuffle">shuffle: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">coalesce</span><span class="params">(<span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="shuffle">shuffle: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -319,7 +328,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">collect</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.PartialFunction" class="extype" target="_top">PartialFunction</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD.collect.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.collect.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.collect.U">U</span>]</span>
+        <span class="name">collect</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.PartialFunction" class="extype" target="_top">PartialFunction</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD.collect.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.collect.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.collect.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -337,7 +346,7 @@ results will be returned in a single partition.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#compute" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="compute(thePart:org.apache.spark.Partition,context:org.apache.spark.TaskContext):Iterator[T]"></a>
+      <a id="compute(sparkPartition:org.apache.spark.Partition,context:org.apache.spark.TaskContext):Iterator[T]"></a>
       <a id="compute(Partition,TaskContext):Iterator[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -345,7 +354,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">compute</span><span class="params">(<span name="thePart">thePart: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Partition" class="extype" target="_top">Partition</a></span>, <span name="context">context: <span class="extype" name="org.apache.spark.TaskContext">TaskContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">compute</span><span class="params">(<span name="sparkPartition">sparkPartition: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Partition" class="extype" target="_top">Partition</a></span>, <span name="context">context: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.TaskContext" class="extype" target="_top">TaskContext</a></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD">MemSQLRDD</a> → RDD</dd></dl></div>
@@ -358,7 +367,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">context</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>
+        <span class="name">context</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -384,7 +393,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">countApprox</span><span class="params">(<span name="timeout">timeout: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="confidence">confidence: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.partial.PartialResult">PartialResult</span>[<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.partial.BoundedDouble" class="extype" target="_top">BoundedDouble</a>]</span>
+        <span class="name">countApprox</span><span class="params">(<span name="timeout">timeout: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="confidence">confidence: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.partial.PartialResult">PartialResult</span>[<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.partial.BoundedDouble" class="extype" target="_top">BoundedDouble</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd><dt>Annotations</dt><dd>
@@ -392,7 +401,7 @@ results will be returned in a single partition.
               
         </dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#countApproxDistinct" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="countApproxDistinct(relativeSD:Double):Long"></a>
+      <a id="countApproxDistinct(relativeSD:&lt;?&gt;):Long"></a>
       <a id="countApproxDistinct(Double):Long"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -405,7 +414,7 @@ results will be returned in a single partition.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#countApproxDistinct" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="countApproxDistinct(p:Int,sp:Int):Long"></a>
+      <a id="countApproxDistinct(p:&lt;?&gt;,sp:&lt;?&gt;):Long"></a>
       <a id="countApproxDistinct(Int,Int):Long"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -442,54 +451,27 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">countByValueApprox</span><span class="params">(<span name="timeout">timeout: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="confidence">confidence: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.partial.PartialResult">PartialResult</span>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.collection.Map" class="extype" target="_top">Map</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.partial.BoundedDouble" class="extype" target="_top">BoundedDouble</a>]]</span>
+        <span class="name">countByValueApprox</span><span class="params">(<span name="timeout">timeout: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="confidence">confidence: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.spark.partial.PartialResult">PartialResult</span>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.collection.Map" class="extype" target="_top">Map</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.partial.BoundedDouble" class="extype" target="_top">BoundedDouble</a>]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd><dt>Annotations</dt><dd>
                 <span class="name">@Experimental</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#dbHost" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dbHost:String"></a>
-      <a id="dbHost:String"></a>
+    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#databaseName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="databaseName:Option[String]"></a>
+      <a id="databaseName:Option[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">dbHost</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">databaseName</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The host to connect to for the master aggregator of the MemSQL
-  cluster.</p>
-    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#dbName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dbName:String"></a>
-      <a id="dbName:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dbName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The name of the database we're working in.</p>
-    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#dbPort" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="dbPort:Int"></a>
-      <a id="dbPort:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dbPort</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The port to connect to for the master aggregator of the MemSQL
-  cluster.</p>
+      <p class="shortcomment cmt">Optionally provide a database name for this RDD.</p><div class="fullcomment"><div class="comment cmt"><p>Optionally provide a database name for this RDD.
+                    This is required for Partition Pushdown</p></div></div>
     </li><li name="org.apache.spark.rdd.RDD#dependencies" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dependencies:Seq[org.apache.spark.Dependency[_]]"></a>
       <a id="dependencies:Seq[Dependency[_]]"></a>
@@ -499,7 +481,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dependencies</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Dependency" class="extype" target="_top">Dependency</a>[_]]</span>
+        <span class="name">dependencies</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Dependency" class="extype" target="_top">Dependency</a>[_]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -512,12 +494,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">distinct</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">distinct</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#distinct" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="distinct(numPartitions:Int)(implicitord:Ordering[T]):org.apache.spark.rdd.RDD[T]"></a>
+      <a id="distinct(numPartitions:&lt;?&gt;)(implicitord:&lt;?&gt;):org.apache.spark.rdd.RDD[T]"></a>
       <a id="distinct(Int)(Ordering[T]):RDD[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -525,7 +507,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">distinct</span><span class="params">(<span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">distinct</span><span class="params">(<span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -551,7 +533,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">filter</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">filter</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -596,7 +578,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">firstParent</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.firstParent.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.firstParent.U">U</span>]</span>
+        <span class="name">firstParent</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.firstParent.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.firstParent.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../org/apache/spark/package.html" class="extype" name="org.apache.spark">org.apache.spark</a>] </dd><dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -609,7 +591,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<span class="extype" name="org.apache.spark.rdd.RDD.flatMap.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.flatMap.U">U</span>]</span>
+        <span class="name">flatMap</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<span class="extype" name="org.apache.spark.rdd.RDD.flatMap.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.flatMap.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.flatMap.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -640,7 +622,7 @@ results will be returned in a single partition.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#foreachPartition" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="foreachPartition(f:Iterator[T]=&gt;Unit):Unit"></a>
+      <a id="foreachPartition(f:&lt;?&gt;):Unit"></a>
       <a id="foreachPartition((Iterator[T])⇒Unit):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -687,7 +669,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getDependencies</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Dependency" class="extype" target="_top">Dependency</a>[_]]</span>
+        <span class="name">getDependencies</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Dependency" class="extype" target="_top">Dependency</a>[_]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -700,12 +682,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getPartitions</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Partition" class="extype" target="_top">Partition</a>]</span>
+        <span class="name">getPartitions</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Partition" class="extype" target="_top">Partition</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD">MemSQLRDD</a> → RDD</dd></dl></div>
     </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#getPreferredLocations" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getPreferredLocations(split:org.apache.spark.Partition):Seq[String]"></a>
+      <a id="getPreferredLocations(sparkPartition:org.apache.spark.Partition):Seq[String]"></a>
       <a id="getPreferredLocations(Partition):Seq[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -713,7 +695,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getPreferredLocations</span><span class="params">(<span name="split">split: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Partition" class="extype" target="_top">Partition</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">getPreferredLocations</span><span class="params">(<span name="sparkPartition">sparkPartition: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Partition" class="extype" target="_top">Partition</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD">MemSQLRDD</a> → RDD</dd></dl></div>
@@ -726,7 +708,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getStorageLevel</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.storage.StorageLevel" class="extype" target="_top">StorageLevel</a></span>
+        <span class="name">getStorageLevel</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.storage.StorageLevel" class="extype" target="_top">StorageLevel</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -739,12 +721,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">glom</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]]</span>
+        <span class="name">glom</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#groupBy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="groupBy[K](f:T=&gt;K,p:org.apache.spark.Partitioner)(implicitkt:scala.reflect.ClassTag[K],implicitord:Ordering[K]):org.apache.spark.rdd.RDD[(K,Iterable[T])]"></a>
+      <a id="groupBy[K&lt;:&lt;?&gt;](f:&lt;?&gt;,p:&lt;?&gt;)(implicitkt:&lt;?&gt;,implicitord:&lt;?&gt;):org.apache.spark.rdd.RDD[(K,Iterable[T])]"></a>
       <a id="groupBy[K]((T)⇒K,Partitioner)(ClassTag[K],Ordering[K]):RDD[(K,Iterable[T])]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -752,12 +734,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">groupBy</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span></span>, <span name="p">p: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Partitioner" class="extype" target="_top">Partitioner</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="kt">kt: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>]</span>, <span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>, <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>])]</span>
+        <span class="name">groupBy</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span></span>, <span name="p">p: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Partitioner" class="extype" target="_top">Partitioner</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="kt">kt: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>]</span>, <span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>, <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>])]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#groupBy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="groupBy[K](f:T=&gt;K,numPartitions:Int)(implicitkt:scala.reflect.ClassTag[K]):org.apache.spark.rdd.RDD[(K,Iterable[T])]"></a>
+      <a id="groupBy[K&lt;:&lt;?&gt;](f:&lt;?&gt;,numPartitions:&lt;?&gt;)(implicitkt:&lt;?&gt;):org.apache.spark.rdd.RDD[(K,Iterable[T])]"></a>
       <a id="groupBy[K]((T)⇒K,Int)(ClassTag[K]):RDD[(K,Iterable[T])]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -765,12 +747,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">groupBy</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span></span>, <span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="kt">kt: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>, <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>])]</span>
+        <span class="name">groupBy</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span></span>, <span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="kt">kt: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>, <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>])]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#groupBy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="groupBy[K](f:T=&gt;K)(implicitkt:scala.reflect.ClassTag[K]):org.apache.spark.rdd.RDD[(K,Iterable[T])]"></a>
+      <a id="groupBy[K&lt;:&lt;?&gt;](f:&lt;?&gt;)(implicitkt:&lt;?&gt;):org.apache.spark.rdd.RDD[(K,Iterable[T])]"></a>
       <a id="groupBy[K]((T)⇒K)(ClassTag[K]):RDD[(K,Iterable[T])]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -778,7 +760,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">groupBy</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="kt">kt: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>, <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>])]</span>
+        <span class="name">groupBy</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="kt">kt: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="org.apache.spark.rdd.RDD.groupBy.K">K</span>, <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>])]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -796,7 +778,7 @@ results will be returned in a single partition.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#intersection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="intersection(other:org.apache.spark.rdd.RDD[T],numPartitions:Int):org.apache.spark.rdd.RDD[T]"></a>
+      <a id="intersection(other:&lt;?&gt;,numPartitions:&lt;?&gt;):org.apache.spark.rdd.RDD[T]"></a>
       <a id="intersection(RDD[T],Int):RDD[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -804,12 +786,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">intersection</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>, <span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">intersection</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>, <span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#intersection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="intersection(other:org.apache.spark.rdd.RDD[T],partitioner:org.apache.spark.Partitioner)(implicitord:Ordering[T]):org.apache.spark.rdd.RDD[T]"></a>
+      <a id="intersection(other:&lt;?&gt;,partitioner:&lt;?&gt;)(implicitord:&lt;?&gt;):org.apache.spark.rdd.RDD[T]"></a>
       <a id="intersection(RDD[T],Partitioner)(Ordering[T]):RDD[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -817,12 +799,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">intersection</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>, <span name="partitioner">partitioner: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Partitioner" class="extype" target="_top">Partitioner</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">intersection</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>, <span name="partitioner">partitioner: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Partitioner" class="extype" target="_top">Partitioner</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#intersection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="intersection(other:org.apache.spark.rdd.RDD[T]):org.apache.spark.rdd.RDD[T]"></a>
+      <a id="intersection(other:&lt;?&gt;):org.apache.spark.rdd.RDD[T]"></a>
       <a id="intersection(RDD[T]):RDD[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -830,7 +812,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">intersection</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">intersection</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -895,7 +877,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">iterator</span><span class="params">(<span name="split">split: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Partition" class="extype" target="_top">Partition</a></span>, <span name="context">context: <span class="extype" name="org.apache.spark.TaskContext">TaskContext</span></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">iterator</span><span class="params">(<span name="split">split: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Partition" class="extype" target="_top">Partition</a></span>, <span name="context">context: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.TaskContext" class="extype" target="_top">TaskContext</a></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -908,7 +890,20 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">keyBy</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.keyBy.K">K</span></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="org.apache.spark.rdd.RDD.keyBy.K">K</span>, <span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>)]</span>
+        <span class="name">keyBy</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.keyBy.K">K</span></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="org.apache.spark.rdd.RDD.keyBy.K">K</span>, <span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>)]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
+    </li><li name="org.apache.spark.rdd.RDD#localCheckpoint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="localCheckpoint():RDD.this.type"></a>
+      <a id="localCheckpoint():MemSQLRDD.this.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">localCheckpoint</span><span class="params">()</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD">MemSQLRDD</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1077,7 +1072,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.map.U">U</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.map.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.map.U">U</span>]</span>
+        <span class="name">map</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.map.U">U</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.map.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.map.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1090,7 +1085,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mapPartitions</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitions.U">U</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitions.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitions.U">U</span>]</span>
+        <span class="name">mapPartitions</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitions.U">U</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitions.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitions.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1103,7 +1098,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mapPartitionsWithIndex</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>, <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithIndex.U">U</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithIndex.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithIndex.U">U</span>]</span>
+        <span class="name">mapPartitionsWithIndex</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>, <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithIndex.U">U</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithIndex.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithIndex.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1123,7 +1118,7 @@ results will be returned in a single partition.
   result type(s).</p><div class="fullcomment"><div class="comment cmt"><p>A function from a ResultSet to a single row of the desired
   result type(s).  This should only call getInt, getString, etc; the RDD
   takes care of calling next.  The default maps a ResultSet to an array of
-  Object.
+  Any.
 </p></div></div>
     </li><li name="org.apache.spark.rdd.RDD#max" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="max()(implicitord:&lt;?&gt;):T"></a>
@@ -1212,7 +1207,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">parent</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="j">j: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.parent.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.parent.U">U</span>]</span>
+        <span class="name">parent</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="j">j: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.parent.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.parent.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../org/apache/spark/package.html" class="extype" name="org.apache.spark">org.apache.spark</a>] </dd><dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1225,7 +1220,7 @@ results will be returned in a single partition.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">partitioner</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Partitioner" class="extype" target="_top">Partitioner</a>]</span>
+        <span class="name">partitioner</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Partitioner" class="extype" target="_top">Partitioner</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1238,38 +1233,10 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">partitions</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Partition" class="extype" target="_top">Partition</a>]</span>
+        <span class="name">partitions</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Partition" class="extype" target="_top">Partition</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
-    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#password" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="password:String"></a>
-      <a id="password:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">password</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The password to use when connecting to the databases in the
-  MemSQL cluster.</p><div class="fullcomment"><div class="comment cmt"><p>The password to use when connecting to the databases in the
-  MemSQL cluster.  All the nodes in the cluster should use the same password.</p></div></div>
-    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#perPartitionSqlTemplate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="perPartitionSqlTemplate:String"></a>
-      <a id="perPartitionSqlTemplate:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">perPartitionSqlTemplate</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
-      </span>
-      </h4>
-      
     </li><li name="org.apache.spark.rdd.RDD#persist" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="persist():RDD.this.type"></a>
       <a id="persist():MemSQLRDD.this.type"></a>
@@ -1284,7 +1251,7 @@ results will be returned in a single partition.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#persist" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="persist(newLevel:org.apache.spark.storage.StorageLevel):RDD.this.type"></a>
+      <a id="persist(newLevel:&lt;?&gt;):RDD.this.type"></a>
       <a id="persist(StorageLevel):MemSQLRDD.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1292,12 +1259,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">persist</span><span class="params">(<span name="newLevel">newLevel: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.storage.StorageLevel" class="extype" target="_top">StorageLevel</a></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD">MemSQLRDD</a>.this.type</span>
+        <span class="name">persist</span><span class="params">(<span name="newLevel">newLevel: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.storage.StorageLevel" class="extype" target="_top">StorageLevel</a></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD">MemSQLRDD</a>.this.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#pipe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pipe(command:Seq[String],env:scala.collection.Map[String,String],printPipeContext:(String=&gt;Unit)=&gt;Unit,printRDDElement:(T,String=&gt;Unit)=&gt;Unit,separateWorkingDir:Boolean):org.apache.spark.rdd.RDD[String]"></a>
+      <a id="pipe(command:&lt;?&gt;,env:&lt;?&gt;,printPipeContext:&lt;?&gt;,printRDDElement:&lt;?&gt;,separateWorkingDir:&lt;?&gt;):org.apache.spark.rdd.RDD[String]"></a>
       <a id="pipe(Seq[String],Map[String,String],((String)⇒Unit)⇒Unit,(T,(String)⇒Unit)⇒Unit,Boolean):RDD[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1305,12 +1272,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">pipe</span><span class="params">(<span name="command">command: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="env">env: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.collection.Map" class="extype" target="_top">Map</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="printPipeContext">printPipeContext: ((<span class="extype" name="scala.Predef.String">String</span>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>, <span name="printRDDElement">printRDDElement: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, (<span class="extype" name="scala.Predef.String">String</span>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>, <span name="separateWorkingDir">separateWorkingDir: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">pipe</span><span class="params">(<span name="command">command: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="env">env: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.collection.Map" class="extype" target="_top">Map</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="printPipeContext">printPipeContext: ((<span class="extype" name="scala.Predef.String">String</span>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>, <span name="printRDDElement">printRDDElement: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, (<span class="extype" name="scala.Predef.String">String</span>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>, <span name="separateWorkingDir">separateWorkingDir: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#pipe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pipe(command:String,env:scala.collection.Map[String,String]):org.apache.spark.rdd.RDD[String]"></a>
+      <a id="pipe(command:&lt;?&gt;,env:&lt;?&gt;):org.apache.spark.rdd.RDD[String]"></a>
       <a id="pipe(String,Map[String,String]):RDD[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1318,12 +1285,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">pipe</span><span class="params">(<span name="command">command: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="env">env: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.collection.Map" class="extype" target="_top">Map</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">pipe</span><span class="params">(<span name="command">command: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="env">env: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.collection.Map" class="extype" target="_top">Map</a>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#pipe" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pipe(command:String):org.apache.spark.rdd.RDD[String]"></a>
+      <a id="pipe(command:&lt;?&gt;):org.apache.spark.rdd.RDD[String]"></a>
       <a id="pipe(String):RDD[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1331,7 +1298,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">pipe</span><span class="params">(<span name="command">command: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">pipe</span><span class="params">(<span name="command">command: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1344,12 +1311,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">preferredLocations</span><span class="params">(<span name="split">split: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Partition" class="extype" target="_top">Partition</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">preferredLocations</span><span class="params">(<span name="split">split: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Partition" class="extype" target="_top">Partition</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#randomSplit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="randomSplit(weights:Array[Double],seed:Long):Array[org.apache.spark.rdd.RDD[T]]"></a>
+      <a id="randomSplit(weights:&lt;?&gt;,seed:&lt;?&gt;):Array[org.apache.spark.rdd.RDD[T]]"></a>
       <a id="randomSplit(Array[Double],Long):Array[RDD[T]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1357,7 +1324,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randomSplit</span><span class="params">(<span name="weights">weights: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>, <span name="seed">seed: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]]</span>
+        <span class="name">randomSplit</span><span class="params">(<span name="weights">weights: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a>]</span>, <span name="seed">seed: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1383,7 +1350,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">repartition</span><span class="params">(<span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">repartition</span><span class="params">(<span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1396,7 +1363,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sample</span><span class="params">(<span name="withReplacement">withReplacement: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="fraction">fraction: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>, <span name="seed">seed: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">sample</span><span class="params">(<span name="withReplacement">withReplacement: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="fraction">fraction: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Double" class="extype" target="_top">Double</a></span>, <span name="seed">seed: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1414,7 +1381,7 @@ results will be returned in a single partition.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#saveAsTextFile" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="saveAsTextFile(path:String,codec:Class[_&lt;:org.apache.hadoop.io.compress.CompressionCodec]):Unit"></a>
+      <a id="saveAsTextFile(path:&lt;?&gt;,codec:&lt;?&gt;):Unit"></a>
       <a id="saveAsTextFile(String,Class[_&lt;:CompressionCodec]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1427,7 +1394,7 @@ results will be returned in a single partition.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#saveAsTextFile" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="saveAsTextFile(path:String):Unit"></a>
+      <a id="saveAsTextFile(path:&lt;?&gt;):Unit"></a>
       <a id="saveAsTextFile(String):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1448,7 +1415,7 @@ results will be returned in a single partition.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">sc</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>
+        <span class="name">sc</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>
       </span>
       </h4>
       
@@ -1474,7 +1441,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sortBy</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.sortBy.K">K</span></span>, <span name="ascending">ascending: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="org.apache.spark.rdd.RDD.sortBy.K">K</span>]</span>, <span name="ctag">ctag: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.sortBy.K">K</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">sortBy</span><span class="tparams">[<span name="K">K</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.sortBy.K">K</span></span>, <span name="ascending">ascending: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="org.apache.spark.rdd.RDD.sortBy.K">K</span>]</span>, <span name="ctag">ctag: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.sortBy.K">K</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1487,11 +1454,11 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sparkContext</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>
+        <span class="name">sparkContext</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
-    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#sql" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#sql" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sql:String"></a>
       <a id="sql:String"></a>
       <h4 class="signature">
@@ -1503,9 +1470,23 @@ results will be returned in a single partition.
         <span class="name">sql</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The text of the query.</p>
+      <p class="shortcomment cmt">The text of the query.</p><div class="fullcomment"><div class="comment cmt"><p>The text of the query. Can be a prepared statement template,
+   in which case parameters from sqlParams are substituted.</p></div></div>
+    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#sqlParams" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sqlParams:Seq[Any]"></a>
+      <a id="sqlParams:Seq[Any]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sqlParams</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The parameters of the query if sql is a template.</p>
     </li><li name="org.apache.spark.rdd.RDD#subtract" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="subtract(other:org.apache.spark.rdd.RDD[T],p:org.apache.spark.Partitioner)(implicitord:Ordering[T]):org.apache.spark.rdd.RDD[T]"></a>
+      <a id="subtract(other:&lt;?&gt;,p:&lt;?&gt;)(implicitord:&lt;?&gt;):org.apache.spark.rdd.RDD[T]"></a>
       <a id="subtract(RDD[T],Partitioner)(Ordering[T]):RDD[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1513,12 +1494,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">subtract</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>, <span name="p">p: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Partitioner" class="extype" target="_top">Partitioner</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">subtract</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>, <span name="p">p: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Partitioner" class="extype" target="_top">Partitioner</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#subtract" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="subtract(other:org.apache.spark.rdd.RDD[T],numPartitions:Int):org.apache.spark.rdd.RDD[T]"></a>
+      <a id="subtract(other:&lt;?&gt;,numPartitions:&lt;?&gt;):org.apache.spark.rdd.RDD[T]"></a>
       <a id="subtract(RDD[T],Int):RDD[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1526,12 +1507,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">subtract</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>, <span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">subtract</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>, <span name="numPartitions">numPartitions: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#subtract" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="subtract(other:org.apache.spark.rdd.RDD[T]):org.apache.spark.rdd.RDD[T]"></a>
+      <a id="subtract(other:&lt;?&gt;):org.apache.spark.rdd.RDD[T]"></a>
       <a id="subtract(RDD[T]):RDD[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1539,7 +1520,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">subtract</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">subtract</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1617,7 +1598,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toJavaRDD</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.api.java.JavaRDD" class="extype" target="_top">JavaRDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">toJavaRDD</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.api.java.JavaRDD" class="extype" target="_top">JavaRDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1695,7 +1676,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">union</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name">union</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1712,34 +1693,6 @@ results will be returned in a single partition.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
-    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#usePerPartitionSql" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="usePerPartitionSql:Boolean"></a>
-      <a id="usePerPartitionSql:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">usePerPartitionSql</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#user" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="user:String"></a>
-      <a id="user:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">user</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The username to use when connecting to the databases in the
-  MemSQL cluster.</p><div class="fullcomment"><div class="comment cmt"><p>The username to use when connecting to the databases in the
-  MemSQL cluster.  All the nodes in the cluster should use the same user.</p></div></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -1806,12 +1759,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zip</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zip.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zip.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD.zip.U">U</span>)]</span>
+        <span class="name">zip</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="other">other: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zip.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zip.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD.zip.U">U</span>)]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zipPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipPartitions[B,C,D,V](rdd2:org.apache.spark.rdd.RDD[B],rdd3:org.apache.spark.rdd.RDD[C],rdd4:org.apache.spark.rdd.RDD[D])(f:(Iterator[T],Iterator[B],Iterator[C],Iterator[D])=&gt;Iterator[V])(implicitevidence$27:scala.reflect.ClassTag[B],implicitevidence$28:scala.reflect.ClassTag[C],implicitevidence$29:scala.reflect.ClassTag[D],implicitevidence$30:scala.reflect.ClassTag[V]):org.apache.spark.rdd.RDD[V]"></a>
+      <a id="zipPartitions[B&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;,D&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,rdd3:&lt;?&gt;,rdd4:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$27:&lt;?&gt;,implicitevidence$28:&lt;?&gt;,implicitevidence$29:&lt;?&gt;,implicitevidence$30:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
       <a id="zipPartitions[B,C,D,V](RDD[B],RDD[C],RDD[D])((Iterator[T],Iterator[B],Iterator[C],Iterator[D])⇒Iterator[V])(ClassTag[B],ClassTag[C],ClassTag[D],ClassTag[V]):RDD[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1819,12 +1772,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zipPartitions</span><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd2">rdd2: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="rdd3">rdd3: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="rdd4">rdd4: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.D">D</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.D">D</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="arg2">arg2: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.D">D</span>]</span>, <span name="arg3">arg3: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>
+        <span class="name">zipPartitions</span><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd2">rdd2: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="rdd3">rdd3: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="rdd4">rdd4: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.D">D</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.D">D</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="arg2">arg2: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.D">D</span>]</span>, <span name="arg3">arg3: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zipPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipPartitions[B,C,D,V](rdd2:org.apache.spark.rdd.RDD[B],rdd3:org.apache.spark.rdd.RDD[C],rdd4:org.apache.spark.rdd.RDD[D],preservesPartitioning:Boolean)(f:(Iterator[T],Iterator[B],Iterator[C],Iterator[D])=&gt;Iterator[V])(implicitevidence$23:scala.reflect.ClassTag[B],implicitevidence$24:scala.reflect.ClassTag[C],implicitevidence$25:scala.reflect.ClassTag[D],implicitevidence$26:scala.reflect.ClassTag[V]):org.apache.spark.rdd.RDD[V]"></a>
+      <a id="zipPartitions[B&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;,D&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,rdd3:&lt;?&gt;,rdd4:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$23:&lt;?&gt;,implicitevidence$24:&lt;?&gt;,implicitevidence$25:&lt;?&gt;,implicitevidence$26:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
       <a id="zipPartitions[B,C,D,V](RDD[B],RDD[C],RDD[D],Boolean)((Iterator[T],Iterator[B],Iterator[C],Iterator[D])⇒Iterator[V])(ClassTag[B],ClassTag[C],ClassTag[D],ClassTag[V]):RDD[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1832,12 +1785,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zipPartitions</span><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd2">rdd2: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="rdd3">rdd3: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="rdd4">rdd4: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.D">D</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.D">D</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="arg2">arg2: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.D">D</span>]</span>, <span name="arg3">arg3: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>
+        <span class="name">zipPartitions</span><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd2">rdd2: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="rdd3">rdd3: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="rdd4">rdd4: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.D">D</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.D">D</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="arg2">arg2: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.D">D</span>]</span>, <span name="arg3">arg3: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zipPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipPartitions[B,C,V](rdd2:org.apache.spark.rdd.RDD[B],rdd3:org.apache.spark.rdd.RDD[C])(f:(Iterator[T],Iterator[B],Iterator[C])=&gt;Iterator[V])(implicitevidence$20:scala.reflect.ClassTag[B],implicitevidence$21:scala.reflect.ClassTag[C],implicitevidence$22:scala.reflect.ClassTag[V]):org.apache.spark.rdd.RDD[V]"></a>
+      <a id="zipPartitions[B&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,rdd3:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$20:&lt;?&gt;,implicitevidence$21:&lt;?&gt;,implicitevidence$22:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
       <a id="zipPartitions[B,C,V](RDD[B],RDD[C])((Iterator[T],Iterator[B],Iterator[C])⇒Iterator[V])(ClassTag[B],ClassTag[C],ClassTag[V]):RDD[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1845,12 +1798,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zipPartitions</span><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd2">rdd2: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="rdd3">rdd3: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="arg2">arg2: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>
+        <span class="name">zipPartitions</span><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd2">rdd2: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="rdd3">rdd3: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="arg2">arg2: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zipPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipPartitions[B,C,V](rdd2:org.apache.spark.rdd.RDD[B],rdd3:org.apache.spark.rdd.RDD[C],preservesPartitioning:Boolean)(f:(Iterator[T],Iterator[B],Iterator[C])=&gt;Iterator[V])(implicitevidence$17:scala.reflect.ClassTag[B],implicitevidence$18:scala.reflect.ClassTag[C],implicitevidence$19:scala.reflect.ClassTag[V]):org.apache.spark.rdd.RDD[V]"></a>
+      <a id="zipPartitions[B&lt;:&lt;?&gt;,C&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,rdd3:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$17:&lt;?&gt;,implicitevidence$18:&lt;?&gt;,implicitevidence$19:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
       <a id="zipPartitions[B,C,V](RDD[B],RDD[C],Boolean)((Iterator[T],Iterator[B],Iterator[C])⇒Iterator[V])(ClassTag[B],ClassTag[C],ClassTag[V]):RDD[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1858,12 +1811,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zipPartitions</span><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd2">rdd2: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="rdd3">rdd3: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="arg2">arg2: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>
+        <span class="name">zipPartitions</span><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd2">rdd2: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="rdd3">rdd3: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.C">C</span>]</span>, <span name="arg2">arg2: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zipPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipPartitions[B,V](rdd2:org.apache.spark.rdd.RDD[B])(f:(Iterator[T],Iterator[B])=&gt;Iterator[V])(implicitevidence$15:scala.reflect.ClassTag[B],implicitevidence$16:scala.reflect.ClassTag[V]):org.apache.spark.rdd.RDD[V]"></a>
+      <a id="zipPartitions[B&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$15:&lt;?&gt;,implicitevidence$16:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
       <a id="zipPartitions[B,V](RDD[B])((Iterator[T],Iterator[B])⇒Iterator[V])(ClassTag[B],ClassTag[V]):RDD[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1871,12 +1824,12 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zipPartitions</span><span class="tparams">[<span name="B">B</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd2">rdd2: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>
+        <span class="name">zipPartitions</span><span class="tparams">[<span name="B">B</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd2">rdd2: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
     </li><li name="org.apache.spark.rdd.RDD#zipPartitions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="zipPartitions[B,V](rdd2:org.apache.spark.rdd.RDD[B],preservesPartitioning:Boolean)(f:(Iterator[T],Iterator[B])=&gt;Iterator[V])(implicitevidence$13:scala.reflect.ClassTag[B],implicitevidence$14:scala.reflect.ClassTag[V]):org.apache.spark.rdd.RDD[V]"></a>
+      <a id="zipPartitions[B&lt;:&lt;?&gt;,V&lt;:&lt;?&gt;](rdd2:&lt;?&gt;,preservesPartitioning:&lt;?&gt;)(f:&lt;?&gt;)(implicitevidence$13:&lt;?&gt;,implicitevidence$14:&lt;?&gt;):org.apache.spark.rdd.RDD[V]"></a>
       <a id="zipPartitions[B,V](RDD[B],Boolean)((Iterator[T],Iterator[B])⇒Iterator[V])(ClassTag[B],ClassTag[V]):RDD[V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1884,7 +1837,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zipPartitions</span><span class="tparams">[<span name="B">B</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd2">rdd2: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>
+        <span class="name">zipPartitions</span><span class="tparams">[<span name="B">B</span>, <span name="V">V</span>]</span><span class="params">(<span name="rdd2">rdd2: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>], <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.B">B</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.zipPartitions.V">V</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1897,7 +1850,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zipWithIndex</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>)]</span>
+        <span class="name">zipWithIndex</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>)]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1910,7 +1863,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">zipWithUniqueId</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>)]</span>
+        <span class="name">zipWithUniqueId</span><span class="params">()</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[(<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>)]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd></dl></div>
@@ -1930,7 +1883,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 1.0.0) use mapPartitionsWithIndex and filter">filterWith</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="constructA">constructA: (<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.filterWith.A">A</span></span>)</span><span class="params">(<span name="p">p: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD.filterWith.A">A</span>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version 1.0.0) use mapPartitionsWithIndex and filter">filterWith</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="constructA">constructA: (<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.filterWith.A">A</span></span>)</span><span class="params">(<span name="p">p: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD.filterWith.A">A</span>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd><dt>Annotations</dt><dd>
@@ -1946,7 +1899,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 1.0.0) use mapPartitionsWithIndex and flatMap">flatMapWith</span><span class="tparams">[<span name="A">A</span>, <span name="U">U</span>]</span><span class="params">(<span name="constructA">constructA: (<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.flatMapWith.A">A</span></span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD.flatMapWith.A">A</span>) ⇒ <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.rdd.RDD.flatMapWith.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.flatMapWith.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.flatMapWith.U">U</span>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version 1.0.0) use mapPartitionsWithIndex and flatMap">flatMapWith</span><span class="tparams">[<span name="A">A</span>, <span name="U">U</span>]</span><span class="params">(<span name="constructA">constructA: (<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.flatMapWith.A">A</span></span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD.flatMapWith.A">A</span>) ⇒ <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.spark.rdd.RDD.flatMapWith.U">U</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.flatMapWith.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.flatMapWith.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd><dt>Annotations</dt><dd>
@@ -1978,7 +1931,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 1.2.0) use TaskContext.get">mapPartitionsWithContext</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="org.apache.spark.TaskContext">TaskContext</span>, <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithContext.U">U</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithContext.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithContext.U">U</span>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version 1.2.0) use TaskContext.get">mapPartitionsWithContext</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.TaskContext" class="extype" target="_top">TaskContext</a>, <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithContext.U">U</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithContext.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithContext.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd><dt>Annotations</dt><dd>
@@ -1996,7 +1949,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 0.7.0) use mapPartitionsWithIndex">mapPartitionsWithSplit</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>, <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithSplit.U">U</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithSplit.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithSplit.U">U</span>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version 0.7.0) use mapPartitionsWithIndex">mapPartitionsWithSplit</span><span class="tparams">[<span name="U">U</span>]</span><span class="params">(<span name="f">f: (<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>, <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]) ⇒ <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithSplit.U">U</span>]</span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithSplit.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapPartitionsWithSplit.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd><dt>Annotations</dt><dd>
@@ -2012,7 +1965,7 @@ results will be returned in a single partition.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 1.0.0) use mapPartitionsWithIndex">mapWith</span><span class="tparams">[<span name="A">A</span>, <span name="U">U</span>]</span><span class="params">(<span name="constructA">constructA: (<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.mapWith.A">A</span></span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD.mapWith.A">A</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.mapWith.U">U</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapWith.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapWith.U">U</span>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version 1.0.0) use mapPartitionsWithIndex">mapWith</span><span class="tparams">[<span name="A">A</span>, <span name="U">U</span>]</span><span class="params">(<span name="constructA">constructA: (<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.mapWith.A">A</span></span>, <span name="preservesPartitioning">preservesPartitioning: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>, <span class="extype" name="org.apache.spark.rdd.RDD.mapWith.A">A</span>) ⇒ <span class="extype" name="org.apache.spark.rdd.RDD.mapWith.U">U</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapWith.U">U</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="org.apache.spark.rdd.RDD.mapWith.U">U</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RDD</dd><dt>Annotations</dt><dd>
@@ -2045,9 +1998,9 @@ results will be returned in a single partition.
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Equals" class="extype" target="_top">Equals</a></h3>
             </div><div class="parent" name="org.apache.spark.rdd.RDD">
-              <h3>Inherited from <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</h3>
+              <h3>Inherited from <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="com.memsql.spark.connector.rdd.MemSQLRDD.T">T</span>]</h3>
             </div><div class="parent" name="org.apache.spark.Logging">
-              <h3>Inherited from <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a></h3>
+              <h3>Inherited from <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a></h3>
             </div><div class="parent" name="scala.Serializable">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></h3>
             </div><div class="parent" name="java.io.Serializable">

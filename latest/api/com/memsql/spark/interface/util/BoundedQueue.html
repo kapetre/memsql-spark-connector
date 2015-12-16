@@ -209,7 +209,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableLike</dd></dl></div>
     </li><li name="scala.collection.generic.Growable#++=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="++=(xs:&lt;?&gt;):Growable.this.type"></a>
+      <a id="++=(xs:scala.collection.TraversableOnce[A]):Growable.this.type"></a>
       <a id="++=(TraversableOnce[A]):BoundedQueue.this.type"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -936,7 +936,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableLike → GenTraversableLike → FilterMonadic</dd></dl></div>
     </li><li name="scala.collection.generic.GenericTraversableTemplate#flatten" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="flatten[B&lt;:&lt;?&gt;](implicitasTraversable:&lt;?&gt;):CC[B]"></a>
+      <a id="flatten[B](implicitasTraversable:A=&gt;scala.collection.GenTraversableOnce[B]):CC[B]"></a>
       <a id="flatten[B]((A)⇒GenTraversableOnce[B]):Queue[B]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2182,7 +2182,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sortBy</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.interface.util.BoundedQueue.A">A</span>) ⇒ <span class="extype" name="scala.collection.SeqLike.sortBy.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.math.Ordering">Ordering</span>[<span class="extype" name="scala.collection.SeqLike.sortBy.B">B</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.collection.mutable.Queue" class="extype" target="_top">Queue</a>[<span class="extype" name="com.memsql.spark.interface.util.BoundedQueue.A">A</span>]</span>
+        <span class="name">sortBy</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.memsql.spark.interface.util.BoundedQueue.A">A</span>) ⇒ <span class="extype" name="scala.collection.SeqLike.sortBy.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.math.Ordering" class="extype" target="_top">Ordering</a>[<span class="extype" name="scala.collection.SeqLike.sortBy.B">B</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.collection.mutable.Queue" class="extype" target="_top">Queue</a>[<span class="extype" name="com.memsql.spark.interface.util.BoundedQueue.A">A</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SeqLike</dd></dl></div>
@@ -2200,7 +2200,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SeqLike</dd></dl></div>
     </li><li name="scala.collection.SeqLike#sorted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sorted[B&lt;:&lt;?&gt;](implicitord:&lt;?&gt;):Repr"></a>
+      <a id="sorted[B&gt;:A](implicitord:scala.math.Ordering[B]):Repr"></a>
       <a id="sorted[B&gt;:A](Ordering[B]):Queue[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2208,7 +2208,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sorted</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="com.memsql.spark.interface.util.BoundedQueue.A">A</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <span class="extype" name="scala.math.Ordering">Ordering</span>[<span class="extype" name="scala.collection.SeqLike.sorted.B">B</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.collection.mutable.Queue" class="extype" target="_top">Queue</a>[<span class="extype" name="com.memsql.spark.interface.util.BoundedQueue.A">A</span>]</span>
+        <span class="name">sorted</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="com.memsql.spark.interface.util.BoundedQueue.A">A</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.math.Ordering" class="extype" target="_top">Ordering</a>[<span class="extype" name="scala.collection.SeqLike.sorted.B">B</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.collection.mutable.Queue" class="extype" target="_top">Queue</a>[<span class="extype" name="com.memsql.spark.interface.util.BoundedQueue.A">A</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SeqLike</dd></dl></div>
@@ -2546,7 +2546,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toStream</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.collection.immutable.Stream" class="extype" target="_top">Stream</a>[<span class="extype" name="com.memsql.spark.interface.util.BoundedQueue.A">A</span>]</span>
+        <span class="name">toStream</span><span class="result">: <span class="extype" name="scala.collection.immutable.Stream">Stream</span>[<span class="extype" name="com.memsql.spark.interface.util.BoundedQueue.A">A</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>IterableLike → TraversableLike → GenTraversableOnce</dd></dl></div>

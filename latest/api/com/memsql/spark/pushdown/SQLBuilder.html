@@ -1,0 +1,731 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>SQLBuilder - com.memsql.spark.pushdown.SQLBuilder</title>
+          <meta name="description" content="SQLBuilder - com.memsql.spark.pushdown.SQLBuilder" />
+          <meta name="keywords" content="SQLBuilder com.memsql.spark.pushdown.SQLBuilder" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'com.memsql.spark.pushdown.SQLBuilder';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="SQLBuilder$.html" title="Go to companion"><img src="../../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.memsql">memsql</a>.<a href="../package.html" class="extype" name="com.memsql.spark">spark</a>.<a href="package.html" class="extype" name="com.memsql.spark.pushdown">pushdown</a></p>
+        <h1><a href="SQLBuilder$.html" title="Go to companion">SQLBuilder</a></h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SQLBuilder</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>SQLBuilder is a mutable object for efficiently building up complex SQL expressions.
+Internally it uses StringBuilder and a ListBuffer to efficiently support many small writes.
+All methods return <code>this</code> for chaining.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="com.memsql.spark.pushdown.SQLBuilder"><span>SQLBuilder</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="com.memsql.spark.pushdown.SQLBuilder#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(fields:Seq[org.apache.spark.sql.catalyst.expressions.NamedExpression]):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="&lt;init&gt;:SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SQLBuilder</span><span class="params">(<span name="fields">fields: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.NamedExpression" class="extype" target="_top">NamedExpression</a>] = <span class="symbol">immutable.this.Nil</span></span>)</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#addExpression" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addExpression(expression:org.apache.spark.sql.catalyst.expressions.Expression):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="addExpression(Expression):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addExpression</span><span class="params">(<span name="expression">expression: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Expression" class="extype" target="_top">Expression</a></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Adds a Catalyst <span class="extype" name="Expression">Expression</span> to this SQLBuilder</p><div class="fullcomment"><div class="comment cmt"><p>Adds a Catalyst <span class="extype" name="Expression">Expression</span> to this SQLBuilder</p></div><dl class="paramcmts block"><dt class="param">expression</dt><dd class="cmt"><p>The <span class="extype" name="Expression">Expression</span> to add
+</p></dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#addExpressions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addExpressions(expressions:Seq[org.apache.spark.sql.catalyst.expressions.Expression],conjunction:String):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="addExpressions(Seq[Expression],String):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addExpressions</span><span class="params">(<span name="expressions">expressions: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Expression" class="extype" target="_top">Expression</a>]</span>, <span name="conjunction">conjunction: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Adds a list of expressions to this SQLBuilder, joins each expression with the provided conjunction.</p><div class="fullcomment"><div class="comment cmt"><p>Adds a list of expressions to this SQLBuilder, joins each expression with the provided conjunction.</p></div><dl class="paramcmts block"><dt class="param">expressions</dt><dd class="cmt"><p>A list of <span class="extype" name="Expression">Expression</span>s</p></dd><dt class="param">conjunction</dt><dd class="cmt"><p>A string to join the resulting SQL Expressions with
+</p></dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#addParams" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addParams(newParams:Seq[Any]):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="addParams(Seq[Any]):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addParams</span><span class="params">(<span name="newParams">newParams: <span class="extype" name="scala.Seq">Seq</span>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Add a list of params directly to the internal params list.</p><div class="fullcomment"><div class="comment cmt"><p>Add a list of params directly to the internal params list.
+Optimized form of calling SQLBuilder#param(Any) for each element of newParams.
+</p></div></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#aliasedBlock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aliasedBlock(alias:com.memsql.spark.pushdown.QueryAlias,inner:com.memsql.spark.pushdown.SQLBuilder=&gt;Unit):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="aliasedBlock(QueryAlias,(SQLBuilder)⇒Unit):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">aliasedBlock</span><span class="params">(<span name="alias">alias: <a href="QueryAlias.html" class="extype" name="com.memsql.spark.pushdown.QueryAlias">QueryAlias</a></span>, <span name="inner">inner: (<a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>SQLBuilder#aliasedBlock(String, SQLBuilder =&gt; Unit)
+</p></span></dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#aliasedBlock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aliasedBlock(alias:String,inner:com.memsql.spark.pushdown.SQLBuilder=&gt;Unit):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="aliasedBlock(String,(SQLBuilder)⇒Unit):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">aliasedBlock</span><span class="params">(<span name="alias">alias: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="inner">inner: (<a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a>) ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wraps the provided lambda with a non-qualified alias.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps the provided lambda with a non-qualified alias.</p></div><dl class="paramcmts block"><dt class="param">alias</dt><dd class="cmt"><p>The alias to give the inner expression</p></dd><dt class="param">inner</dt><dd class="cmt"><p>A lambda which will be wrapped with ( ... ) AS alias
+</p></dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#appendBuilder" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="appendBuilder(other:com.memsql.spark.pushdown.SQLBuilder):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="appendBuilder(SQLBuilder):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">appendBuilder</span><span class="params">(<span name="other">other: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Appends another SQLBuilder to this one.</p><div class="fullcomment"><div class="comment cmt"><p>Appends another SQLBuilder to this one.</p></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>The other SQLBuilder</p></dd><dt>returns</dt><dd class="cmt"><p>This SQLBuilder
+</p></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#attr" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="attr(a:org.apache.spark.sql.catalyst.expressions.Attribute):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="attr(Attribute):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">attr</span><span class="params">(<span name="a">a: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Attribute" class="extype" target="_top">Attribute</a></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Adds a named expression to the builder.</p><div class="fullcomment"><div class="comment cmt"><p>Adds a named expression to the builder.</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>The expression is fully qualified if possible (ex. <code>foo</code>.<code>bar</code>)
+</p></span>, <span class="cmt"><p>Attempts to lookup the expression in <span class="extype" name="fields">fields</span> if it exists.</p></span></dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#block" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="block(inner:=&gt;Unit):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="block(⇒Unit):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">block</span><span class="params">(<span name="inner">inner: ⇒ <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wraps the provided lambda in parentheses.</p><div class="fullcomment"><div class="comment cmt"><p>Wraps the provided lambda in parentheses.</p></div><dl class="paramcmts block"><dt class="param">inner</dt><dd class="cmt"><p>A lambda which will be executed between adding parenthesis to the expression
+</p></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#identifier" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="identifier(a:String):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="identifier(String):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">identifier</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Escapes and appends a single identifier to the SQLBuilder.</p>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#maybeAddExpressions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="maybeAddExpressions(expressions:Seq[org.apache.spark.sql.catalyst.expressions.Expression],conjunction:String):Option[com.memsql.spark.pushdown.SQLBuilder]"></a>
+      <a id="maybeAddExpressions(Seq[Expression],String):Option[SQLBuilder]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maybeAddExpressions</span><span class="params">(<span name="expressions">expressions: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Expression" class="extype" target="_top">Expression</a>]</span>, <span name="conjunction">conjunction: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#maybeAppendBuilder" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="maybeAppendBuilder(other:Option[com.memsql.spark.pushdown.SQLBuilder],ifNone:String):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="maybeAppendBuilder(Option[SQLBuilder],String):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maybeAppendBuilder</span><span class="params">(<span name="other">other: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a>]</span>, <span name="ifNone">ifNone: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Appends another SQLBuilder to this one.</p><div class="fullcomment"><div class="comment cmt"><p>Appends another SQLBuilder to this one.</p></div><dl class="paramcmts block"><dt class="param">other</dt><dd class="cmt"><p>The other SQLBuilder</p></dd><dt class="param">ifNone</dt><dd class="cmt"><p>A string to append to this SQLBuilder if other is None</p></dd><dt>returns</dt><dd class="cmt"><p>This SQLBuilder
+</p></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#param" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="param(l:org.apache.spark.sql.catalyst.expressions.Literal):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="param(Literal):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">param</span><span class="params">(<span name="l">l: <span class="extype" name="org.apache.spark.sql.catalyst.expressions.Literal">Literal</span></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Handles converting the literal from its Catalyst Type to a Scala Type
+</p></span></dd><dt>See also</dt><dd><span class="cmt"><p>SQLBuilder#param(Any)</p></span></dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#param" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="param(p:Any,t:org.apache.spark.sql.types.DataType):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="param(Any,DataType):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">param</span><span class="params">(<span name="p">p: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>, <span name="t">t: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.types.DataType" class="extype" target="_top">DataType</a></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Use this variant if the parameter is one of the Catalyst Types
+</p></span></dd><dt>See also</dt><dd><span class="cmt"><p>SQLBuilder#param(Any)</p></span></dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#param" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="param(p:Any):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="param(Any):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">param</span><span class="params">(<span name="p">p: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Adds the provided param to the internal params list.</p>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#paramList" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="paramList(newParams:Seq[Any],t:org.apache.spark.sql.types.DataType):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="paramList(Seq[Any],DataType):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">paramList</span><span class="params">(<span name="newParams">newParams: <span class="extype" name="scala.Seq">Seq</span>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>, <span name="t">t: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.types.DataType" class="extype" target="_top">DataType</a></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Adds a list of elements to the SQL expression, as a comma-delimited list.</p><div class="fullcomment"><div class="comment cmt"><p>Adds a list of elements to the SQL expression, as a comma-delimited list.
+Handles updating the expression as well as adding
+each param to the internal params list.
+</p></div><dl class="paramcmts block"><dt class="param">newParams</dt><dd class="cmt"><p>A list of objects to add to the expression</p></dd><dt class="param">t</dt><dd class="cmt"><p>The Catalyst type for all of the objects
+</p></dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#params" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="params:scala.collection.mutable.ListBuffer[Any]"></a>
+      <a id="params:ListBuffer[Any]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">params</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.collection.mutable.ListBuffer" class="extype" target="_top">ListBuffer</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#qualifiedAttr" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="qualifiedAttr(qualifier:Option[String],name:String):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="qualifiedAttr(Option[String],String):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">qualifiedAttr</span><span class="params">(<span name="qualifier">qualifier: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A String attribute optionally qualified by another string.</p>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#raw" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="raw(s:StringBuilder):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="raw(StringBuilder):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">raw</span><span class="params">(<span name="s">s: <span class="extype" name="scala.StringBuilder">StringBuilder</span></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>SQLBuilder#raw(String)
+</p></span></dd></dl></div>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#raw" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="raw(s:String):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="raw(String):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">raw</span><span class="params">(<span name="s">s: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Adds a raw string to the expression, no escaping occurs.</p>
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#sql" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sql:StringBuilder"></a>
+      <a id="sql:StringBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sql</span><span class="result">: <span class="extype" name="scala.StringBuilder">StringBuilder</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.pushdown.SQLBuilder#sqlFunction" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sqlFunction(fnName:String,children:org.apache.spark.sql.catalyst.expressions.Expression*):com.memsql.spark.pushdown.SQLBuilder"></a>
+      <a id="sqlFunction(String,Expression*):SQLBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sqlFunction</span><span class="params">(<span name="fnName">fnName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="children">children: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Expression" class="extype" target="_top">Expression</a>*</span>)</span><span class="result">: <a href="" class="extype" name="com.memsql.spark.pushdown.SQLBuilder">SQLBuilder</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../lib/template.js"></script>
+    </body>
+      </html>

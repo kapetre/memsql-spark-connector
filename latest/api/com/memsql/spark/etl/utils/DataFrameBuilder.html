@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">DataFrameBuilder</span><span class="params">(<span name="schema">schema: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.4.1/spark-catalyst_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.sql.types.StructType" class="extype" target="_top">StructType</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a></span>
+        <span class="name">DataFrameBuilder</span><span class="params">(<span name="schema">schema: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.types.StructType" class="extype" target="_top">StructType</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a></span>
       </span>
       </h4>
       
@@ -50,7 +50,7 @@ Attempting to set a column not found in the schema will throw a SparkException.<
     .set(<span class="lit">"b"</span>,...)
     .finishRow
 }
-dfb.finishDataFrame(sqlContext, rowRDD)</pre><p>see also: <a href="../../context/MemSQLContext.html#getTableSchema(dbName:String,tableName:String):org.apache.spark.sql.types.StructType" class="extmbr" name="com.memsql.spark.context.MemSQLContext#getTableSchema">com.memsql.spark.context.MemSQLContext.getTableSchema</a>
+dfb.finishDataFrame(sqlContext, rowRDD)</pre><p>see also: <span class="extype" name="com.memsql.spark.context.MemSQLContext.getTableSchema">com.memsql.spark.context.MemSQLContext.getTableSchema</span>
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Equals" class="extype" target="_top">Equals</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
@@ -100,7 +100,7 @@ dfb.finishDataFrame(sqlContext, rowRDD)</pre><p>see also: <a href="../../context
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">DataFrameBuilder</span><span class="params">(<span name="schema">schema: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.4.1/spark-catalyst_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.sql.types.StructType" class="extype" target="_top">StructType</a></span>)</span>
+        <span class="name">DataFrameBuilder</span><span class="params">(<span name="schema">schema: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.types.StructType" class="extype" target="_top">StructType</a></span>)</span>
       </span>
       </h4>
       
@@ -264,7 +264,7 @@ dfb.finishDataFrame(sqlContext, rowRDD)</pre><p>see also: <a href="../../context
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finishDataFrame</span><span class="params">(<span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="rdd">rdd: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.4.1/spark-catalyst_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.sql.Row" class="extype" target="_top">Row</a>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>
+        <span class="name">finishDataFrame</span><span class="params">(<span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="rdd">rdd: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.Row" class="extype" target="_top">Row</a>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>
       </span>
       </h4>
       
@@ -342,7 +342,7 @@ dfb.finishDataFrame(sqlContext, rowRDD)</pre><p>see also: <a href="../../context
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">schema</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.4.1/spark-catalyst_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.sql.types.StructType" class="extype" target="_top">StructType</a></span>
+        <span class="name">schema</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.types.StructType" class="extype" target="_top">StructType</a></span>
       </span>
       </h4>
       

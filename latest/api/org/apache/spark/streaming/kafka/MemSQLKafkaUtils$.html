@@ -150,6 +150,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils#ZK_CONNECT_TIMEOUT" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZK_CONNECT_TIMEOUT:Int"></a>
+      <a id="ZK_CONNECT_TIMEOUT:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ZK_CONNECT_TIMEOUT</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils#ZK_SESSION_TIMEOUT" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZK_SESSION_TIMEOUT:Int"></a>
+      <a id="ZK_SESSION_TIMEOUT:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ZK_SESSION_TIMEOUT</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -183,15 +209,15 @@
               
         </dd></dl></div>
     </li><li name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils#createDirectStream" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="createDirectStream[K,V,KD&lt;:kafka.serializer.Decoder[K],VD&lt;:kafka.serializer.Decoder[V]](ssc:org.apache.spark.streaming.StreamingContext,kafkaParams:Map[String,String],topics:Set[String],batchInterval:Long)(implicitevidence$1:scala.reflect.ClassTag[K],implicitevidence$2:scala.reflect.ClassTag[V],implicitevidence$3:scala.reflect.ClassTag[KD],implicitevidence$4:scala.reflect.ClassTag[VD]):org.apache.spark.streaming.dstream.InputDStream[V]"></a>
-      <a id="createDirectStream[K,V,KD&lt;:Decoder[K],VD&lt;:Decoder[V]](StreamingContext,Map[String,String],Set[String],Long)(ClassTag[K],ClassTag[V],ClassTag[KD],ClassTag[VD]):InputDStream[V]"></a>
+      <a id="createDirectStream[K,V,KD&lt;:kafka.serializer.Decoder[K],VD&lt;:kafka.serializer.Decoder[V]](ssc:org.apache.spark.streaming.StreamingContext,kafkaParams:Map[String,String],topics:Set[String],batchInterval:Long)(implicitevidence$5:scala.reflect.ClassTag[K],implicitevidence$6:scala.reflect.ClassTag[V],implicitevidence$7:scala.reflect.ClassTag[KD],implicitevidence$8:scala.reflect.ClassTag[VD]):org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream[K,V,KD,VD,V]"></a>
+      <a id="createDirectStream[K,V,KD&lt;:Decoder[K],VD&lt;:Decoder[V]](StreamingContext,Map[String,String],Set[String],Long)(ClassTag[K],ClassTag[V],ClassTag[KD],ClassTag[VD]):MemSQLDirectKafkaInputDStream[K,V,KD,VD,V]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createDirectStream</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="KD">KD &lt;: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.serializer.Decoder" class="extype" target="_top">Decoder</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.K">K</span>]</span>, <span name="VD">VD &lt;: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.serializer.Decoder" class="extype" target="_top">Decoder</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.V">V</span>]</span>]</span><span class="params">(<span name="ssc">ssc: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>, <span name="kafkaParams">kafkaParams: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="topics">topics: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="batchInterval">batchInterval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.K">K</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.V">V</span>]</span>, <span name="arg2">arg2: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.KD">KD</span>]</span>, <span name="arg3">arg3: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.VD">VD</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.dstream.InputDStream" class="extype" target="_top">InputDStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.V">V</span>]</span>
+        <span class="name">createDirectStream</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="KD">KD &lt;: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.serializer.Decoder" class="extype" target="_top">Decoder</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.K">K</span>]</span>, <span name="VD">VD &lt;: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.serializer.Decoder" class="extype" target="_top">Decoder</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.V">V</span>]</span>]</span><span class="params">(<span name="ssc">ssc: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>, <span name="kafkaParams">kafkaParams: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="topics">topics: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="batchInterval">batchInterval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.K">K</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.V">V</span>]</span>, <span name="arg2">arg2: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.KD">KD</span>]</span>, <span name="arg3">arg3: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.VD">VD</span>]</span>)</span><span class="result">: <a href="MemSQLDirectKafkaInputDStream.html" class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream">MemSQLDirectKafkaInputDStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.K">K</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.V">V</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.KD">KD</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.VD">VD</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStream.V">V</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">:: Experimental ::
@@ -203,8 +229,8 @@ from Kafka is included in transformations exactly once (see points below).</p><p
    by the stream itself. For interoperability with Kafka monitoring tools that depend on
    Zookeeper, you have to update Kafka/Zookeeper yourself from the streaming application.
    You can access the offsets used in each batch from the generated RDDs (see
-   <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming-kafka_2.10/1.4.1/spark-streaming-kafka_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.streaming.kafka.HasOffsetRanges" class="extype" target="_top">org.apache.spark.streaming.kafka.HasOffsetRanges</a>).</li><li>Failure Recovery: To recover from driver failures, you have to enable checkpointing
-   in the <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a>. The information on consumed offset can be
+   <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming-kafka_2.10/1.5.1/spark-streaming-kafka_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.streaming.kafka.HasOffsetRanges" class="extype" target="_top">org.apache.spark.streaming.kafka.HasOffsetRanges</a>).</li><li>Failure Recovery: To recover from driver failures, you have to enable checkpointing
+   in the <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a>. The information on consumed offset can be
    recovered from the checkpoint. See the programming guide for details (constraints, etc.).</li><li>End-to-end semantics: This stream ensures that every records is effectively received and
    transformed exactly once, but gives no guarantees on whether the transformed data are
    outputted exactly once. For end-to-end exactly-once semantics, you have to either ensure
@@ -217,6 +243,44 @@ from Kafka is included in transformations exactly once (see points below).</p><p
   If not starting from a checkpoint, &quot;auto.offset.reset&quot; may be set to &quot;largest&quot; or &quot;smallest&quot;
   to determine where the stream starts (defaults to &quot;largest&quot;)</p></dd><dt class="param">topics</dt><dd class="cmt"><p>Names of the topics to consume</p></dd><dt class="param">batchInterval</dt><dd class="cmt"><p>Batch interval for this pipeline. NOTE: Modified for MemSQL Streamliner
 </p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@Experimental</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils#createDirectStreamFromZookeeper" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="createDirectStreamFromZookeeper[K,V,KD&lt;:kafka.serializer.Decoder[K],VD&lt;:kafka.serializer.Decoder[V]](ssc:org.apache.spark.streaming.StreamingContext,kafkaParams:Map[String,String],topics:Set[String],batchInterval:Long)(implicitevidence$1:scala.reflect.ClassTag[K],implicitevidence$2:scala.reflect.ClassTag[V],implicitevidence$3:scala.reflect.ClassTag[KD],implicitevidence$4:scala.reflect.ClassTag[VD]):org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream[K,V,KD,VD,V]"></a>
+      <a id="createDirectStreamFromZookeeper[K,V,KD&lt;:Decoder[K],VD&lt;:Decoder[V]](StreamingContext,Map[String,String],Set[String],Long)(ClassTag[K],ClassTag[V],ClassTag[KD],ClassTag[VD]):MemSQLDirectKafkaInputDStream[K,V,KD,VD,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">createDirectStreamFromZookeeper</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>, <span name="KD">KD &lt;: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.serializer.Decoder" class="extype" target="_top">Decoder</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStreamFromZookeeper.K">K</span>]</span>, <span name="VD">VD &lt;: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/kafka/kafka_2.10/0.8.2.1/kafka_2.10-0.8.2.1-javadoc.jar/!/index.html#kafka.serializer.Decoder" class="extype" target="_top">Decoder</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStreamFromZookeeper.V">V</span>]</span>]</span><span class="params">(<span name="ssc">ssc: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>, <span name="kafkaParams">kafkaParams: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="topics">topics: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="batchInterval">batchInterval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStreamFromZookeeper.K">K</span>]</span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStreamFromZookeeper.V">V</span>]</span>, <span name="arg2">arg2: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStreamFromZookeeper.KD">KD</span>]</span>, <span name="arg3">arg3: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.reflect.ClassTag" class="extype" target="_top">ClassTag</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStreamFromZookeeper.VD">VD</span>]</span>)</span><span class="result">: <a href="MemSQLDirectKafkaInputDStream.html" class="extype" name="org.apache.spark.streaming.kafka.MemSQLDirectKafkaInputDStream">MemSQLDirectKafkaInputDStream</a>[<span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStreamFromZookeeper.K">K</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStreamFromZookeeper.V">V</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStreamFromZookeeper.KD">KD</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStreamFromZookeeper.VD">VD</span>, <span class="extype" name="org.apache.spark.streaming.kafka.MemSQLKafkaUtils.createDirectStreamFromZookeeper.V">V</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">:: Experimental ::
+Create an input stream that directly pulls messages from Kafka Brokers
+without using any receiver.</p><div class="fullcomment"><div class="comment cmt"><p>:: Experimental ::
+Create an input stream that directly pulls messages from Kafka Brokers
+without using any receiver. This stream can guarantee that each message
+from Kafka is included in transformations exactly once (see points below).
+NOTE: Modified to use Zookeeper quorum for MemSQL Streamliner.</p><p>Points to note:</p><ul><li>No receivers: This stream does not use any receiver. It directly queries Kafka</li><li>Offsets: This does not use Zookeeper to store offsets. The consumed offsets are tracked
+   by the stream itself. For interoperability with Kafka monitoring tools that depend on
+   Zookeeper, you have to update Kafka/Zookeeper yourself from the streaming application.
+   You can access the offsets used in each batch from the generated RDDs (see
+   <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming-kafka_2.10/1.5.1/spark-streaming-kafka_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.streaming.kafka.HasOffsetRanges" class="extype" target="_top">org.apache.spark.streaming.kafka.HasOffsetRanges</a>).</li><li>Failure Recovery: To recover from driver failures, you have to enable checkpointing
+   in the <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a>. The information on consumed offset can be
+   recovered from the checkpoint. See the programming guide for details (constraints, etc.).</li><li>End-to-end semantics: This stream ensures that every records is effectively received and
+   transformed exactly once, but gives no guarantees on whether the transformed data are
+   outputted exactly once. For end-to-end exactly-once semantics, you have to either ensure
+   that the output operation is idempotent, or use transactions to output records atomically.
+   See the programming guide for more details.
+</li></ul></div><dl class="paramcmts block"><dt class="param">ssc</dt><dd class="cmt"><p>StreamingContext object</p></dd><dt class="param">kafkaParams</dt><dd class="cmt"><p>Kafka <a href="http://kafka.apache.org/documentation.html#configuration">
+  configuration parameters</a>. Requires &quot;memsql.zookeeper.connect&quot; to be set with Zookeeper servers,
+  specified in host1:port1,host2:port2/chroot2 form.
+  If not starting from a checkpoint, &quot;auto.offset.reset&quot; may be set to &quot;largest&quot; or &quot;smallest&quot;
+  to determine where the stream starts (defaults to &quot;largest&quot;)</p></dd><dt class="param">topics</dt><dd class="cmt"><p>Names of the topics to consume</p></dd><dt class="param">batchInterval</dt><dd class="cmt"><p>Batch interval for this pipeline. NOTE: Modified for MemSQL Streamliner
+  NOTE: Modified for MemSQL Streamliner</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@Experimental</span><span class="args">()</span>
               
         </dd></dl></div>

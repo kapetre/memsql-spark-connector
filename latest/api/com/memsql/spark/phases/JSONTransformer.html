@@ -35,13 +35,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">JSONTransformer</span><span class="result"> extends <a href="../etl/api/ByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayTransformer">ByteArrayTransformer</a></span>
+        <span class="name">JSONTransformer</span><span class="result"> extends <a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../etl/api/ByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayTransformer">ByteArrayTransformer</a>, <a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Byte" class="extype" target="_top">Byte</a>]], <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a>, <a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.memsql.spark.phases.JSONTransformer"><span>JSONTransformer</span></li><li class="in" name="com.memsql.spark.etl.api.ByteArrayTransformer"><span>ByteArrayTransformer</span></li><li class="in" name="com.memsql.spark.etl.api.Transformer"><span>Transformer</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.memsql.spark.phases.JSONTransformer"><span>JSONTransformer</span></li><li class="in" name="com.memsql.spark.etl.api.StringTransformer"><span>StringTransformer</span></li><li class="in" name="com.memsql.spark.etl.api.Transformer"><span>Transformer</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -179,7 +179,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.memsql.spark.etl.api.ByteArrayTransformer#byteUtils" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="com.memsql.spark.etl.api.StringTransformer#byteUtils" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="byteUtils:com.memsql.spark.etl.utils.ByteUtils.type"></a>
       <a id="byteUtils:ByteUtils.type"></a>
       <h4 class="signature">
@@ -191,7 +191,24 @@
         <span class="name">byteUtils</span><span class="result">: <a href="../etl/utils/ByteUtils$.html" class="extype" name="com.memsql.spark.etl.utils.ByteUtils">ByteUtils</a>.type</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../etl/api/ByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayTransformer">ByteArrayTransformer</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a></dd></dl></div>
+    </li><li name="com.memsql.spark.etl.api.Transformer#cleanup" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cleanup(sqlContext:org.apache.spark.sql.SQLContext,config:com.memsql.spark.etl.api.PhaseConfig,logger:com.memsql.spark.etl.utils.PhaseLogger):Unit"></a>
+      <a id="cleanup(SQLContext,PhaseConfig,PhaseLogger):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cleanup</span><span class="params">(<span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="config">config: <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="logger">logger: <a href="../etl/utils/PhaseLogger.html" class="extype" name="com.memsql.spark.etl.utils.PhaseLogger">PhaseLogger</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cleanup code for your Transformer.</p><div class="fullcomment"><div class="comment cmt"><p>Cleanup code for your Transformer.
+This is called after your pipeline has stopped.
+The default implementation does nothing.
+</p></div><dl class="paramcmts block"><dt class="param">sqlContext</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">org.apache.spark.sql.SQLContext</a> that is used to run this pipeline.</p></dd><dt class="param">config</dt><dd class="cmt"><p>The Transformer configuration passed from MemSQL Ops.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -304,14 +321,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">initialize</span><span class="params">(<span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="transformConfig">transformConfig: <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="logger">logger: <a href="../etl/utils/PhaseLogger.html" class="extype" name="com.memsql.spark.etl.utils.PhaseLogger">PhaseLogger</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">initialize</span><span class="params">(<span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="transformConfig">transformConfig: <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="logger">logger: <a href="../etl/utils/PhaseLogger.html" class="extype" name="com.memsql.spark.etl.utils.PhaseLogger">PhaseLogger</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Initialization code for this Extractor
 </p><div class="fullcomment"><div class="comment cmt"><p>Initialization code for this Extractor
 </p></div><dl class="paramcmts block"><dt class="param">sqlContext</dt><dd class="cmt"><p>The SQLContext that is used to run this pipeline.
                   NOTE: If the pipeline is running in MemSQL Streamliner, this is an instance of
-                  <a href="../context/MemSQLContext.html" class="extype" name="com.memsql.spark.context.MemSQLContext">com.memsql.spark.context.MemSQLContext</a>, which has additional metadata about the MemSQL cluster.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.
+                  <span class="extype" name="com.memsql.spark.context.MemSQLContext">com.memsql.spark.context.MemSQLContext</span>, which has additional metadata about the MemSQL cluster.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.phases.JSONTransformer">JSONTransformer</a> → <a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -392,22 +409,39 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="com.memsql.spark.phases.JSONTransformer#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="transform(sqlContext:org.apache.spark.sql.SQLContext,rdd:org.apache.spark.rdd.RDD[Array[Byte]],transformConfig:com.memsql.spark.etl.api.PhaseConfig,logger:com.memsql.spark.etl.utils.PhaseLogger):org.apache.spark.sql.DataFrame"></a>
-      <a id="transform(SQLContext,RDD[Array[Byte]],PhaseConfig,PhaseLogger):DataFrame"></a>
+      <a id="transform(sqlContext:org.apache.spark.sql.SQLContext,rdd:org.apache.spark.rdd.RDD[String],transformConfig:com.memsql.spark.etl.api.PhaseConfig,logger:com.memsql.spark.etl.utils.PhaseLogger):org.apache.spark.sql.DataFrame"></a>
+      <a id="transform(SQLContext,RDD[String],PhaseConfig,PhaseLogger):DataFrame"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">transform</span><span class="params">(<span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="rdd">rdd: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Byte" class="extype" target="_top">Byte</a>]]</span>, <span name="transformConfig">transformConfig: <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="logger">logger: <a href="../etl/utils/PhaseLogger.html" class="extype" name="com.memsql.spark.etl.utils.PhaseLogger">PhaseLogger</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>
+        <span class="name">transform</span><span class="params">(<span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="rdd">rdd: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="transformConfig">transformConfig: <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="logger">logger: <a href="../etl/utils/PhaseLogger.html" class="extype" name="com.memsql.spark.etl.utils.PhaseLogger">PhaseLogger</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Transforms the incoming <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> into a <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Transforms the incoming <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> into a <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>.
+      <p class="shortcomment cmt">Transforms the incoming <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> of bytes.</p><div class="fullcomment"><div class="comment cmt"><p>Transforms the incoming <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> of bytes.
 </p></div><dl class="paramcmts block"><dt class="param">sqlContext</dt><dd class="cmt"><p>The SQLContext that is used to run this pipeline.
                   NOTE: If the pipeline is running in MemSQL Streamliner, this is an instance of
-                  <a href="../context/MemSQLContext.html" class="extype" name="com.memsql.spark.context.MemSQLContext">com.memsql.spark.context.MemSQLContext</a>, which has additional metadata about the MemSQL cluster.</p></dd><dt class="param">rdd</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> generated by the Extractor for this batch.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.</p></dd><dt>returns</dt><dd class="cmt"><p>A <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> with the transformed data to be loaded.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.phases.JSONTransformer">JSONTransformer</a> → <a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></dd></dl></div>
+                  <span class="extype" name="com.memsql.spark.context.MemSQLContext">com.memsql.spark.context.MemSQLContext</span>, which has additional metadata about the MemSQL cluster.</p></dd><dt class="param">rdd</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> generated by the Extractor for this batch.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.</p></dd><dt>returns</dt><dd class="cmt"><p>A <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> with the transformed data to be loaded.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.phases.JSONTransformer">JSONTransformer</a> → <a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a></dd></dl></div>
+    </li><li name="com.memsql.spark.etl.api.StringTransformer#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="transform(sqlContext:org.apache.spark.sql.SQLContext,df:org.apache.spark.sql.DataFrame,config:com.memsql.spark.etl.api.PhaseConfig,logger:com.memsql.spark.etl.utils.PhaseLogger):org.apache.spark.sql.DataFrame"></a>
+      <a id="transform(SQLContext,DataFrame,PhaseConfig,PhaseLogger):DataFrame"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">transform</span><span class="params">(<span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="df">df: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>, <span name="config">config: <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="logger">logger: <a href="../etl/utils/PhaseLogger.html" class="extype" name="com.memsql.spark.etl.utils.PhaseLogger">PhaseLogger</a></span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Transforms the incoming <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Transforms the incoming <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>.
+</p></div><dl class="paramcmts block"><dt class="param">sqlContext</dt><dd class="cmt"><p>The SQLContext that is used to run this pipeline.
+                  NOTE: If the pipeline is running in MemSQL Streamliner, this is an instance of
+                  <span class="extype" name="com.memsql.spark.context.MemSQLContext">com.memsql.spark.context.MemSQLContext</span>, which has additional metadata about the MemSQL cluster.</p></dd><dt class="param">df</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> generated by the Extractor for this batch.</p></dd><dt class="param">config</dt><dd class="cmt"><p>The Transformer configuration passed from MemSQL Ops.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.</p></dd><dt>returns</dt><dd class="cmt"><p>A <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> with the transformed data to be loaded.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a> → <a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -474,10 +508,10 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="com.memsql.spark.etl.api.ByteArrayTransformer">
-              <h3>Inherited from <a href="../etl/api/ByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayTransformer">ByteArrayTransformer</a></h3>
+        <div class="parent" name="com.memsql.spark.etl.api.StringTransformer">
+              <h3>Inherited from <a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a></h3>
             </div><div class="parent" name="com.memsql.spark.etl.api.Transformer">
-              <h3>Inherited from <a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Byte" class="extype" target="_top">Byte</a>]]</h3>
+              <h3>Inherited from <a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></h3>
             </div><div class="parent" name="scala.Serializable">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></h3>
             </div><div class="parent" name="java.io.Serializable">

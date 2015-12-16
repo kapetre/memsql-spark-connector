@@ -24,9 +24,9 @@
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../../../../lib/class_big.png" />
+        <a href="BigIntUnsignedValue$.html" title="Go to companion"><img src="../../../../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a href="../../../../package.html" class="extype" name="com">com</a>.<a href="../../../package.html" class="extype" name="com.memsql">memsql</a>.<a href="../../package.html" class="extype" name="com.memsql.spark">spark</a>.<a href="../package.html" class="extype" name="com.memsql.spark.connector">connector</a>.<a href="package.html" class="extype" name="com.memsql.spark.connector.dataframe">dataframe</a></p>
-        <h1>BigIntUnsignedValue</h1>
+        <h1><a href="BigIntUnsignedValue$.html" title="Go to companion">BigIntUnsignedValue</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,7 +35,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">BigIntUnsignedValue</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <span class="name">BigIntUnsignedValue</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a> with <a href="MemSQLCustomType.html" class="extype" name="com.memsql.spark.connector.dataframe.MemSQLCustomType">MemSQLCustomType</a></span>
       </span>
       </h4>
       
@@ -44,7 +44,7 @@
               
         </dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="MemSQLCustomType.html" class="extype" name="com.memsql.spark.connector.dataframe.MemSQLCustomType">MemSQLCustomType</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -62,7 +62,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.memsql.spark.connector.dataframe.BigIntUnsignedValue"><span>BigIntUnsignedValue</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.memsql.spark.connector.dataframe.BigIntUnsignedValue"><span>BigIntUnsignedValue</span></li><li class="in" name="com.memsql.spark.connector.dataframe.MemSQLCustomType"><span>MemSQLCustomType</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -83,7 +83,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.memsql.spark.connector.dataframe.BigIntUnsignedValue#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(value:Long):com.memsql.spark.connector.dataframe.BigIntUnsignedValue"></a>
+      <a id="&lt;init&gt;(signedLongValue:Long):com.memsql.spark.connector.dataframe.BigIntUnsignedValue"></a>
       <a id="&lt;init&gt;:BigIntUnsignedValue"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -91,7 +91,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">BigIntUnsignedValue</span><span class="params">(<span name="value">value: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span>
+        <span class="name">BigIntUnsignedValue</span><span class="params">(<span name="signedLongValue">signedLongValue: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span>
       </span>
       </h4>
       
@@ -214,8 +214,8 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a>
+    </li><li name="com.memsql.spark.connector.dataframe.BigIntUnsignedValue#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(that:Any):Boolean"></a>
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -223,10 +223,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="that">that: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.connector.dataframe.BigIntUnsignedValue">BigIntUnsignedValue</a> → AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
@@ -324,6 +324,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.memsql.spark.connector.dataframe.BigIntUnsignedValue#signedLongValue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="signedLongValue:Long"></a>
+      <a id="signedLongValue:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">signedLongValue</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -351,15 +364,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.connector.dataframe.BigIntUnsignedValue">BigIntUnsignedValue</a> → AnyRef → Any</dd></dl></div>
     </li><li name="com.memsql.spark.connector.dataframe.BigIntUnsignedValue#value" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="value:Long"></a>
-      <a id="value:Long"></a>
+      <a id="value:scala.math.BigDecimal"></a>
+      <a id="value:BigDecimal"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">value</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>
+        <span class="name">value</span><span class="result">: <span class="extype" name="scala.math.BigDecimal">BigDecimal</span></span>
       </span>
       </h4>
       
@@ -429,7 +442,9 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.Serializable">
+        <div class="parent" name="com.memsql.spark.connector.dataframe.MemSQLCustomType">
+              <h3>Inherited from <a href="MemSQLCustomType.html" class="extype" name="com.memsql.spark.connector.dataframe.MemSQLCustomType">MemSQLCustomType</a></h3>
+            </div><div class="parent" name="scala.Serializable">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>

@@ -240,16 +240,16 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#getConnection" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getConnection(host:String,port:Int,user:String,password:String,dbName:String):java.sql.Connection"></a>
-      <a id="getConnection(String,Int,String,String,String):Connection"></a>
+    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#getPerPartitionSql" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getPerPartitionSql(template:String,dbName:String,idx:Int):String"></a>
+      <a id="getPerPartitionSql(String,String,Int):String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getConnection</span><span class="params">(<span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dbName">dbName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;information_schema&quot;</span></span>)</span><span class="result">: <span class="extype" name="java.sql.Connection">Connection</span></span>
+        <span class="name">getPerPartitionSql</span><span class="params">(<span name="template">template: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dbName">dbName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="idx">idx: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
       
@@ -318,29 +318,16 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#resultSetToIterator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="resultSetToIterator(rs:java.sql.ResultSet):Iterator[java.sql.ResultSet]"></a>
-      <a id="resultSetToIterator(ResultSet):Iterator[ResultSet]"></a>
+    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#resultSetToArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="resultSetToArray(rs:java.sql.ResultSet):Array[Any]"></a>
+      <a id="resultSetToArray(ResultSet):Array[Any]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resultSetToIterator</span><span class="params">(<span name="rs">rs: <span class="extype" name="java.sql.ResultSet">ResultSet</span></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="java.sql.ResultSet">ResultSet</span>]</span>
-      </span>
-      </h4>
-      
-    </li><li name="com.memsql.spark.connector.rdd.MemSQLRDD#resultSetToObjectArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="resultSetToObjectArray(rs:java.sql.ResultSet):Array[Object]"></a>
-      <a id="resultSetToObjectArray(ResultSet):Array[AnyRef]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">resultSetToObjectArray</span><span class="params">(<span name="rs">rs: <span class="extype" name="java.sql.ResultSet">ResultSet</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>]</span>
+        <span class="name">resultSetToArray</span><span class="params">(<span name="rs">rs: <span class="extype" name="java.sql.ResultSet">ResultSet</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Array" class="extype" target="_top">Array</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
       </span>
       </h4>
       

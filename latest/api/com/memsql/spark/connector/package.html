@@ -82,44 +82,71 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="com.memsql.spark.connector.DataFrameFunctions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DataFrameFunctionsextendsSerializable"></a>
+      <a id="DataFrameFunctionsextendsSparkImplicits.DataFrameFunctions"></a>
       <a id="DataFrameFunctions:DataFrameFunctions"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">implicit </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="DataFrameFunctions.html"><span class="name">DataFrameFunctions</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="package$$DataFrameFunctions.html"><span class="name">DataFrameFunctions</span></a><span class="result"> extends <a href="../../../../org/apache/spark/sql/memsql/SparkImplicits$$DataFrameFunctions.html" class="extype" name="org.apache.spark.sql.memsql.SparkImplicits.DataFrameFunctions">org.apache.spark.sql.memsql.SparkImplicits.DataFrameFunctions</a></span>
       </span>
       </h4>
       
-    </li><li name="com.memsql.spark.connector.RDDFunctions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RDDFunctionsextendsSerializablewithLogging"></a>
-      <a id="RDDFunctions:RDDFunctions"></a>
+    </li><li name="com.memsql.spark.connector.DefaultSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultSourceextendsDefaultSource"></a>
+      <a id="DefaultSource:DefaultSource"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="RDDFunctions.html"><span class="name">RDDFunctions</span></a><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span> with <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a></span>
+        <a href="DefaultSource.html"><span class="name">DefaultSource</span></a><span class="result"> extends <a href="../../../../org/apache/spark/sql/memsql/DefaultSource.html" class="extype" name="org.apache.spark.sql.memsql.DefaultSource">org.apache.spark.sql.memsql.DefaultSource</a></span>
+      </span>
+      </h4>
+      <p class="comment cmt">This class is a proxy for the actual implementation in org.</p>
+    </li><li name="com.memsql.spark.connector.MemSQLCluster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLClusterextendsProductwithSerializable"></a>
+      <a id="MemSQLCluster:MemSQLCluster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLCluster.html"><span class="name">MemSQLCluster</span></a><span class="params">(<span name="conf">conf: <a href="MemSQLConf.html" class="extype" name="com.memsql.spark.connector.MemSQLConf">MemSQLConf</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       
-    </li><li name="com.memsql.spark.connector.SaveToMemSQLException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="SaveToMemSQLExceptionextendsException"></a>
-      <a id="SaveToMemSQLException:SaveToMemSQLException"></a>
+    </li><li name="com.memsql.spark.connector.MemSQLConf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLConfextendsProductwithSerializable"></a>
+      <a id="MemSQLConf:MemSQLConf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MemSQLConf.html"><span class="name">MemSQLConf</span></a><span class="params">(<span name="masterHost">masterHost: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="masterPort">masterPort: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="defaultDBName">defaultDBName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="defaultSaveMode">defaultSaveMode: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SaveMode" class="extype" target="_top">SaveMode</a></span>, <span name="defaultCreateMode">defaultCreateMode: <a href="../../../../org/apache/spark/sql/memsql/CreateMode$.html#CreateMode=org.apache.spark.sql.memsql.CreateMode.Value" class="extmbr" name="org.apache.spark.sql.memsql.CreateMode.CreateMode">CreateMode</a></span>, <span name="defaultInsertBatchSize">defaultInsertBatchSize: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="defaultLoadDataCompression">defaultLoadDataCompression: <a href="../../../../org/apache/spark/sql/memsql/CompressionType$.html#CompressionType=org.apache.spark.sql.memsql.CompressionType.Value" class="extmbr" name="org.apache.spark.sql.memsql.CompressionType.CompressionType">CompressionType</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.connector.MemSQLContext" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLContextextendsMemSQLContext"></a>
+      <a id="MemSQLContext:MemSQLContext"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="SaveToMemSQLException.html"><span class="name">SaveToMemSQLException</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+        <a href="MemSQLContext.html"><span class="name">MemSQLContext</span></a><span class="result"> extends <a href="../../../../org/apache/spark/sql/memsql/MemSQLContext.html" class="extype" name="org.apache.spark.sql.memsql.MemSQLContext">org.apache.spark.sql.memsql.MemSQLContext</a></span>
       </span>
       </h4>
-      
+      <p class="comment cmt">This class is just a proxy so you can import from
+com.</p>
     </li></ol>
             </div>
 
@@ -127,29 +154,29 @@
 
         <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li name="com.memsql.spark.connector.OnDupKeyBehavior" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="OnDupKeyBehavior"></a>
-      <a id="OnDupKeyBehavior:OnDupKeyBehavior"></a>
+              <ol><li name="com.memsql.spark.connector.MemSQLConf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLConf"></a>
+      <a id="MemSQLConf:MemSQLConf"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="OnDupKeyBehavior$.html"><span class="name">OnDupKeyBehavior</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Enumeration" class="extype" target="_top">Enumeration</a></span>
+        <a href="MemSQLConf$.html"><span class="name">MemSQLConf</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       
-    </li><li name="com.memsql.spark.connector.RDDFunctions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RDDFunctions"></a>
-      <a id="RDDFunctions:RDDFunctions"></a>
+    </li><li name="com.memsql.spark.connector.MemSQLConnectionPool" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemSQLConnectionPool"></a>
+      <a id="MemSQLConnectionPool:MemSQLConnectionPool"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="RDDFunctions$.html"><span class="name">RDDFunctions</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="MemSQLConnectionPool$.html"><span class="name">MemSQLConnectionPool</span></a>
       </span>
       </h4>
       
@@ -179,29 +206,29 @@
       </span>
       </h4>
       
-    </li><li name="com.memsql.spark.connector.package#toDataFrameFunctions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toDataFrameFunctions(df:org.apache.spark.sql.DataFrame):com.memsql.spark.connector.DataFrameFunctions"></a>
-      <a id="toDataFrameFunctions(DataFrame):DataFrameFunctions"></a>
+    </li><li name="com.memsql.spark.connector.sql" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sql"></a>
+      <a id="sql:sql"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
+        <span class="modifier"></span>
+        <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <span class="name">toDataFrameFunctions</span><span class="params">(<span name="df">df: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a></span>)</span><span class="result">: <a href="DataFrameFunctions.html" class="extype" name="com.memsql.spark.connector.DataFrameFunctions">DataFrameFunctions</a></span>
+        <a href="sql/package.html"><span class="name">sql</span></a>
       </span>
       </h4>
       
-    </li><li name="com.memsql.spark.connector.package#toRDDFunctions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toRDDFunctions(rdd:org.apache.spark.rdd.RDD[org.apache.spark.sql.Row]):com.memsql.spark.connector.RDDFunctions"></a>
-      <a id="toRDDFunctions(RDD[Row]):RDDFunctions"></a>
+    </li><li name="com.memsql.spark.connector.util" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="util"></a>
+      <a id="util:util"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
+        <span class="modifier"></span>
+        <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <span class="name">toRDDFunctions</span><span class="params">(<span name="rdd">rdd: <a href="https://spark.apache.org/docs/1.4.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.4.1/spark-catalyst_2.10-1.4.1-javadoc.jar/!/index.html#org.apache.spark.sql.Row" class="extype" target="_top">Row</a>]</span>)</span><span class="result">: <a href="RDDFunctions.html" class="extype" name="com.memsql.spark.connector.RDDFunctions">RDDFunctions</a></span>
+        <a href="util/package.html"><span class="name">util</span></a>
       </span>
       </h4>
       

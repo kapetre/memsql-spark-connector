@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">PipelineInstance</span><span class="params">(<span name="extractor">extractor: <a href="../../etl/api/ByteArrayExtractor.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayExtractor">ByteArrayExtractor</a></span>, <span name="extractConfig">extractConfig: <a href="../../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="transformer">transformer: <a href="../../etl/api/ByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayTransformer">ByteArrayTransformer</a></span>, <span name="transformConfig">transformConfig: <a href="../../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="loader">loader: <a href="../../etl/api/Loader.html" class="extype" name="com.memsql.spark.etl.api.Loader">Loader</a></span>, <span name="loadConfig">loadConfig: <a href="../../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <span class="name">PipelineInstance</span><span class="params">(<span name="extractor">extractor: <a href="../../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></span>, <span name="extractConfig">extractConfig: <a href="../../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="transformer">transformer: <a href="../../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></span>, <span name="transformConfig">transformConfig: <a href="../../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="loader">loader: <a href="../../etl/api/Loader.html" class="extype" name="com.memsql.spark.etl.api.Loader">Loader</a></span>, <span name="loadConfig">loadConfig: <a href="../../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       
@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.memsql.spark.interface.api.PipelineInstance#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(extractor:com.memsql.spark.etl.api.ByteArrayExtractor,extractConfig:com.memsql.spark.etl.api.PhaseConfig,transformer:com.memsql.spark.etl.api.ByteArrayTransformer,transformConfig:com.memsql.spark.etl.api.PhaseConfig,loader:com.memsql.spark.etl.api.Loader,loadConfig:com.memsql.spark.etl.api.PhaseConfig):com.memsql.spark.interface.api.PipelineInstance"></a>
+      <a id="&lt;init&gt;(extractor:com.memsql.spark.etl.api.Extractor,extractConfig:com.memsql.spark.etl.api.PhaseConfig,transformer:com.memsql.spark.etl.api.Transformer,transformConfig:com.memsql.spark.etl.api.PhaseConfig,loader:com.memsql.spark.etl.api.Loader,loadConfig:com.memsql.spark.etl.api.PhaseConfig):com.memsql.spark.interface.api.PipelineInstance"></a>
       <a id="&lt;init&gt;:PipelineInstance"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">PipelineInstance</span><span class="params">(<span name="extractor">extractor: <a href="../../etl/api/ByteArrayExtractor.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayExtractor">ByteArrayExtractor</a></span>, <span name="extractConfig">extractConfig: <a href="../../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="transformer">transformer: <a href="../../etl/api/ByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayTransformer">ByteArrayTransformer</a></span>, <span name="transformConfig">transformConfig: <a href="../../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="loader">loader: <a href="../../etl/api/Loader.html" class="extype" name="com.memsql.spark.etl.api.Loader">Loader</a></span>, <span name="loadConfig">loadConfig: <a href="../../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>)</span>
+        <span class="name">PipelineInstance</span><span class="params">(<span name="extractor">extractor: <a href="../../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></span>, <span name="extractConfig">extractConfig: <a href="../../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="transformer">transformer: <a href="../../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></span>, <span name="transformConfig">transformConfig: <a href="../../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="loader">loader: <a href="../../etl/api/Loader.html" class="extype" name="com.memsql.spark.etl.api.Loader">Loader</a></span>, <span name="loadConfig">loadConfig: <a href="../../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>)</span>
       </span>
       </h4>
       
@@ -225,15 +225,15 @@
       </h4>
       
     </li><li name="com.memsql.spark.interface.api.PipelineInstance#extractor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="extractor:com.memsql.spark.etl.api.ByteArrayExtractor"></a>
-      <a id="extractor:ByteArrayExtractor"></a>
+      <a id="extractor:com.memsql.spark.etl.api.Extractor"></a>
+      <a id="extractor:Extractor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">extractor</span><span class="result">: <a href="../../etl/api/ByteArrayExtractor.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayExtractor">ByteArrayExtractor</a></span>
+        <span class="name">extractor</span><span class="result">: <a href="../../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></span>
       </span>
       </h4>
       
@@ -374,15 +374,15 @@
       </h4>
       
     </li><li name="com.memsql.spark.interface.api.PipelineInstance#transformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="transformer:com.memsql.spark.etl.api.ByteArrayTransformer"></a>
-      <a id="transformer:ByteArrayTransformer"></a>
+      <a id="transformer:com.memsql.spark.etl.api.Transformer"></a>
+      <a id="transformer:Transformer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">transformer</span><span class="result">: <a href="../../etl/api/ByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayTransformer">ByteArrayTransformer</a></span>
+        <span class="name">transformer</span><span class="result">: <a href="../../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></span>
       </span>
       </h4>
       
