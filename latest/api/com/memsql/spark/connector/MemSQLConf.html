@@ -39,7 +39,25 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Configuration for a MemSQL cluster. By default these parameters are set by the corresponding
+value in the Spark configuration.
+</p></div><dl class="paramcmts block"><dt class="param">masterHost</dt><dd class="cmt"><p>Hostname of the MemSQL Master Aggregator. Corresponds to &quot;memsql.host&quot;
+                  in the Spark configuration.</p></dd><dt class="param">masterPort</dt><dd class="cmt"><p>Port of the MemSQL Master Aggregator. Corresponds to &quot;memsql.port&quot;
+                  in the Spark configuration.</p></dd><dt class="param">user</dt><dd class="cmt"><p>Username to use when connecting to the MemSQL Master Aggregator. Corresponds to
+            &quot;memsql.user&quot; in the Spark configuration.</p></dd><dt class="param">password</dt><dd class="cmt"><p>Password to use when connecting to the MemSQL Master Aggregator. Corresponds to
+                &quot;memsql.password&quot; in the Spark configuration.</p></dd><dt class="param">defaultDBName</dt><dd class="cmt"><p>The default database to use when connecting to the cluster. Corresponds to
+                     &quot;memsql.defaultDatabase&quot; in the Spark configuration.</p></dd><dt class="param">defaultSaveMode</dt><dd class="cmt"><p>The default <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SaveMode" class="extype" target="_top">org.apache.spark.sql.SaveMode</a> to use when writingsaving
+                       <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>s to a MemSQL table. Corresponds to
+                       &quot;memsql.defaultSaveMode&quot; in the Spark configuration.</p></dd><dt class="param">defaultCreateMode</dt><dd class="cmt"><p>The default <a href="../../../../org/apache/spark/sql/memsql/CreateMode$.html" class="extype" name="org.apache.spark.sql.memsql.CreateMode">org.apache.spark.sql.memsql.CreateMode</a> to use
+                         when creating a MemSQL table. Corresponds to &quot;memsql.defaultCreateMode&quot;
+                         in the Spark configuration.</p></dd><dt class="param">defaultInsertBatchSize</dt><dd class="cmt"><p>The default batch insert size to use when writing to a
+                              MemSQL table using <a href="../../../../org/apache/spark/sql/memsql/InsertStrategy.html" class="extype" name="org.apache.spark.sql.memsql.InsertStrategy">org.apache.spark.sql.memsql.InsertStrategy</a>.
+                              Corresponds to &quot;memsql.defaultInsertBatchSize&quot; in the Spark
+                              configuration.</p></dd><dt class="param">defaultLoadDataCompression</dt><dd class="cmt"><p>The default <a href="../../../../org/apache/spark/sql/memsql/CompressionType$.html" class="extype" name="org.apache.spark.sql.memsql.CompressionType">org.apache.spark.sql.memsql.CompressionType</a> to
+                                  use when writing to a MemSQL table using
+                                  <a href="../../../../org/apache/spark/sql/memsql/LoadDataStrategy.html" class="extype" name="org.apache.spark.sql.memsql.LoadDataStrategy">org.apache.spark.sql.memsql.LoadDataStrategy</a>. Corresponds to
+                                  &quot;memsql.defaultLoadDataCompression&quot; in the Spark configuration.
+</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Equals" class="extype" target="_top">Equals</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
@@ -79,7 +97,7 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="com.memsql.spark.connector.MemSQLConf#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="com.memsql.spark.connector.MemSQLConf#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&lt;init&gt;(masterHost:String,masterPort:Int,user:String,password:String,defaultDBName:String,defaultSaveMode:org.apache.spark.sql.SaveMode,defaultCreateMode:org.apache.spark.sql.memsql.CreateMode.CreateMode,defaultInsertBatchSize:Int,defaultLoadDataCompression:org.apache.spark.sql.memsql.CompressionType.CompressionType):com.memsql.spark.connector.MemSQLConf"></a>
       <a id="&lt;init&gt;:MemSQLConf"></a>
       <h4 class="signature">
@@ -91,7 +109,23 @@
         <span class="name">MemSQLConf</span><span class="params">(<span name="masterHost">masterHost: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="masterPort">masterPort: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="defaultDBName">defaultDBName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="defaultSaveMode">defaultSaveMode: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SaveMode" class="extype" target="_top">SaveMode</a></span>, <span name="defaultCreateMode">defaultCreateMode: <a href="../../../../org/apache/spark/sql/memsql/CreateMode$.html#CreateMode=org.apache.spark.sql.memsql.CreateMode.Value" class="extmbr" name="org.apache.spark.sql.memsql.CreateMode.CreateMode">CreateMode</a></span>, <span name="defaultInsertBatchSize">defaultInsertBatchSize: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="defaultLoadDataCompression">defaultLoadDataCompression: <a href="../../../../org/apache/spark/sql/memsql/CompressionType$.html#CompressionType=org.apache.spark.sql.memsql.CompressionType.Value" class="extmbr" name="org.apache.spark.sql.memsql.CompressionType.CompressionType">CompressionType</a></span>)</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">masterHost</dt><dd class="cmt"><p>Hostname of the MemSQL Master Aggregator. Corresponds to &quot;memsql.host&quot;
+                  in the Spark configuration.</p></dd><dt class="param">masterPort</dt><dd class="cmt"><p>Port of the MemSQL Master Aggregator. Corresponds to &quot;memsql.port&quot;
+                  in the Spark configuration.</p></dd><dt class="param">user</dt><dd class="cmt"><p>Username to use when connecting to the MemSQL Master Aggregator. Corresponds to
+            &quot;memsql.user&quot; in the Spark configuration.</p></dd><dt class="param">password</dt><dd class="cmt"><p>Password to use when connecting to the MemSQL Master Aggregator. Corresponds to
+                &quot;memsql.password&quot; in the Spark configuration.</p></dd><dt class="param">defaultDBName</dt><dd class="cmt"><p>The default database to use when connecting to the cluster. Corresponds to
+                     &quot;memsql.defaultDatabase&quot; in the Spark configuration.</p></dd><dt class="param">defaultSaveMode</dt><dd class="cmt"><p>The default <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SaveMode" class="extype" target="_top">org.apache.spark.sql.SaveMode</a> to use when writingsaving
+                       <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>s to a MemSQL table. Corresponds to
+                       &quot;memsql.defaultSaveMode&quot; in the Spark configuration.</p></dd><dt class="param">defaultCreateMode</dt><dd class="cmt"><p>The default <a href="../../../../org/apache/spark/sql/memsql/CreateMode$.html" class="extype" name="org.apache.spark.sql.memsql.CreateMode">org.apache.spark.sql.memsql.CreateMode</a> to use
+                         when creating a MemSQL table. Corresponds to &quot;memsql.defaultCreateMode&quot;
+                         in the Spark configuration.</p></dd><dt class="param">defaultInsertBatchSize</dt><dd class="cmt"><p>The default batch insert size to use when writing to a
+                              MemSQL table using <a href="../../../../org/apache/spark/sql/memsql/InsertStrategy.html" class="extype" name="org.apache.spark.sql.memsql.InsertStrategy">org.apache.spark.sql.memsql.InsertStrategy</a>.
+                              Corresponds to &quot;memsql.defaultInsertBatchSize&quot; in the Spark
+                              configuration.</p></dd><dt class="param">defaultLoadDataCompression</dt><dd class="cmt"><p>The default <a href="../../../../org/apache/spark/sql/memsql/CompressionType$.html" class="extype" name="org.apache.spark.sql.memsql.CompressionType">org.apache.spark.sql.memsql.CompressionType</a> to
+                                  use when writing to a MemSQL table using
+                                  <a href="../../../../org/apache/spark/sql/memsql/LoadDataStrategy.html" class="extype" name="org.apache.spark.sql.memsql.LoadDataStrategy">org.apache.spark.sql.memsql.LoadDataStrategy</a>. Corresponds to
+                                  &quot;memsql.defaultLoadDataCompression&quot; in the Spark configuration.
+</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -198,7 +232,7 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.memsql.spark.connector.MemSQLConf#defaultCreateMode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.memsql.spark.connector.MemSQLConf#defaultCreateMode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="defaultCreateMode:org.apache.spark.sql.memsql.CreateMode.CreateMode"></a>
       <a id="defaultCreateMode:CreateMode"></a>
       <h4 class="signature">
@@ -210,8 +244,11 @@
         <span class="name">defaultCreateMode</span><span class="result">: <a href="../../../../org/apache/spark/sql/memsql/CreateMode$.html#CreateMode=org.apache.spark.sql.memsql.CreateMode.Value" class="extmbr" name="org.apache.spark.sql.memsql.CreateMode.CreateMode">CreateMode</a></span>
       </span>
       </h4>
-      
-    </li><li name="com.memsql.spark.connector.MemSQLConf#defaultDBName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">The default <a href="../../../../org/apache/spark/sql/memsql/CreateMode$.html" class="extype" name="org.apache.spark.sql.memsql.CreateMode">org.apache.spark.sql.memsql.CreateMode</a> to use
+                         when creating a MemSQL table.</p><div class="fullcomment"><div class="comment cmt"><p>The default <a href="../../../../org/apache/spark/sql/memsql/CreateMode$.html" class="extype" name="org.apache.spark.sql.memsql.CreateMode">org.apache.spark.sql.memsql.CreateMode</a> to use
+                         when creating a MemSQL table. Corresponds to &quot;memsql.defaultCreateMode&quot;
+                         in the Spark configuration.</p></div></div>
+    </li><li name="com.memsql.spark.connector.MemSQLConf#defaultDBName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="defaultDBName:String"></a>
       <a id="defaultDBName:String"></a>
       <h4 class="signature">
@@ -223,8 +260,9 @@
         <span class="name">defaultDBName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
-    </li><li name="com.memsql.spark.connector.MemSQLConf#defaultInsertBatchSize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">The default database to use when connecting to the cluster.</p><div class="fullcomment"><div class="comment cmt"><p>The default database to use when connecting to the cluster. Corresponds to
+                     &quot;memsql.defaultDatabase&quot; in the Spark configuration.</p></div></div>
+    </li><li name="com.memsql.spark.connector.MemSQLConf#defaultInsertBatchSize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="defaultInsertBatchSize:Int"></a>
       <a id="defaultInsertBatchSize:Int"></a>
       <h4 class="signature">
@@ -236,8 +274,12 @@
         <span class="name">defaultInsertBatchSize</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
       </h4>
-      
-    </li><li name="com.memsql.spark.connector.MemSQLConf#defaultLoadDataCompression" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">The default batch insert size to use when writing to a
+                              MemSQL table using <a href="../../../../org/apache/spark/sql/memsql/InsertStrategy.html" class="extype" name="org.apache.spark.sql.memsql.InsertStrategy">org.apache.spark.sql.memsql.InsertStrategy</a>.</p><div class="fullcomment"><div class="comment cmt"><p>The default batch insert size to use when writing to a
+                              MemSQL table using <a href="../../../../org/apache/spark/sql/memsql/InsertStrategy.html" class="extype" name="org.apache.spark.sql.memsql.InsertStrategy">org.apache.spark.sql.memsql.InsertStrategy</a>.
+                              Corresponds to &quot;memsql.defaultInsertBatchSize&quot; in the Spark
+                              configuration.</p></div></div>
+    </li><li name="com.memsql.spark.connector.MemSQLConf#defaultLoadDataCompression" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="defaultLoadDataCompression:org.apache.spark.sql.memsql.CompressionType.CompressionType"></a>
       <a id="defaultLoadDataCompression:CompressionType"></a>
       <h4 class="signature">
@@ -249,8 +291,14 @@
         <span class="name">defaultLoadDataCompression</span><span class="result">: <a href="../../../../org/apache/spark/sql/memsql/CompressionType$.html#CompressionType=org.apache.spark.sql.memsql.CompressionType.Value" class="extmbr" name="org.apache.spark.sql.memsql.CompressionType.CompressionType">CompressionType</a></span>
       </span>
       </h4>
-      
-    </li><li name="com.memsql.spark.connector.MemSQLConf#defaultSaveMode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">The default <a href="../../../../org/apache/spark/sql/memsql/CompressionType$.html" class="extype" name="org.apache.spark.sql.memsql.CompressionType">org.apache.spark.sql.memsql.CompressionType</a> to
+                                  use when writing to a MemSQL table using
+                                  <a href="../../../../org/apache/spark/sql/memsql/LoadDataStrategy.html" class="extype" name="org.apache.spark.sql.memsql.LoadDataStrategy">org.apache.spark.sql.memsql.LoadDataStrategy</a>.</p><div class="fullcomment"><div class="comment cmt"><p>The default <a href="../../../../org/apache/spark/sql/memsql/CompressionType$.html" class="extype" name="org.apache.spark.sql.memsql.CompressionType">org.apache.spark.sql.memsql.CompressionType</a> to
+                                  use when writing to a MemSQL table using
+                                  <a href="../../../../org/apache/spark/sql/memsql/LoadDataStrategy.html" class="extype" name="org.apache.spark.sql.memsql.LoadDataStrategy">org.apache.spark.sql.memsql.LoadDataStrategy</a>. Corresponds to
+                                  &quot;memsql.defaultLoadDataCompression&quot; in the Spark configuration.
+</p></div></div>
+    </li><li name="com.memsql.spark.connector.MemSQLConf#defaultSaveMode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="defaultSaveMode:org.apache.spark.sql.SaveMode"></a>
       <a id="defaultSaveMode:SaveMode"></a>
       <h4 class="signature">
@@ -262,7 +310,10 @@
         <span class="name">defaultSaveMode</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SaveMode" class="extype" target="_top">SaveMode</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The default <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SaveMode" class="extype" target="_top">org.apache.spark.sql.SaveMode</a> to use when writingsaving
+                       <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>s to a MemSQL table.</p><div class="fullcomment"><div class="comment cmt"><p>The default <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SaveMode" class="extype" target="_top">org.apache.spark.sql.SaveMode</a> to use when writingsaving
+                       <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>s to a MemSQL table. Corresponds to
+                       &quot;memsql.defaultSaveMode&quot; in the Spark configuration.</p></div></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -334,7 +385,7 @@
       </span>
       </h4>
       
-    </li><li name="com.memsql.spark.connector.MemSQLConf#masterHost" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.memsql.spark.connector.MemSQLConf#masterHost" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="masterHost:String"></a>
       <a id="masterHost:String"></a>
       <h4 class="signature">
@@ -346,8 +397,9 @@
         <span class="name">masterHost</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
-    </li><li name="com.memsql.spark.connector.MemSQLConf#masterPort" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <p class="shortcomment cmt">Hostname of the MemSQL Master Aggregator.</p><div class="fullcomment"><div class="comment cmt"><p>Hostname of the MemSQL Master Aggregator. Corresponds to &quot;memsql.host&quot;
+                  in the Spark configuration.</p></div></div>
+    </li><li name="com.memsql.spark.connector.MemSQLConf#masterPort" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="masterPort:Int"></a>
       <a id="masterPort:Int"></a>
       <h4 class="signature">
@@ -359,7 +411,8 @@
         <span class="name">masterPort</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Port of the MemSQL Master Aggregator.</p><div class="fullcomment"><div class="comment cmt"><p>Port of the MemSQL Master Aggregator. Corresponds to &quot;memsql.port&quot;
+                  in the Spark configuration.</p></div></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -399,7 +452,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.memsql.spark.connector.MemSQLConf#password" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.memsql.spark.connector.MemSQLConf#password" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="password:String"></a>
       <a id="password:String"></a>
       <h4 class="signature">
@@ -411,7 +464,8 @@
         <span class="name">password</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Password to use when connecting to the MemSQL Master Aggregator.</p><div class="fullcomment"><div class="comment cmt"><p>Password to use when connecting to the MemSQL Master Aggregator. Corresponds to
+                &quot;memsql.password&quot; in the Spark configuration.</p></div></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -425,7 +479,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.memsql.spark.connector.MemSQLConf#user" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.memsql.spark.connector.MemSQLConf#user" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="user:String"></a>
       <a id="user:String"></a>
       <h4 class="signature">
@@ -437,7 +491,8 @@
         <span class="name">user</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Username to use when connecting to the MemSQL Master Aggregator.</p><div class="fullcomment"><div class="comment cmt"><p>Username to use when connecting to the MemSQL Master Aggregator. Corresponds to
+            &quot;memsql.user&quot; in the Spark configuration.</p></div></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
