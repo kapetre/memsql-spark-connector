@@ -58,8 +58,34 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="com.memsql.spark.phases.CSVTransformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="CSVTransformerextendsStringTransformer"></a>
+              <ol><li name="com.memsql.spark.phases.CSVSamplingTransformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CSVSamplingTransformerextendsCSVTransformerBase"></a>
+      <a id="CSVSamplingTransformer:CSVSamplingTransformer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CSVSamplingTransformer.html"><span class="name">CSVSamplingTransformer</span></a><span class="result"> extends <a href="CSVTransformerBase.html" class="extype" name="com.memsql.spark.phases.CSVTransformerBase">CSVTransformerBase</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.CSVSamplingTransformerConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CSVSamplingTransformerConfigextendsPhaseConfigwithProductwithSerializable"></a>
+      <a id="CSVSamplingTransformerConfig:CSVSamplingTransformerConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="CSVSamplingTransformerConfig.html"><span class="name">CSVSamplingTransformerConfig</span></a><span class="params">(<span name="delimiter">delimiter: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Char" class="extype" target="_top">Char</a>]</span>, <span name="escape">escape: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="quote">quote: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Char" class="extype" target="_top">Char</a>]</span>, <span name="null_string">null_string: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="sample_size">sample_size: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>, <span name="has_headers">has_headers: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a>]</span>)</span><span class="result"> extends <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.CSVTransformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CSVTransformerextendsCSVTransformerBase"></a>
       <a id="CSVTransformer:CSVTransformer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -67,7 +93,20 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="CSVTransformer.html"><span class="name">CSVTransformer</span></a><span class="result"> extends <a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a></span>
+        <a href="CSVTransformer.html"><span class="name">CSVTransformer</span></a><span class="result"> extends <a href="CSVTransformerBase.html" class="extype" name="com.memsql.spark.phases.CSVTransformerBase">CSVTransformerBase</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.CSVTransformerBase" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CSVTransformerBaseextendsStringTransformer"></a>
+      <a id="CSVTransformerBase:CSVTransformerBase"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CSVTransformerBase.html"><span class="name">CSVTransformerBase</span></a><span class="result"> extends <a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a></span>
       </span>
       </h4>
       
@@ -94,6 +133,58 @@
       </span>
       <span class="symbol">
         <a href="CSVTransformerException.html"><span class="name">CSVTransformerException</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.HDFSExtractConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HDFSExtractConfigextendsPhaseConfigwithProductwithSerializable"></a>
+      <a id="HDFSExtractConfig:HDFSExtractConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="HDFSExtractConfig.html"><span class="name">HDFSExtractConfig</span></a><span class="params">(<span name="hdfs_server">hdfs_server: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hdfs_port">hdfs_port: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="task_config">task_config: <a href="HDFSExtractTaskConfig.html" class="extype" name="com.memsql.spark.phases.HDFSExtractTaskConfig">HDFSExtractTaskConfig</a></span>, <span name="max_records">max_records: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>, <span name="num_records_to_skip">num_records_to_skip: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>)</span><span class="result"> extends <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.HDFSExtractException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HDFSExtractExceptionextendsExceptionwithProductwithSerializable"></a>
+      <a id="HDFSExtractException:HDFSExtractException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="HDFSExtractException.html"><span class="name">HDFSExtractException</span></a><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.HDFSExtractTaskConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HDFSExtractTaskConfigextendsProductwithSerializable"></a>
+      <a id="HDFSExtractTaskConfig:HDFSExtractTaskConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="HDFSExtractTaskConfig.html"><span class="name">HDFSExtractTaskConfig</span></a><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.HDFSExtractor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HDFSExtractorextendsExtractor"></a>
+      <a id="HDFSExtractor:HDFSExtractor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="HDFSExtractor.html"><span class="name">HDFSExtractor</span></a><span class="result"> extends <a href="../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></span>
       </span>
       </h4>
       
@@ -188,6 +279,45 @@
       </span>
       </h4>
       
+    </li><li name="com.memsql.spark.phases.MySQLExtractConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MySQLExtractConfigextendsPhaseConfigwithProductwithSerializable"></a>
+      <a id="MySQLExtractConfig:MySQLExtractConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MySQLExtractConfig.html"><span class="name">MySQLExtractConfig</span></a><span class="params">(<span name="host">host: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="port">port: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="user">user: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="password">password: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="db_name">db_name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="table_name">table_name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="max_records">max_records: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>, <span name="task_config">task_config: <a href="MySQLExtractTaskConfig.html" class="extype" name="com.memsql.spark.phases.MySQLExtractTaskConfig">MySQLExtractTaskConfig</a></span>)</span><span class="result"> extends <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.MySQLExtractTaskConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MySQLExtractTaskConfigextendsProductwithSerializable"></a>
+      <a id="MySQLExtractTaskConfig:MySQLExtractTaskConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MySQLExtractTaskConfig.html"><span class="name">MySQLExtractTaskConfig</span></a><span class="params">()</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.MySQLExtractor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MySQLExtractorextendsExtractor"></a>
+      <a id="MySQLExtractor:MySQLExtractor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MySQLExtractor.html"><span class="name">MySQLExtractor</span></a><span class="result"> extends <a href="../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></span>
+      </span>
+      </h4>
+      
     </li><li name="com.memsql.spark.phases.PythonExtractConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PythonExtractConfigextendsPhaseConfigwithProductwithSerializable"></a>
       <a id="PythonExtractConfig:PythonExtractConfig"></a>
@@ -237,6 +367,58 @@
       </span>
       <span class="symbol">
         <a href="PythonTransformer.html"><span class="name">PythonTransformer</span></a><span class="result"> extends <a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a> with <a href="../interface/util/python/PythonPhase.html" class="extype" name="com.memsql.spark.interface.util.python.PythonPhase">PythonPhase</a>[<a href="api/python/PythonTransformerInterface.html" class="extype" name="com.memsql.spark.phases.api.python.PythonTransformerInterface">PythonTransformerInterface</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.S3ExtractConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S3ExtractConfigextendsPhaseConfigwithProductwithSerializable"></a>
+      <a id="S3ExtractConfig:S3ExtractConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="S3ExtractConfig.html"><span class="name">S3ExtractConfig</span></a><span class="params">(<span name="aws_access_key_id">aws_access_key_id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="aws_secret_access_key">aws_secret_access_key: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="bucket">bucket: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="task_config">task_config: <a href="S3ExtractTaskConfig.html" class="extype" name="com.memsql.spark.phases.S3ExtractTaskConfig">S3ExtractTaskConfig</a></span>, <span name="max_records">max_records: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>, <span name="num_records_to_skip">num_records_to_skip: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>]</span>)</span><span class="result"> extends <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.S3ExtractException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S3ExtractExceptionextendsExceptionwithProductwithSerializable"></a>
+      <a id="S3ExtractException:S3ExtractException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="S3ExtractException.html"><span class="name">S3ExtractException</span></a><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.S3ExtractTaskConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S3ExtractTaskConfigextendsProductwithSerializable"></a>
+      <a id="S3ExtractTaskConfig:S3ExtractTaskConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="S3ExtractTaskConfig.html"><span class="name">S3ExtractTaskConfig</span></a><span class="params">(<span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.phases.S3Extractor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S3ExtractorextendsExtractor"></a>
+      <a id="S3Extractor:S3Extractor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="S3Extractor.html"><span class="name">S3Extractor</span></a><span class="result"> extends <a href="../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></span>
       </span>
       </h4>
       

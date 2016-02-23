@@ -35,13 +35,13 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">ApiActor</span>
+        <span class="name">ApiActor</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.memsql.spark.interface.api.ApiActor"><span>ApiActor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.memsql.spark.interface.api.ApiActor"><span>ApiActor</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -120,6 +120,19 @@
       </span>
       </h4>
       
+    </li><li name="com.memsql.spark.interface.api.ApiActor.PipelineProgress" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PipelineProgressextendsProductwithSerializable"></a>
+      <a id="PipelineProgress:PipelineProgress"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ApiActor$$PipelineProgress.html"><span class="name">PipelineProgress</span></a><span class="params">(<span name="pipeline_id">pipeline_id: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
     </li><li name="com.memsql.spark.interface.api.ApiActor.PipelinePut" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PipelinePutextendsProductwithSerializable"></a>
       <a id="PipelinePut:PipelinePut"></a>
@@ -129,7 +142,20 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ApiActor$$PipelinePut.html"><span class="name">PipelinePut</span></a><span class="params">(<span name="pipeline_id">pipeline_id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="batch_interval">batch_interval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="config">config: <a href="../../etl/api/configs/PipelineConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.PipelineConfig">PipelineConfig</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="ApiActor$$PipelinePut.html"><span class="name">PipelinePut</span></a><span class="params">(<span name="pipeline_id">pipeline_id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="single_step">single_step: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a>]</span>, <span name="batch_interval">batch_interval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>]</span>, <span name="trace_batch_count">trace_batch_count: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>] = <span class="symbol">scala.None</span></span>, <span name="config">config: <a href="../../etl/api/configs/PipelineConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.PipelineConfig">PipelineConfig</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.api.ApiActor.PipelineQuery" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PipelineQueryextendsProductwithSerializable"></a>
+      <a id="PipelineQuery:PipelineQuery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ApiActor$$PipelineQuery.html"><span class="name">PipelineQuery</span></a><span class="params">(<span name="show_single_step">show_single_step: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a>]</span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       
@@ -155,7 +181,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ApiActor$$PipelineUpdate.html"><span class="name">PipelineUpdate</span></a><span class="params">(<span name="pipeline_id">pipeline_id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="state">state: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="PipelineState$.html#PipelineState=com.memsql.spark.interface.api.PipelineState.Value" class="extmbr" name="com.memsql.spark.interface.api.PipelineState.PipelineState">PipelineState.PipelineState</a>] = <span class="symbol">scala.None</span></span>, <span name="batch_interval">batch_interval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>] = <span class="symbol">scala.None</span></span>, <span name="config">config: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="../../etl/api/configs/PipelineConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.PipelineConfig">PipelineConfig</a>] = <span class="symbol">scala.None</span></span>, <span name="trace_batch_count">trace_batch_count: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>] = <span class="symbol">scala.None</span></span>, <span name="error">error: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>, <span name="_validate">_validate: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a> = <span class="symbol">false</span></span>, <span name="threadState">threadState: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="PipelineThreadState$.html#PipelineThreadState=com.memsql.spark.interface.api.PipelineThreadState.Value" class="extmbr" name="com.memsql.spark.interface.api.PipelineThreadState.PipelineThreadState">PipelineThreadState.PipelineThreadState</a>] = <span class="symbol">scala.None</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <a href="ApiActor$$PipelineUpdate.html"><span class="name">PipelineUpdate</span></a><span class="params">(<span name="pipeline_id">pipeline_id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="state">state: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="PipelineState$.html#PipelineState=com.memsql.spark.interface.api.PipelineState.Value" class="extmbr" name="com.memsql.spark.interface.api.PipelineState.PipelineState">PipelineState.PipelineState</a>] = <span class="symbol">scala.None</span></span>, <span name="batch_interval">batch_interval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a>] = <span class="symbol">scala.None</span></span>, <span name="config">config: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="../../etl/api/configs/PipelineConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.PipelineConfig">PipelineConfig</a>] = <span class="symbol">scala.None</span></span>, <span name="trace_batch_count">trace_batch_count: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Int" class="extype" target="_top">Int</a>] = <span class="symbol">scala.None</span></span>, <span name="error">error: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>, <span name="_validate">_validate: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a> = <span class="symbol">false</span></span>, <span name="threadState">threadState: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="PipelineThreadState$.html#PipelineThreadState=com.memsql.spark.interface.api.PipelineThreadState.Value" class="extmbr" name="com.memsql.spark.interface.api.PipelineThreadState.PipelineThreadState">PipelineThreadState.PipelineThreadState</a>] = <span class="symbol">scala.None</span></span>, <span name="jobGroupId">jobGroupId: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       
@@ -241,19 +267,6 @@
       </span>
       <span class="symbol">
         <a href="ApiActor$$Ping$.html"><span class="name">Ping</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
-      </span>
-      </h4>
-      
-    </li><li name="com.memsql.spark.interface.api.ApiActor.PipelineQuery" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="PipelineQuery"></a>
-      <a id="PipelineQuery:PipelineQuery"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="ApiActor$$PipelineQuery$.html"><span class="name">PipelineQuery</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       
@@ -517,7 +530,11 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></h3>

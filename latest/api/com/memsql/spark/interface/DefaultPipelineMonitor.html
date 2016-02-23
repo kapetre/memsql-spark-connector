@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.memsql.spark.interface.DefaultPipelineMonitor#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(api:akka.actor.ActorRef,pipeline:com.memsql.spark.interface.api.Pipeline,sparkContext:org.apache.spark.SparkContext,streamingContext:org.apache.spark.streaming.StreamingContext,jobProgressListener:org.apache.spark.ui.jobs.JobProgressListener):com.memsql.spark.interface.DefaultPipelineMonitor"></a>
+      <a id="&lt;init&gt;(api:akka.actor.ActorRef,pipeline:com.memsql.spark.interface.api.Pipeline,sparkContext:org.apache.spark.SparkContext,streamingContext:org.apache.spark.streaming.StreamingContext,sparkProgressListener:com.memsql.spark.interface.SparkProgressListener):com.memsql.spark.interface.DefaultPipelineMonitor"></a>
       <a id="&lt;init&gt;:DefaultPipelineMonitor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">DefaultPipelineMonitor</span><span class="params">(<span name="api">api: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/com/typesafe/akka/akka-actor_2.10/2.3.11/akka-actor_2.10-2.3.11-javadoc.jar/!/index.html#akka.actor.ActorRef" class="extype" target="_top">ActorRef</a></span>, <span name="pipeline">pipeline: <a href="api/Pipeline.html" class="extype" name="com.memsql.spark.interface.api.Pipeline">Pipeline</a></span>, <span name="sparkContext">sparkContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>, <span name="streamingContext">streamingContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>, <span name="jobProgressListener">jobProgressListener: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.ui.jobs.JobProgressListener" class="extype" target="_top">JobProgressListener</a> = <span class="symbol">null</span></span>)</span>
+        <span class="name">DefaultPipelineMonitor</span><span class="params">(<span name="api">api: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/com/typesafe/akka/akka-actor_2.10/2.3.11/akka-actor_2.10-2.3.11-javadoc.jar/!/index.html#akka.actor.ActorRef" class="extype" target="_top">ActorRef</a></span>, <span name="pipeline">pipeline: <a href="api/Pipeline.html" class="extype" name="com.memsql.spark.interface.api.Pipeline">Pipeline</a></span>, <span name="sparkContext">sparkContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>, <span name="streamingContext">streamingContext: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming_2.10/1.5.1/spark-streaming_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>, <span name="sparkProgressListener">sparkProgressListener: <a href="SparkProgressListener.html" class="extype" name="com.memsql.spark.interface.SparkProgressListener">SparkProgressListener</a> = <span class="symbol">null</span></span>)</span>
       </span>
       </h4>
       
@@ -386,19 +386,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.memsql.spark.interface.DefaultPipelineMonitor#jobProgressListener" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="jobProgressListener:org.apache.spark.ui.jobs.JobProgressListener"></a>
-      <a id="jobProgressListener:JobProgressListener"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">jobProgressListener</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.ui.jobs.JobProgressListener" class="extype" target="_top">JobProgressListener</a></span>
-      </span>
-      </h4>
-      
     </li><li name="com.memsql.spark.interface.DefaultPipelineMonitor#lastUpdated" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="lastUpdated:Long"></a>
       <a id="lastUpdated:Long"></a>
@@ -646,6 +633,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.interface.DefaultPipelineMonitor">DefaultPipelineMonitor</a> → <a href="PipelineMonitor.html" class="extype" name="com.memsql.spark.interface.PipelineMonitor">PipelineMonitor</a></dd></dl></div>
+    </li><li name="com.memsql.spark.interface.DefaultPipelineMonitor#singleStep" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="singleStep:Boolean"></a>
+      <a id="singleStep:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">singleStep</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.interface.DefaultPipelineMonitor">DefaultPipelineMonitor</a> → <a href="PipelineMonitor.html" class="extype" name="com.memsql.spark.interface.PipelineMonitor">PipelineMonitor</a></dd></dl></div>
     </li><li name="com.memsql.spark.interface.DefaultPipelineMonitor#sparkContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sparkContext:org.apache.spark.SparkContext"></a>
       <a id="sparkContext:SparkContext"></a>
@@ -659,6 +659,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.interface.DefaultPipelineMonitor">DefaultPipelineMonitor</a> → <a href="PipelineMonitor.html" class="extype" name="com.memsql.spark.interface.PipelineMonitor">PipelineMonitor</a></dd></dl></div>
+    </li><li name="com.memsql.spark.interface.DefaultPipelineMonitor#sparkProgressListener" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sparkProgressListener:com.memsql.spark.interface.SparkProgressListener"></a>
+      <a id="sparkProgressListener:SparkProgressListener"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sparkProgressListener</span><span class="result">: <a href="SparkProgressListener.html" class="extype" name="com.memsql.spark.interface.SparkProgressListener">SparkProgressListener</a></span>
+      </span>
+      </h4>
+      
     </li><li name="com.memsql.spark.interface.DefaultPipelineMonitor#sqlContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="sqlContext:com.memsql.spark.connector.MemSQLContext"></a>
       <a id="sqlContext:MemSQLContext"></a>
@@ -672,6 +685,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.interface.DefaultPipelineMonitor">DefaultPipelineMonitor</a> → <a href="PipelineMonitor.html" class="extype" name="com.memsql.spark.interface.PipelineMonitor">PipelineMonitor</a></dd></dl></div>
+    </li><li name="com.memsql.spark.interface.DefaultPipelineMonitor#stepPipeline" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stepPipeline(extractLogger:com.memsql.spark.interface.util.PipelineLogger,transformLogger:com.memsql.spark.interface.util.PipelineLogger,time:Long):Unit"></a>
+      <a id="stepPipeline(PipelineLogger,PipelineLogger,Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stepPipeline</span><span class="params">(<span name="extractLogger">extractLogger: <a href="util/PipelineLogger.html" class="extype" name="com.memsql.spark.interface.util.PipelineLogger">PipelineLogger</a></span>, <span name="transformLogger">transformLogger: <a href="util/PipelineLogger.html" class="extype" name="com.memsql.spark.interface.util.PipelineLogger">PipelineLogger</a></span>, <span name="time">time: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      
     </li><li name="com.memsql.spark.interface.DefaultPipelineMonitor#stop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="stop():Unit"></a>
       <a id="stop():Unit"></a>
@@ -694,7 +720,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">streamingContext</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>
+        <span class="name">streamingContext</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming_2.10/1.5.1/spark-streaming_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.interface.DefaultPipelineMonitor">DefaultPipelineMonitor</a> → <a href="PipelineMonitor.html" class="extype" name="com.memsql.spark.interface.PipelineMonitor">PipelineMonitor</a></dd></dl></div>

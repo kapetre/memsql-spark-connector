@@ -39,7 +39,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This class is just a proxy so you can import from
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A MemSQL cluster aware <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">org.apache.spark.sql.SQLContext</a> that can read and write
+<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>s from MemSQL tables.</p><p>Configuration for the MemSQL cluster is set via <a href="MemSQLConf.html" class="extype" name="com.memsql.spark.connector.MemSQLConf">com.memsql.spark.connector.MemSQLConf</a>.</p><p>NOTE: This class is just a proxy so you can import from
 com.memsql.spark.connector rather than org.apache.spark.sql.memsql</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="../../../../org/apache/spark/sql/memsql/MemSQLContext.html" class="extype" name="org.apache.spark.sql.memsql.MemSQLContext">org.apache.spark.sql.memsql.MemSQLContext</a>
 </p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
@@ -81,7 +82,7 @@ com.memsql.spark.connector rather than org.apache.spark.sql.memsql</p></div><dl 
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="com.memsql.spark.connector.MemSQLContext#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="com.memsql.spark.connector.MemSQLContext#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&lt;init&gt;(sc:org.apache.spark.SparkContext):com.memsql.spark.connector.MemSQLContext"></a>
       <a id="&lt;init&gt;:MemSQLContext"></a>
       <h4 class="signature">
@@ -93,7 +94,8 @@ com.memsql.spark.connector rather than org.apache.spark.sql.memsql</p></div><dl 
         <span class="name">MemSQLContext</span><span class="params">(<span name="sc">sc: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>)</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">sc</dt><dd class="cmt"><p>The context for your Spark application
+</p></dd></dl></div>
     </li></ol>
             </div>
 

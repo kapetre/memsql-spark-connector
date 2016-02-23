@@ -98,7 +98,7 @@
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="spray.routing.PathMatchers.NumberMatcher" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="NumberMatcher[T&lt;:&lt;?&gt;]extendsPathMatcher1[T]"></a>
+      <a id="NumberMatcher[T]extendsPathMatcher1[T]"></a>
       <a id="NumberMatcher[T]:NumberMatcher[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -274,7 +274,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.interface.server.WebServer">WebServer</a> → HttpService</dd></dl></div>
     </li><li name="spray.routing.directives.AnyParamDirectives#anyParam" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="anyParam(apdm:&lt;?&gt;):apdm.Out"></a>
+      <a id="anyParam(apdm:spray.routing.directives.AnyParamDefMagnet):apdm.Out"></a>
       <a id="anyParam(AnyParamDefMagnet):Out"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -287,7 +287,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyParamDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.AnyParamDirectives#anyParams" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="anyParams(apdm:&lt;?&gt;):apdm.Out"></a>
+      <a id="anyParams(apdm:spray.routing.directives.AnyParamDefMagnet):apdm.Out"></a>
       <a id="anyParams(AnyParamDefMagnet):Out"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -417,7 +417,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="spray.routing.directives.SecurityDirectives#authenticate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="authenticate[T&lt;:&lt;?&gt;](magnet:&lt;?&gt;):spray.routing.Directive1[T]"></a>
+      <a id="authenticate[T](magnet:spray.routing.directives.AuthMagnet[T]):spray.routing.Directive1[T]"></a>
       <a id="authenticate[T](AuthMagnet[T]):Directive1[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -430,7 +430,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SecurityDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.SecurityDirectives#authorize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="authorize(check:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="authorize(check:spray.routing.RequestContext=&gt;Boolean):spray.routing.Directive0"></a>
       <a id="authorize((RequestContext)⇒Boolean):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -443,7 +443,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SecurityDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.SecurityDirectives#authorize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="authorize(check:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="authorize(check:=&gt;Boolean):spray.routing.Directive0"></a>
       <a id="authorize(⇒Boolean):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -456,7 +456,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SecurityDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.ChunkingDirectives#autoChunk" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="autoChunk(csm:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="autoChunk(csm:spray.routing.directives.ChunkSizeMagnet):spray.routing.Directive0"></a>
       <a id="autoChunk(ChunkSizeMagnet):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -469,7 +469,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ChunkingDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.ChunkingDirectives#autoChunkFileBytes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="autoChunkFileBytes(csm:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="autoChunkFileBytes(csm:spray.routing.directives.ChunkSizeMagnet):spray.routing.Directive0"></a>
       <a id="autoChunkFileBytes(ChunkSizeMagnet):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -482,7 +482,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ChunkingDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.MiscDirectives#cancelAllRejections" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="cancelAllRejections(cancelFilter:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="cancelAllRejections(cancelFilter:spray.routing.Rejection=&gt;Boolean):spray.routing.Directive0"></a>
       <a id="cancelAllRejections((Rejection)⇒Boolean):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -495,7 +495,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.MiscDirectives#cancelRejection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="cancelRejection(rejection:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="cancelRejection(rejection:spray.routing.Rejection):spray.routing.Directive0"></a>
       <a id="cancelRejection(Rejection):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -553,7 +553,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RouteDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.EncodingDirectives#compressResponse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="compressResponse(magnet:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="compressResponse(magnet:spray.routing.directives.CompressResponseMagnet):spray.routing.Directive0"></a>
       <a id="compressResponse(CompressResponseMagnet):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -566,7 +566,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>EncodingDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.EncodingDirectives#compressResponseIfRequested" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="compressResponseIfRequested(magnet:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="compressResponseIfRequested(magnet:spray.routing.directives.RefFactoryMagnet):spray.routing.Directive0"></a>
       <a id="compressResponseIfRequested(RefFactoryMagnet):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -579,7 +579,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>EncodingDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.CacheConditionDirectives#conditional" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="conditional(eTag:&lt;?&gt;,lastModified:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="conditional(eTag:spray.http.EntityTag,lastModified:spray.http.DateTime):spray.routing.Directive0"></a>
       <a id="conditional(EntityTag,DateTime):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -605,7 +605,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li name="spray.routing.directives.CookieDirectives#cookie" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="cookie(name:&lt;?&gt;):spray.routing.Directive1[spray.http.HttpCookie]"></a>
+      <a id="cookie(name:String):spray.routing.Directive1[spray.http.HttpCookie]"></a>
       <a id="cookie(String):Directive1[HttpCookie]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -618,7 +618,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CookieDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.EncodingDirectives#decodeRequest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="decodeRequest(decoder:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="decodeRequest(decoder:spray.httpx.encoding.Decoder):spray.routing.Directive0"></a>
       <a id="decodeRequest(Decoder):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -631,7 +631,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>EncodingDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.EncodingDirectives#decompressRequest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="decompressRequest(first:&lt;?&gt;,more:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="decompressRequest(first:spray.httpx.encoding.Decoder,more:spray.httpx.encoding.Decoder*):spray.routing.Directive0"></a>
       <a id="decompressRequest(Decoder,Decoder*):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -670,7 +670,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MethodDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.CookieDirectives#deleteCookie" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="deleteCookie(name:&lt;?&gt;,domain:&lt;?&gt;,path:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="deleteCookie(name:String,domain:String,path:String):spray.routing.Directive0"></a>
       <a id="deleteCookie(String,String,String):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -683,7 +683,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CookieDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.CookieDirectives#deleteCookie" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="deleteCookie(first:&lt;?&gt;,more:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="deleteCookie(first:spray.http.HttpCookie,more:spray.http.HttpCookie*):spray.routing.Directive0"></a>
       <a id="deleteCookie(HttpCookie,HttpCookie*):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -696,7 +696,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CookieDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.ExecutionDirectives#detach" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="detach(dm:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="detach(dm:spray.routing.directives.DetachMagnet):spray.routing.Directive0"></a>
       <a id="detach(DetachMagnet):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -722,7 +722,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ExecutionDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.ExecutionDirectives#dynamicIf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dynamicIf(enabled:&lt;?&gt;):spray.routing.directives.ByNameDirective0"></a>
+      <a id="dynamicIf(enabled:Boolean):spray.routing.directives.ByNameDirective0"></a>
       <a id="dynamicIf(Boolean):ByNameDirective0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -735,7 +735,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ExecutionDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.EncodingDirectives#encodeResponse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="encodeResponse(magnet:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="encodeResponse(magnet:spray.routing.directives.EncodeResponseMagnet):spray.routing.Directive0"></a>
       <a id="encodeResponse(EncodeResponseMagnet):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -787,7 +787,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#extract" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="extract[T&lt;:&lt;?&gt;](f:&lt;?&gt;):spray.routing.Directive1[T]"></a>
+      <a id="extract[T](f:spray.routing.RequestContext=&gt;T):spray.routing.Directive1[T]"></a>
       <a id="extract[T]((RequestContext)⇒T):Directive1[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -800,7 +800,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.RouteDirectives#failWith" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="failWith(error:&lt;?&gt;):spray.routing.StandardRoute"></a>
+      <a id="failWith(error:Throwable):spray.routing.StandardRoute"></a>
       <a id="failWith(Throwable):StandardRoute"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -832,7 +832,7 @@
               
         </dd></dl></div>
     </li><li name="spray.routing.directives.FormFieldDirectives#formField" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="formField(fdm:&lt;?&gt;):fdm.Out"></a>
+      <a id="formField(fdm:spray.routing.directives.FieldDefMagnet):fdm.Out"></a>
       <a id="formField(FieldDefMagnet):Out"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -845,7 +845,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FormFieldDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FormFieldDirectives#formFields" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="formFields(fdm:&lt;?&gt;):fdm.Out"></a>
+      <a id="formFields(fdm:spray.routing.directives.FieldDefMagnet):fdm.Out"></a>
       <a id="formFields(FieldDefMagnet):Out"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -884,7 +884,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="spray.routing.directives.FileAndResourceDirectives#getFromBrowseableDirectories" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getFromBrowseableDirectories(directories:&lt;?&gt;)(implicitrenderer:&lt;?&gt;,implicitsettings:&lt;?&gt;,implicitresolver:&lt;?&gt;,implicitrefFactory:&lt;?&gt;,implicitlog:&lt;?&gt;):spray.routing.RequestContext=&gt;Unit"></a>
+      <a id="getFromBrowseableDirectories(directories:String*)(implicitrenderer:spray.httpx.marshalling.Marshaller[spray.routing.directives.DirectoryListing],implicitsettings:spray.routing.RoutingSettings,implicitresolver:spray.routing.directives.ContentTypeResolver,implicitrefFactory:akka.actor.ActorRefFactory,implicitlog:spray.util.LoggingContext):spray.routing.RequestContext=&gt;Unit"></a>
       <a id="getFromBrowseableDirectories(String*)(Marshaller[DirectoryListing],RoutingSettings,ContentTypeResolver,ActorRefFactory,LoggingContext):(RequestContext)⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -897,7 +897,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FileAndResourceDirectives#getFromBrowseableDirectory" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getFromBrowseableDirectory(directory:&lt;?&gt;)(implicitrenderer:&lt;?&gt;,implicitsettings:&lt;?&gt;,implicitresolver:&lt;?&gt;,implicitrefFactory:&lt;?&gt;,implicitlog:&lt;?&gt;):spray.routing.RequestContext=&gt;Unit"></a>
+      <a id="getFromBrowseableDirectory(directory:String)(implicitrenderer:spray.httpx.marshalling.Marshaller[spray.routing.directives.DirectoryListing],implicitsettings:spray.routing.RoutingSettings,implicitresolver:spray.routing.directives.ContentTypeResolver,implicitrefFactory:akka.actor.ActorRefFactory,implicitlog:spray.util.LoggingContext):spray.routing.RequestContext=&gt;Unit"></a>
       <a id="getFromBrowseableDirectory(String)(Marshaller[DirectoryListing],RoutingSettings,ContentTypeResolver,ActorRefFactory,LoggingContext):(RequestContext)⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -910,7 +910,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FileAndResourceDirectives#getFromDirectory" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getFromDirectory(directoryName:&lt;?&gt;)(implicitsettings:&lt;?&gt;,implicitresolver:&lt;?&gt;,implicitrefFactory:&lt;?&gt;,implicitlog:&lt;?&gt;):spray.routing.RequestContext=&gt;Unit"></a>
+      <a id="getFromDirectory(directoryName:String)(implicitsettings:spray.routing.RoutingSettings,implicitresolver:spray.routing.directives.ContentTypeResolver,implicitrefFactory:akka.actor.ActorRefFactory,implicitlog:spray.util.LoggingContext):spray.routing.RequestContext=&gt;Unit"></a>
       <a id="getFromDirectory(String)(RoutingSettings,ContentTypeResolver,ActorRefFactory,LoggingContext):(RequestContext)⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -923,7 +923,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FileAndResourceDirectives#getFromFile" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getFromFile(file:&lt;?&gt;,contentType:&lt;?&gt;)(implicitsettings:&lt;?&gt;,implicitrefFactory:&lt;?&gt;):spray.routing.RequestContext=&gt;Unit"></a>
+      <a id="getFromFile(file:java.io.File,contentType:spray.http.ContentType)(implicitsettings:spray.routing.RoutingSettings,implicitrefFactory:akka.actor.ActorRefFactory):spray.routing.RequestContext=&gt;Unit"></a>
       <a id="getFromFile(File,ContentType)(RoutingSettings,ActorRefFactory):(RequestContext)⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -936,7 +936,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FileAndResourceDirectives#getFromFile" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getFromFile(file:&lt;?&gt;)(implicitsettings:&lt;?&gt;,implicitresolver:&lt;?&gt;,implicitrefFactory:&lt;?&gt;):spray.routing.RequestContext=&gt;Unit"></a>
+      <a id="getFromFile(file:java.io.File)(implicitsettings:spray.routing.RoutingSettings,implicitresolver:spray.routing.directives.ContentTypeResolver,implicitrefFactory:akka.actor.ActorRefFactory):spray.routing.RequestContext=&gt;Unit"></a>
       <a id="getFromFile(File)(RoutingSettings,ContentTypeResolver,ActorRefFactory):(RequestContext)⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -949,7 +949,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FileAndResourceDirectives#getFromFile" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getFromFile(fileName:&lt;?&gt;)(implicitsettings:&lt;?&gt;,implicitresolver:&lt;?&gt;,implicitrefFactory:&lt;?&gt;):spray.routing.RequestContext=&gt;Unit"></a>
+      <a id="getFromFile(fileName:String)(implicitsettings:spray.routing.RoutingSettings,implicitresolver:spray.routing.directives.ContentTypeResolver,implicitrefFactory:akka.actor.ActorRefFactory):spray.routing.RequestContext=&gt;Unit"></a>
       <a id="getFromFile(String)(RoutingSettings,ContentTypeResolver,ActorRefFactory):(RequestContext)⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -962,7 +962,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FileAndResourceDirectives#getFromResource" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getFromResource(resourceName:&lt;?&gt;,contentType:&lt;?&gt;)(implicitrefFactory:&lt;?&gt;):spray.routing.RequestContext=&gt;Unit"></a>
+      <a id="getFromResource(resourceName:String,contentType:spray.http.ContentType)(implicitrefFactory:akka.actor.ActorRefFactory):spray.routing.RequestContext=&gt;Unit"></a>
       <a id="getFromResource(String,ContentType)(ActorRefFactory):(RequestContext)⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -975,7 +975,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FileAndResourceDirectives#getFromResource" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getFromResource(resourceName:&lt;?&gt;)(implicitresolver:&lt;?&gt;,implicitrefFactory:&lt;?&gt;):spray.routing.RequestContext=&gt;Unit"></a>
+      <a id="getFromResource(resourceName:String)(implicitresolver:spray.routing.directives.ContentTypeResolver,implicitrefFactory:akka.actor.ActorRefFactory):spray.routing.RequestContext=&gt;Unit"></a>
       <a id="getFromResource(String)(ContentTypeResolver,ActorRefFactory):(RequestContext)⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -988,7 +988,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FileAndResourceDirectives#getFromResourceDirectory" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getFromResourceDirectory(directoryName:&lt;?&gt;)(implicitresolver:&lt;?&gt;,implicitrefFactory:&lt;?&gt;,implicitlog:&lt;?&gt;):spray.routing.RequestContext=&gt;Unit"></a>
+      <a id="getFromResourceDirectory(directoryName:String)(implicitresolver:spray.routing.directives.ContentTypeResolver,implicitrefFactory:akka.actor.ActorRefFactory,implicitlog:spray.util.LoggingContext):spray.routing.RequestContext=&gt;Unit"></a>
       <a id="getFromResourceDirectory(String)(ContentTypeResolver,ActorRefFactory,LoggingContext):(RequestContext)⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1001,7 +1001,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.ExecutionDirectives#handleExceptions" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="handleExceptions(handler:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="handleExceptions(handler:spray.routing.ExceptionHandler):spray.routing.Directive0"></a>
       <a id="handleExceptions(ExceptionHandler):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1014,7 +1014,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ExecutionDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.ExecutionDirectives#handleRejections" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="handleRejections(handler:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="handleRejections(handler:spray.routing.RejectionHandler):spray.routing.Directive0"></a>
       <a id="handleRejections(RejectionHandler):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1040,7 +1040,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HttpServiceBase</dd></dl></div>
     </li><li name="spray.routing.directives.MarshallingDirectives#handleWith" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="handleWith[A&lt;:&lt;?&gt;,B&lt;:&lt;?&gt;](f:&lt;?&gt;)(implicitum:&lt;?&gt;,implicitm:&lt;?&gt;):spray.routing.RequestContext=&gt;Unit"></a>
+      <a id="handleWith[A,B](f:A=&gt;B)(implicitum:spray.httpx.unmarshalling.FromRequestUnmarshaller[A],implicitm:spray.httpx.marshalling.ToResponseMarshaller[B]):spray.routing.RequestContext=&gt;Unit"></a>
       <a id="handleWith[A,B]((A)⇒B)(FromRequestUnmarshaller[A],ToResponseMarshaller[B]):(RequestContext)⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1079,7 +1079,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MethodDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HeaderDirectives#headerValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="headerValue[T&lt;:&lt;?&gt;](f:&lt;?&gt;):spray.routing.Directive1[T]"></a>
+      <a id="headerValue[T](f:spray.http.HttpHeader=&gt;Option[T]):spray.routing.Directive1[T]"></a>
       <a id="headerValue[T]((HttpHeader)⇒Option[T]):Directive1[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1092,7 +1092,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HeaderDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HeaderDirectives#headerValueByName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="headerValueByName(headerName:&lt;?&gt;):spray.routing.Directive1[String]"></a>
+      <a id="headerValueByName(headerName:String):spray.routing.Directive1[String]"></a>
       <a id="headerValueByName(String):Directive1[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1105,7 +1105,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HeaderDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HeaderDirectives#headerValueByName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="headerValueByName(headerName:&lt;?&gt;):spray.routing.Directive1[String]"></a>
+      <a id="headerValueByName(headerName:Symbol):spray.routing.Directive1[String]"></a>
       <a id="headerValueByName(Symbol):Directive1[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1118,7 +1118,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HeaderDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HeaderDirectives#headerValueByType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="headerValueByType[T&lt;:&lt;?&gt;](magnet:&lt;?&gt;):spray.routing.Directive1[T]"></a>
+      <a id="headerValueByType[T&lt;:spray.http.HttpHeader](magnet:spray.routing.directives.ClassMagnet[T]):spray.routing.Directive1[T]"></a>
       <a id="headerValueByType[T&lt;:HttpHeader](ClassMagnet[T]):Directive1[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1131,7 +1131,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HeaderDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HeaderDirectives#headerValuePF" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="headerValuePF[T&lt;:&lt;?&gt;](pf:&lt;?&gt;):spray.routing.Directive1[T]"></a>
+      <a id="headerValuePF[T](pf:PartialFunction[spray.http.HttpHeader,T]):spray.routing.Directive1[T]"></a>
       <a id="headerValuePF[T](PartialFunction[HttpHeader,T]):Directive1[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1144,7 +1144,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HeaderDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#hextract" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hextract[L&lt;:&lt;?&gt;](f:&lt;?&gt;):spray.routing.Directive[L]"></a>
+      <a id="hextract[L&lt;:shapeless.HList](f:spray.routing.RequestContext=&gt;L):spray.routing.Directive[L]"></a>
       <a id="hextract[L&lt;:HList]((RequestContext)⇒L):Directive[L]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1157,7 +1157,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HostDirectives#host" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="host(regex:&lt;?&gt;):spray.routing.Directive1[String]"></a>
+      <a id="host(regex:scala.util.matching.Regex):spray.routing.Directive1[String]"></a>
       <a id="host(Regex):Directive1[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1170,7 +1170,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HostDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HostDirectives#host" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="host(predicate:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="host(predicate:String=&gt;Boolean):spray.routing.Directive0"></a>
       <a id="host((String)⇒Boolean):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1183,7 +1183,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HostDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HostDirectives#host" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="host(hostNames:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="host(hostNames:String*):spray.routing.Directive0"></a>
       <a id="host(String*):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1209,7 +1209,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HostDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#hprovide" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hprovide[L&lt;:&lt;?&gt;](values:&lt;?&gt;):spray.routing.Directive[L]"></a>
+      <a id="hprovide[L&lt;:shapeless.HList](values:L):spray.routing.Directive[L]"></a>
       <a id="hprovide[L&lt;:HList](L):Directive[L]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1222,7 +1222,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.MarshallingDirectives#instanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="instanceOf[T&lt;:&lt;?&gt;](implicitm:&lt;?&gt;):spray.httpx.marshalling.ToResponseMarshaller[T]"></a>
+      <a id="instanceOf[T](implicitm:spray.httpx.marshalling.ToResponseMarshaller[T]):spray.httpx.marshalling.ToResponseMarshaller[T]"></a>
       <a id="instanceOf[T](ToResponseMarshaller[T]):ToResponseMarshaller[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1248,7 +1248,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="spray.routing.directives.MiscDirectives#jsonpWithParameter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="jsonpWithParameter(parameterName:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="jsonpWithParameter(parameterName:String):spray.routing.Directive0"></a>
       <a id="jsonpWithParameter(String):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1261,7 +1261,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FileAndResourceDirectives#listDirectoryContents" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="listDirectoryContents(directories:&lt;?&gt;)(implicitrenderer:&lt;?&gt;,implicitrefFactory:&lt;?&gt;,implicitlog:&lt;?&gt;):spray.routing.RequestContext=&gt;Unit"></a>
+      <a id="listDirectoryContents(directories:String*)(implicitrenderer:spray.httpx.marshalling.Marshaller[spray.routing.directives.DirectoryListing],implicitrefFactory:akka.actor.ActorRefFactory,implicitlog:spray.util.LoggingContext):spray.routing.RequestContext=&gt;Unit"></a>
       <a id="listDirectoryContents(String*)(Marshaller[DirectoryListing],ActorRefFactory,LoggingContext):(RequestContext)⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1274,7 +1274,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.DebuggingDirectives#logRequest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logRequest(magnet:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="logRequest(magnet:spray.routing.directives.LoggingMagnet[spray.http.HttpRequest=&gt;Unit]):spray.routing.Directive0"></a>
       <a id="logRequest(LoggingMagnet[(HttpRequest)⇒Unit]):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1300,7 +1300,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DebuggingDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.DebuggingDirectives#logResponse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logResponse(magnet:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="logResponse(magnet:spray.routing.directives.LoggingMagnet[Any=&gt;Unit]):spray.routing.Directive0"></a>
       <a id="logResponse(LoggingMagnet[(Any)⇒Unit]):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1313,7 +1313,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DebuggingDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#mapHttpResponse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapHttpResponse(f:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="mapHttpResponse(f:spray.http.HttpResponse=&gt;spray.http.HttpResponse):spray.routing.Directive0"></a>
       <a id="mapHttpResponse((HttpResponse)⇒HttpResponse):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1326,7 +1326,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#mapHttpResponseEntity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapHttpResponseEntity(f:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="mapHttpResponseEntity(f:spray.http.HttpEntity=&gt;spray.http.HttpEntity):spray.routing.Directive0"></a>
       <a id="mapHttpResponseEntity((HttpEntity)⇒HttpEntity):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1339,7 +1339,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#mapHttpResponseHeaders" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapHttpResponseHeaders(f:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="mapHttpResponseHeaders(f:List[spray.http.HttpHeader]=&gt;List[spray.http.HttpHeader]):spray.routing.Directive0"></a>
       <a id="mapHttpResponseHeaders((List[HttpHeader])⇒List[HttpHeader]):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1352,7 +1352,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#mapHttpResponsePart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapHttpResponsePart(f:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="mapHttpResponsePart(f:spray.http.HttpResponsePart=&gt;spray.http.HttpResponsePart):spray.routing.Directive0"></a>
       <a id="mapHttpResponsePart((HttpResponsePart)⇒HttpResponsePart):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1365,7 +1365,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#mapInnerRoute" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapInnerRoute(f:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="mapInnerRoute(f:(spray.routing.RequestContext=&gt;Unit)=&gt;(spray.routing.RequestContext=&gt;Unit)):spray.routing.Directive0"></a>
       <a id="mapInnerRoute(((RequestContext)⇒Unit)⇒(RequestContext)⇒Unit):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1378,7 +1378,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#mapRejections" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapRejections(f:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="mapRejections(f:List[spray.routing.Rejection]=&gt;List[spray.routing.Rejection]):spray.routing.Directive0"></a>
       <a id="mapRejections((List[Rejection])⇒List[Rejection]):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1391,7 +1391,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#mapRequest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapRequest(f:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="mapRequest(f:spray.http.HttpRequest=&gt;spray.http.HttpRequest):spray.routing.Directive0"></a>
       <a id="mapRequest((HttpRequest)⇒HttpRequest):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1404,7 +1404,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#mapRequestContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapRequestContext(f:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="mapRequestContext(f:spray.routing.RequestContext=&gt;spray.routing.RequestContext):spray.routing.Directive0"></a>
       <a id="mapRequestContext((RequestContext)⇒RequestContext):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1417,7 +1417,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#mapRouteResponse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapRouteResponse(f:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="mapRouteResponse(f:Any=&gt;Any):spray.routing.Directive0"></a>
       <a id="mapRouteResponse((Any)⇒Any):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1430,7 +1430,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#mapRouteResponsePF" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapRouteResponsePF(f:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="mapRouteResponsePF(f:PartialFunction[Any,Any]):spray.routing.Directive0"></a>
       <a id="mapRouteResponsePF(PartialFunction[Any,Any]):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1443,7 +1443,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.MethodDirectives#method" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="method(httpMethod:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="method(httpMethod:spray.http.HttpMethod):spray.routing.Directive0"></a>
       <a id="method(HttpMethod):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1482,7 +1482,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BasicDirectives</dd></dl></div>
     </li><li name="spray.routing.PathMatchers#nothingMatcher" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="nothingMatcher[L&lt;:&lt;?&gt;]:spray.routing.PathMatcher[L]"></a>
+      <a id="nothingMatcher[L&lt;:shapeless.HList]:spray.routing.PathMatcher[L]"></a>
       <a id="nothingMatcher[L&lt;:HList]:PathMatcher[L]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1521,7 +1521,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="spray.routing.directives.MiscDirectives#ofType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ofType[T&lt;:&lt;?&gt;](implicitevidence$1:&lt;?&gt;):spray.routing.Rejection=&gt;Boolean"></a>
+      <a id="ofType[T&lt;:spray.routing.Rejection](implicitevidence$1:scala.reflect.ClassTag[T]):spray.routing.Rejection=&gt;Boolean"></a>
       <a id="ofType[T&lt;:Rejection](ClassTag[T]):(Rejection)⇒Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1534,7 +1534,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.MiscDirectives#ofTypes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ofTypes(classes:&lt;?&gt;):spray.routing.Rejection=&gt;Boolean"></a>
+      <a id="ofTypes(classes:Class[_]*):spray.routing.Rejection=&gt;Boolean"></a>
       <a id="ofTypes(Class[_]*):(Rejection)⇒Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1547,7 +1547,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FutureDirectives#onComplete" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="onComplete[T&lt;:&lt;?&gt;](magnet:&lt;?&gt;):spray.routing.Directive1[scala.util.Try[T]]"></a>
+      <a id="onComplete[T](magnet:spray.routing.directives.OnCompleteFutureMagnet[T]):spray.routing.Directive1[scala.util.Try[T]]"></a>
       <a id="onComplete[T](OnCompleteFutureMagnet[T]):Directive1[Try[T]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1560,7 +1560,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FutureDirectives</dd></dl></div>
     </li><li name="spray.routing.HttpServiceBase#onConnectionClosed" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="onConnectionClosed(ev:&lt;?&gt;):Unit"></a>
+      <a id="onConnectionClosed(ev:akka.io.Tcp.ConnectionClosed):Unit"></a>
       <a id="onConnectionClosed(ConnectionClosed):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1573,7 +1573,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HttpServiceBase</dd></dl></div>
     </li><li name="spray.routing.directives.FutureDirectives#onFailure" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="onFailure(magnet:&lt;?&gt;):spray.routing.Directive1[Throwable]"></a>
+      <a id="onFailure(magnet:spray.routing.directives.OnFailureFutureMagnet):spray.routing.Directive1[Throwable]"></a>
       <a id="onFailure(OnFailureFutureMagnet):Directive1[Throwable]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1586,7 +1586,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FutureDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FutureDirectives#onSuccess" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="onSuccess(magnet:&lt;?&gt;):spray.routing.Directive[magnet.Out]"></a>
+      <a id="onSuccess(magnet:spray.routing.directives.OnSuccessFutureMagnet):spray.routing.Directive[magnet.Out]"></a>
       <a id="onSuccess(OnSuccessFutureMagnet):Directive[Out]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1599,7 +1599,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FutureDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.CookieDirectives#optionalCookie" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="optionalCookie(name:&lt;?&gt;):spray.routing.Directive1[Option[spray.http.HttpCookie]]"></a>
+      <a id="optionalCookie(name:String):spray.routing.Directive1[Option[spray.http.HttpCookie]]"></a>
       <a id="optionalCookie(String):Directive1[Option[HttpCookie]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1612,7 +1612,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>CookieDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HeaderDirectives#optionalHeaderValue" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="optionalHeaderValue[T&lt;:&lt;?&gt;](f:&lt;?&gt;):spray.routing.Directive1[Option[T]]"></a>
+      <a id="optionalHeaderValue[T](f:spray.http.HttpHeader=&gt;Option[T]):spray.routing.Directive1[Option[T]]"></a>
       <a id="optionalHeaderValue[T]((HttpHeader)⇒Option[T]):Directive1[Option[T]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1625,7 +1625,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HeaderDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HeaderDirectives#optionalHeaderValueByName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="optionalHeaderValueByName(headerName:&lt;?&gt;):spray.routing.Directive1[Option[String]]"></a>
+      <a id="optionalHeaderValueByName(headerName:String):spray.routing.Directive1[Option[String]]"></a>
       <a id="optionalHeaderValueByName(String):Directive1[Option[String]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1638,7 +1638,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HeaderDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HeaderDirectives#optionalHeaderValueByName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="optionalHeaderValueByName(headerName:&lt;?&gt;):spray.routing.Directive1[Option[String]]"></a>
+      <a id="optionalHeaderValueByName(headerName:Symbol):spray.routing.Directive1[Option[String]]"></a>
       <a id="optionalHeaderValueByName(Symbol):Directive1[Option[String]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1651,7 +1651,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HeaderDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HeaderDirectives#optionalHeaderValueByType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="optionalHeaderValueByType[T&lt;:&lt;?&gt;](magnet:&lt;?&gt;):spray.routing.Directive1[Option[T]]"></a>
+      <a id="optionalHeaderValueByType[T&lt;:spray.http.HttpHeader](magnet:spray.routing.directives.ClassMagnet[T]):spray.routing.Directive1[Option[T]]"></a>
       <a id="optionalHeaderValueByType[T&lt;:HttpHeader](ClassMagnet[T]):Directive1[Option[T]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1664,7 +1664,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HeaderDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.HeaderDirectives#optionalHeaderValuePF" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="optionalHeaderValuePF[T&lt;:&lt;?&gt;](pf:&lt;?&gt;):spray.routing.Directive1[Option[T]]"></a>
+      <a id="optionalHeaderValuePF[T](pf:PartialFunction[spray.http.HttpHeader,T]):spray.routing.Directive1[Option[T]]"></a>
       <a id="optionalHeaderValuePF[T](PartialFunction[HttpHeader,T]):Directive1[Option[T]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1690,7 +1690,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MethodDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.MethodDirectives#overrideMethodWithParameter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="overrideMethodWithParameter(paramName:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="overrideMethodWithParameter(paramName:String):spray.routing.Directive0"></a>
       <a id="overrideMethodWithParameter(String):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1755,7 +1755,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ParameterDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.ParameterDirectives#parameters" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="parameters(pdm:&lt;?&gt;):pdm.Out"></a>
+      <a id="parameters(pdm:spray.routing.directives.ParamDefMagnet):pdm.Out"></a>
       <a id="parameters(ParamDefMagnet):Out"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1833,7 +1833,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.PathDirectives#pathPrefix" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pathPrefix[L&lt;:&lt;?&gt;](pm:&lt;?&gt;):spray.routing.Directive[L]"></a>
+      <a id="pathPrefix[L&lt;:shapeless.HList](pm:spray.routing.PathMatcher[L]):spray.routing.Directive[L]"></a>
       <a id="pathPrefix[L&lt;:HList](PathMatcher[L]):Directive[L]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1846,7 +1846,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.PathDirectives#pathPrefixTest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pathPrefixTest[L&lt;:&lt;?&gt;](pm:&lt;?&gt;):spray.routing.Directive[L]"></a>
+      <a id="pathPrefixTest[L&lt;:shapeless.HList](pm:spray.routing.PathMatcher[L]):spray.routing.Directive[L]"></a>
       <a id="pathPrefixTest[L&lt;:HList](PathMatcher[L]):Directive[L]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1872,7 +1872,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.PathDirectives#pathSuffix" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pathSuffix[L&lt;:&lt;?&gt;](pm:&lt;?&gt;):spray.routing.Directive[L]"></a>
+      <a id="pathSuffix[L&lt;:shapeless.HList](pm:spray.routing.PathMatcher[L]):spray.routing.Directive[L]"></a>
       <a id="pathSuffix[L&lt;:HList](PathMatcher[L]):Directive[L]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1885,7 +1885,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.PathDirectives#pathSuffixTest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pathSuffixTest[L&lt;:&lt;?&gt;](pm:&lt;?&gt;):spray.routing.Directive[L]"></a>
+      <a id="pathSuffixTest[L&lt;:shapeless.HList](pm:spray.routing.PathMatcher[L]):spray.routing.Directive[L]"></a>
       <a id="pathSuffixTest[L&lt;:HList](PathMatcher[L]):Directive[L]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2000,7 +2000,7 @@
               
         </dd></dl></div>
     </li><li name="spray.routing.directives.MarshallingDirectives#produce" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="produce[T&lt;:&lt;?&gt;](marshaller:&lt;?&gt;):spray.routing.Directive[shapeless.::[T=&gt;Unit,shapeless.HNil]]"></a>
+      <a id="produce[T](marshaller:spray.httpx.marshalling.ToResponseMarshaller[T]):spray.routing.Directive[shapeless.::[T=&gt;Unit,shapeless.HNil]]"></a>
       <a id="produce[T](ToResponseMarshaller[T]):Directive[::[(T)⇒Unit,HNil]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2013,7 +2013,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MarshallingDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#provide" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="provide[T&lt;:&lt;?&gt;](value:&lt;?&gt;):spray.routing.Directive1[T]"></a>
+      <a id="provide[T](value:T):spray.routing.Directive1[T]"></a>
       <a id="provide[T](T):Directive1[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2039,7 +2039,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MethodDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.PathDirectives#rawPathPrefix" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="rawPathPrefix[L&lt;:&lt;?&gt;](pm:&lt;?&gt;):spray.routing.Directive[L]"></a>
+      <a id="rawPathPrefix[L&lt;:shapeless.HList](pm:spray.routing.PathMatcher[L]):spray.routing.Directive[L]"></a>
       <a id="rawPathPrefix[L&lt;:HList](PathMatcher[L]):Directive[L]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2052,7 +2052,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.PathDirectives#rawPathPrefixTest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="rawPathPrefixTest[L&lt;:&lt;?&gt;](pm:&lt;?&gt;):spray.routing.Directive[L]"></a>
+      <a id="rawPathPrefixTest[L&lt;:shapeless.HList](pm:spray.routing.PathMatcher[L]):spray.routing.Directive[L]"></a>
       <a id="rawPathPrefixTest[L&lt;:HList](PathMatcher[L]):Directive[L]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2078,7 +2078,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.interface.server.WebServer">WebServer</a> → Actor</dd></dl></div>
     </li><li name="spray.routing.directives.RouteDirectives#redirect" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="redirect(uri:&lt;?&gt;,redirectionType:&lt;?&gt;):spray.routing.StandardRoute"></a>
+      <a id="redirect(uri:spray.http.Uri,redirectionType:spray.http.StatusCodes.Redirection):spray.routing.StandardRoute"></a>
       <a id="redirect(Uri,Redirection):StandardRoute"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2104,7 +2104,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ImplicitPathMatcherConstruction</dd></dl></div>
     </li><li name="spray.routing.directives.RouteDirectives#reject" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="reject(rejections:&lt;?&gt;):spray.routing.StandardRoute"></a>
+      <a id="reject(rejections:spray.routing.Rejection*):spray.routing.StandardRoute"></a>
       <a id="reject(Rejection*):StandardRoute"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2143,7 +2143,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.EncodingDirectives#requestEncodedWith" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="requestEncodedWith(encoding:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="requestEncodedWith(encoding:spray.http.HttpEncoding):spray.routing.Directive0"></a>
       <a id="requestEncodedWith(HttpEncoding):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2221,7 +2221,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.RespondWithDirectives#respondWithHeader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondWithHeader(responseHeader:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="respondWithHeader(responseHeader:spray.http.HttpHeader):spray.routing.Directive0"></a>
       <a id="respondWithHeader(HttpHeader):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2234,7 +2234,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RespondWithDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.RespondWithDirectives#respondWithHeaders" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondWithHeaders(responseHeaders:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="respondWithHeaders(responseHeaders:List[spray.http.HttpHeader]):spray.routing.Directive0"></a>
       <a id="respondWithHeaders(List[HttpHeader]):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2247,7 +2247,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RespondWithDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.RespondWithDirectives#respondWithHeaders" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondWithHeaders(responseHeaders:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="respondWithHeaders(responseHeaders:spray.http.HttpHeader*):spray.routing.Directive0"></a>
       <a id="respondWithHeaders(HttpHeader*):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2260,7 +2260,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RespondWithDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.FileAndResourceDirectives#respondWithLastModifiedHeader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondWithLastModifiedHeader(timestamp:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="respondWithLastModifiedHeader(timestamp:Long):spray.routing.Directive0"></a>
       <a id="respondWithLastModifiedHeader(Long):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2273,7 +2273,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FileAndResourceDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.RespondWithDirectives#respondWithMediaType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondWithMediaType(mediaType:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="respondWithMediaType(mediaType:spray.http.MediaType):spray.routing.Directive0"></a>
       <a id="respondWithMediaType(MediaType):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2286,7 +2286,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RespondWithDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.RespondWithDirectives#respondWithSingletonHeader" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondWithSingletonHeader(responseHeader:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="respondWithSingletonHeader(responseHeader:spray.http.HttpHeader):spray.routing.Directive0"></a>
       <a id="respondWithSingletonHeader(HttpHeader):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2299,7 +2299,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RespondWithDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.RespondWithDirectives#respondWithSingletonHeaders" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondWithSingletonHeaders(responseHeaders:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="respondWithSingletonHeaders(responseHeaders:List[spray.http.HttpHeader]):spray.routing.Directive0"></a>
       <a id="respondWithSingletonHeaders(List[HttpHeader]):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2312,7 +2312,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RespondWithDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.RespondWithDirectives#respondWithSingletonHeaders" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondWithSingletonHeaders(responseHeaders:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="respondWithSingletonHeaders(responseHeaders:spray.http.HttpHeader*):spray.routing.Directive0"></a>
       <a id="respondWithSingletonHeaders(HttpHeader*):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2325,7 +2325,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RespondWithDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.RespondWithDirectives#respondWithStatus" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="respondWithStatus(responseStatus:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="respondWithStatus(responseStatus:spray.http.StatusCode):spray.routing.Directive0"></a>
       <a id="respondWithStatus(StatusCode):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2338,7 +2338,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>RespondWithDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.EncodingDirectives#responseEncodingAccepted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="responseEncodingAccepted(encoding:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="responseEncodingAccepted(encoding:spray.http.HttpEncoding):spray.routing.Directive0"></a>
       <a id="responseEncodingAccepted(HttpEncoding):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2351,7 +2351,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>EncodingDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.MiscDirectives#rewriteUnmatchedPath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="rewriteUnmatchedPath(f:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="rewriteUnmatchedPath(f:spray.http.Uri.Path=&gt;spray.http.Uri.Path):spray.routing.Directive0"></a>
       <a id="rewriteUnmatchedPath((Path)⇒Path):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2377,7 +2377,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="WebService.html" class="extype" name="com.memsql.spark.interface.server.WebService">WebService</a></dd></dl></div>
     </li><li name="spray.routing.directives.BasicDirectives#routeRouteResponse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="routeRouteResponse(f:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="routeRouteResponse(f:PartialFunction[Any,spray.routing.RequestContext=&gt;Unit]):spray.routing.Directive0"></a>
       <a id="routeRouteResponse(PartialFunction[Any,(RequestContext)⇒Unit]):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2416,7 +2416,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HttpServiceBase</dd></dl></div>
     </li><li name="spray.routing.directives.SchemeDirectives#scheme" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="scheme(schm:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="scheme(schm:String):spray.routing.Directive0"></a>
       <a id="scheme(String):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2442,7 +2442,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SchemeDirectives</dd></dl></div>
     </li><li name="spray.routing.HttpServiceBase#sealRejectionHandler" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sealRejectionHandler(rh:&lt;?&gt;):spray.routing.RejectionHandler"></a>
+      <a id="sealRejectionHandler(rh:spray.routing.RejectionHandler):spray.routing.RejectionHandler"></a>
       <a id="sealRejectionHandler(RejectionHandler):RejectionHandler"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2455,7 +2455,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HttpServiceBase</dd></dl></div>
     </li><li name="spray.routing.HttpServiceBase#sealRoute" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sealRoute(route:&lt;?&gt;)(impliciteh:&lt;?&gt;,implicitrh:&lt;?&gt;):spray.routing.RequestContext=&gt;Unit"></a>
+      <a id="sealRoute(route:spray.routing.RequestContext=&gt;Unit)(impliciteh:spray.routing.ExceptionHandler,implicitrh:spray.routing.RejectionHandler):spray.routing.RequestContext=&gt;Unit"></a>
       <a id="sealRoute((RequestContext)⇒Unit)(ExceptionHandler,RejectionHandler):(RequestContext)⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2507,7 +2507,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li name="spray.routing.PathMatchers#separateOnSlashes" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="separateOnSlashes(string:&lt;?&gt;):spray.routing.PathMatcher0"></a>
+      <a id="separateOnSlashes(string:String):spray.routing.PathMatcher0"></a>
       <a id="separateOnSlashes(String):PathMatcher0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2520,7 +2520,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PathMatchers</dd></dl></div>
     </li><li name="spray.routing.directives.CookieDirectives#setCookie" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="setCookie(first:&lt;?&gt;,more:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="setCookie(first:spray.http.HttpCookie,more:spray.http.HttpCookie*):spray.routing.Directive0"></a>
       <a id="setCookie(HttpCookie,HttpCookie*):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2676,7 +2676,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>MiscDirectives</dd></dl></div>
     </li><li name="spray.routing.directives.MiscDirectives#validate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="validate(check:&lt;?&gt;,errorMsg:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="validate(check:=&gt;Boolean,errorMsg:String):spray.routing.Directive0"></a>
       <a id="validate(⇒Boolean,String):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2759,7 +2759,7 @@
               
         </dd></dl></div>
     </li><li name="spray.routing.directives.RangeDirectives#withRangeSupport" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="withRangeSupport(m:&lt;?&gt;):spray.routing.Directive0"></a>
+      <a id="withRangeSupport(m:spray.routing.directives.RangeDirectives.WithRangeSupportMagnet):spray.routing.Directive0"></a>
       <a id="withRangeSupport(WithRangeSupportMagnet):Directive0"></a>
       <h4 class="signature">
       <span class="modifier_kind">

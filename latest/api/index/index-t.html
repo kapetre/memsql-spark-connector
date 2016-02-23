@@ -82,16 +82,25 @@
       <div class="occurrences"><a href="../com/memsql/spark/etl/api/configs/LoadConfigOptions.html" class="extype" name="com.memsql.spark.etl.api.configs.LoadConfigOptions">LoadConfigOptions</a> </div>
     </div><div class="entry">
       <div class="name">table_name</div>
-      <div class="occurrences"><a href="../com/memsql/spark/etl/api/configs/MemSQLLoadConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.MemSQLLoadConfig">MemSQLLoadConfig</a> </div>
+      <div class="occurrences"><a href="../com/memsql/sampling_utils/MySQLConfig.html" class="extype" name="com.memsql.sampling_utils.MySQLConfig">MySQLConfig</a> <a href="../com/memsql/spark/etl/api/configs/MemSQLLoadConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.MemSQLLoadConfig">MemSQLLoadConfig</a> <a href="../com/memsql/spark/phases/MySQLExtractConfig.html" class="extype" name="com.memsql.spark.phases.MySQLExtractConfig">MySQLExtractConfig</a> </div>
     </div><div class="entry">
       <div class="name">taskErrorRecordFormat</div>
       <div class="occurrences"><a href="../com/memsql/spark/interface/api/ApiJsonProtocol$.html" class="extype" name="com.memsql.spark.interface.api.ApiJsonProtocol">ApiJsonProtocol</a> </div>
+    </div><div class="entry">
+      <div class="name">task_config</div>
+      <div class="occurrences"><a href="../com/memsql/spark/phases/HDFSExtractConfig.html" class="extype" name="com.memsql.spark.phases.HDFSExtractConfig">HDFSExtractConfig</a> <a href="../com/memsql/spark/phases/MySQLExtractConfig.html" class="extype" name="com.memsql.spark.phases.MySQLExtractConfig">MySQLExtractConfig</a> <a href="../com/memsql/spark/phases/S3ExtractConfig.html" class="extype" name="com.memsql.spark.phases.S3ExtractConfig">S3ExtractConfig</a> </div>
     </div><div class="entry">
       <div class="name">task_errors</div>
       <div class="occurrences"><a href="../com/memsql/spark/interface/api/BatchEndEvent.html" class="extype" name="com.memsql.spark.interface.api.BatchEndEvent">BatchEndEvent</a> </div>
     </div><div class="entry">
       <div class="name">task_id</div>
       <div class="occurrences"><a href="../com/memsql/spark/interface/api/TaskErrorRecord.html" class="extype" name="com.memsql.spark.interface.api.TaskErrorRecord">TaskErrorRecord</a> </div>
+    </div><div class="entry">
+      <div class="name">tasks_failed</div>
+      <div class="occurrences"><a href="../com/memsql/spark/interface/api/SparkProgressInfo.html" class="extype" name="com.memsql.spark.interface.api.SparkProgressInfo">SparkProgressInfo</a> </div>
+    </div><div class="entry">
+      <div class="name">tasks_succeeded</div>
+      <div class="occurrences"><a href="../com/memsql/spark/interface/api/SparkProgressInfo.html" class="extype" name="com.memsql.spark.interface.api.SparkProgressInfo">SparkProgressInfo</a> </div>
     </div><div class="entry">
       <div class="name">testLinesConfigFormat</div>
       <div class="occurrences"><a href="../com/memsql/spark/phases/configs/ExtractPhase$.html" class="extype" name="com.memsql.spark.phases.configs.ExtractPhase">ExtractPhase</a> </div>
@@ -103,7 +112,7 @@
       <div class="occurrences"><a href="../com/memsql/spark/interface/api/ApiActor$.html" class="extype" name="com.memsql.spark.interface.api.ApiActor">ApiActor</a> <a href="../com/memsql/spark/interface/server/WebService.html" class="extype" name="com.memsql.spark.interface.server.WebService">WebService</a> </div>
     </div><div class="entry">
       <div class="name">timestamp</div>
-      <div class="occurrences"><a href="../com/memsql/spark/interface/api/BatchEndEvent.html" class="extype" name="com.memsql.spark.interface.api.BatchEndEvent">BatchEndEvent</a> <a href="../com/memsql/spark/interface/api/BatchStartEvent.html" class="extype" name="com.memsql.spark.interface.api.BatchStartEvent">BatchStartEvent</a> <a href="../com/memsql/spark/interface/api/PipelineEndEvent.html" class="extype" name="com.memsql.spark.interface.api.PipelineEndEvent">PipelineEndEvent</a> <a href="../com/memsql/spark/interface/api/PipelineEvent.html" class="extype" name="com.memsql.spark.interface.api.PipelineEvent">PipelineEvent</a> <a href="../com/memsql/spark/interface/api/PipelineStartEvent.html" class="extype" name="com.memsql.spark.interface.api.PipelineStartEvent">PipelineStartEvent</a> </div>
+      <div class="occurrences"><a href="../com/memsql/spark/interface/api/BatchCancelledEvent.html" class="extype" name="com.memsql.spark.interface.api.BatchCancelledEvent">BatchCancelledEvent</a> <a href="../com/memsql/spark/interface/api/BatchEndEvent.html" class="extype" name="com.memsql.spark.interface.api.BatchEndEvent">BatchEndEvent</a> <a href="../com/memsql/spark/interface/api/BatchStartEvent.html" class="extype" name="com.memsql.spark.interface.api.BatchStartEvent">BatchStartEvent</a> <a href="../com/memsql/spark/interface/api/PipelineEndEvent.html" class="extype" name="com.memsql.spark.interface.api.PipelineEndEvent">PipelineEndEvent</a> <a href="../com/memsql/spark/interface/api/PipelineEvent.html" class="extype" name="com.memsql.spark.interface.api.PipelineEvent">PipelineEvent</a> <a href="../com/memsql/spark/interface/api/PipelineStartEvent.html" class="extype" name="com.memsql.spark.interface.api.PipelineStartEvent">PipelineStartEvent</a> </div>
     </div><div class="entry">
       <div class="name">to</div>
       <div class="occurrences"><a href="../com/memsql/spark/connector/util/Loan.html" class="extype" name="com.memsql.spark.connector.util.Loan">Loan</a> </div>
@@ -144,14 +153,17 @@
       <div class="name">topic</div>
       <div class="occurrences"><a href="../com/memsql/spark/phases/KafkaExtractConfig.html" class="extype" name="com.memsql.spark.phases.KafkaExtractConfig">KafkaExtractConfig</a> <a href="../com/memsql/spark/phases/ZookeeperManagedKafkaExtractConfig.html" class="extype" name="com.memsql.spark.phases.ZookeeperManagedKafkaExtractConfig">ZookeeperManagedKafkaExtractConfig</a> </div>
     </div><div class="entry">
+      <div class="name">total_tasks</div>
+      <div class="occurrences"><a href="../com/memsql/spark/interface/api/SparkProgressInfo.html" class="extype" name="com.memsql.spark.interface.api.SparkProgressInfo">SparkProgressInfo</a> </div>
+    </div><div class="entry">
       <div class="name">traceBatchCount</div>
       <div class="occurrences"><a href="../com/memsql/spark/interface/DefaultPipelineMonitor.html" class="extype" name="com.memsql.spark.interface.DefaultPipelineMonitor">DefaultPipelineMonitor</a> <a href="../com/memsql/spark/interface/PipelineMonitor.html" class="extype" name="com.memsql.spark.interface.PipelineMonitor">PipelineMonitor</a> </div>
     </div><div class="entry">
       <div class="name">trace_batch_count</div>
-      <div class="occurrences"><a href="../com/memsql/spark/interface/api/ApiActor$$PipelineUpdate.html" class="extype" name="com.memsql.spark.interface.api.ApiActor.PipelineUpdate">PipelineUpdate</a> </div>
+      <div class="occurrences"><a href="../com/memsql/spark/interface/api/ApiActor$$PipelinePut.html" class="extype" name="com.memsql.spark.interface.api.ApiActor.PipelinePut">PipelinePut</a> <a href="../com/memsql/spark/interface/api/ApiActor$$PipelineUpdate.html" class="extype" name="com.memsql.spark.interface.api.ApiActor.PipelineUpdate">PipelineUpdate</a> </div>
     </div><div class="entry">
       <div class="name">transform</div>
-      <div class="occurrences"><a href="../com/memsql/spark/etl/api/ByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayTransformer">ByteArrayTransformer</a> <a href="../com/memsql/spark/etl/api/SimpleByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.SimpleByteArrayTransformer">SimpleByteArrayTransformer</a> <a href="../com/memsql/spark/etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a> <a href="../com/memsql/spark/etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a> <a href="../com/memsql/spark/etl/api/configs/PipelineConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.PipelineConfig">PipelineConfig</a> <a href="../com/memsql/spark/interface/api/BatchEndEvent.html" class="extype" name="com.memsql.spark.interface.api.BatchEndEvent">BatchEndEvent</a> <a href="../com/memsql/spark/phases/CSVTransformer.html" class="extype" name="com.memsql.spark.phases.CSVTransformer">CSVTransformer</a> <a href="../com/memsql/spark/phases/IdentityTransformer.html" class="extype" name="com.memsql.spark.phases.IdentityTransformer">IdentityTransformer</a> <a href="../com/memsql/spark/phases/JSONTransformer.html" class="extype" name="com.memsql.spark.phases.JSONTransformer">JSONTransformer</a> <a href="../com/memsql/spark/phases/PythonTransformer.html" class="extype" name="com.memsql.spark.phases.PythonTransformer">PythonTransformer</a> </div>
+      <div class="occurrences"><a href="../com/memsql/spark/etl/api/ByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayTransformer">ByteArrayTransformer</a> <a href="../com/memsql/spark/etl/api/SimpleByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.SimpleByteArrayTransformer">SimpleByteArrayTransformer</a> <a href="../com/memsql/spark/etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a> <a href="../com/memsql/spark/etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a> <a href="../com/memsql/spark/etl/api/configs/PipelineConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.PipelineConfig">PipelineConfig</a> <a href="../com/memsql/spark/interface/api/BatchEndEvent.html" class="extype" name="com.memsql.spark.interface.api.BatchEndEvent">BatchEndEvent</a> <a href="../com/memsql/spark/phases/CSVSamplingTransformer.html" class="extype" name="com.memsql.spark.phases.CSVSamplingTransformer">CSVSamplingTransformer</a> <a href="../com/memsql/spark/phases/CSVTransformer.html" class="extype" name="com.memsql.spark.phases.CSVTransformer">CSVTransformer</a> <a href="../com/memsql/spark/phases/IdentityTransformer.html" class="extype" name="com.memsql.spark.phases.IdentityTransformer">IdentityTransformer</a> <a href="../com/memsql/spark/phases/JSONTransformer.html" class="extype" name="com.memsql.spark.phases.JSONTransformer">JSONTransformer</a> <a href="../com/memsql/spark/phases/PythonTransformer.html" class="extype" name="com.memsql.spark.phases.PythonTransformer">PythonTransformer</a> </div>
     </div><div class="entry">
       <div class="name">transformConfig</div>
       <div class="occurrences"><a href="../com/memsql/spark/interface/api/PipelineInstance.html" class="extype" name="com.memsql.spark.interface.api.PipelineInstance">PipelineInstance</a> </div>

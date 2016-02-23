@@ -35,13 +35,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">CSVTransformer</span><span class="result"> extends <a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a></span>
+        <span class="name">CSVTransformer</span><span class="result"> extends <a href="CSVTransformerBase.html" class="extype" name="com.memsql.spark.phases.CSVTransformerBase">CSVTransformerBase</a></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a>, <a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="CSVTransformerBase.html" class="extype" name="com.memsql.spark.phases.CSVTransformerBase">CSVTransformerBase</a>, <a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a>, <a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.memsql.spark.phases.CSVTransformer"><span>CSVTransformer</span></li><li class="in" name="com.memsql.spark.etl.api.StringTransformer"><span>StringTransformer</span></li><li class="in" name="com.memsql.spark.etl.api.Transformer"><span>Transformer</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.memsql.spark.phases.CSVTransformer"><span>CSVTransformer</span></li><li class="in" name="com.memsql.spark.phases.CSVTransformerBase"><span>CSVTransformerBase</span></li><li class="in" name="com.memsql.spark.etl.api.StringTransformer"><span>StringTransformer</span></li><li class="in" name="com.memsql.spark.etl.api.Transformer"><span>Transformer</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -273,6 +273,19 @@ The default implementation does nothing.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="com.memsql.spark.phases.CSVTransformerBase#getCSVFormat" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getCSVFormat(delimiter:Option[Char],escape:Option[String],quote:Option[Char]):org.apache.commons.csv.CSVFormat"></a>
+      <a id="getCSVFormat(Option[Char],Option[String],Option[Char]):CSVFormat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCSVFormat</span><span class="params">(<span name="delimiter">delimiter: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Char" class="extype" target="_top">Char</a>]</span>, <span name="escape">escape: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="quote">quote: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Char" class="extype" target="_top">Char</a>]</span>)</span><span class="result">: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/commons/commons-csv/1.2/commons-csv-1.2-javadoc.jar/!/index.html#org.apache.commons.csv.CSVFormat" class="extype" target="_top">CSVFormat</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CSVTransformerBase.html" class="extype" name="com.memsql.spark.phases.CSVTransformerBase">CSVTransformerBase</a></dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -286,6 +299,19 @@ The default implementation does nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.memsql.spark.phases.CSVTransformerBase#getNulledRDD" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getNulledRDD(rdd:org.apache.spark.rdd.RDD[String],csvFormat:org.apache.commons.csv.CSVFormat,nullString:Option[String]):org.apache.spark.rdd.RDD[List[String]]"></a>
+      <a id="getNulledRDD(RDD[String],CSVFormat,Option[String]):RDD[List[String]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getNulledRDD</span><span class="params">(<span name="rdd">rdd: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="csvFormat">csvFormat: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/commons/commons-csv/1.2/commons-csv-1.2-javadoc.jar/!/index.html#org.apache.commons.csv.CSVFormat" class="extype" target="_top">CSVFormat</a></span>, <span name="nullString">nullString: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">RDD</a>[<span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CSVTransformerBase.html" class="extype" name="com.memsql.spark.phases.CSVTransformerBase">CSVTransformerBase</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -315,7 +341,7 @@ The default implementation does nothing.
 </p><div class="fullcomment"><div class="comment cmt"><p>Initialization code for this Extractor
 </p></div><dl class="paramcmts block"><dt class="param">sqlContext</dt><dd class="cmt"><p>The SQLContext that is used to run this pipeline.
                   NOTE: If the pipeline is running in MemSQL Streamliner, this is an instance of
-                  <a href="../../../../org/apache/spark/sql/memsql/MemSQLContext.html" class="extype" name="org.apache.spark.sql.memsql.MemSQLContext">org.apache.spark.sql.memsql.MemSQLContext</a>, which has additional metadata about the MemSQL cluster.</p></dd><dt class="param">config</dt><dd class="cmt"><p>The Transformer configuration passed from MemSQL Ops.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.
+                  <a href="../connector/MemSQLContext.html" class="extype" name="com.memsql.spark.connector.MemSQLContext">com.memsql.spark.connector.MemSQLContext</a>, which has additional metadata about the MemSQL cluster.</p></dd><dt class="param">config</dt><dd class="cmt"><p>The Transformer configuration passed from MemSQL Ops.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -369,6 +395,19 @@ The default implementation does nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.memsql.spark.phases.CSVTransformerBase#parseCSVLines" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parseCSVLines(s:String,format:org.apache.commons.csv.CSVFormat):Iterable[List[String]]"></a>
+      <a id="parseCSVLines(String,CSVFormat):Iterable[List[String]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parseCSVLines</span><span class="params">(<span name="s">s: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="format">format: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/commons/commons-csv/1.2/commons-csv-1.2-javadoc.jar/!/index.html#org.apache.commons.csv.CSVFormat" class="extype" target="_top">CSVFormat</a></span>)</span><span class="result">: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CSVTransformerBase.html" class="extype" name="com.memsql.spark.phases.CSVTransformerBase">CSVTransformerBase</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -410,7 +449,7 @@ The default implementation does nothing.
       <p class="shortcomment cmt">Transforms the incoming <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> of bytes.</p><div class="fullcomment"><div class="comment cmt"><p>Transforms the incoming <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> of bytes.
 </p></div><dl class="paramcmts block"><dt class="param">sqlContext</dt><dd class="cmt"><p>The SQLContext that is used to run this pipeline.
                   NOTE: If the pipeline is running in MemSQL Streamliner, this is an instance of
-                  <a href="../../../../org/apache/spark/sql/memsql/MemSQLContext.html" class="extype" name="org.apache.spark.sql.memsql.MemSQLContext">org.apache.spark.sql.memsql.MemSQLContext</a>, which has additional metadata about the MemSQL cluster.</p></dd><dt class="param">rdd</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> generated by the Extractor for this batch.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.</p></dd><dt>returns</dt><dd class="cmt"><p>A <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> with the transformed data to be loaded.
+                  <a href="../connector/MemSQLContext.html" class="extype" name="com.memsql.spark.connector.MemSQLContext">com.memsql.spark.connector.MemSQLContext</a>, which has additional metadata about the MemSQL cluster.</p></dd><dt class="param">rdd</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a> generated by the Extractor for this batch.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.</p></dd><dt>returns</dt><dd class="cmt"><p>A <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> with the transformed data to be loaded.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.phases.CSVTransformer">CSVTransformer</a> → <a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a></dd></dl></div>
     </li><li name="com.memsql.spark.etl.api.StringTransformer#transform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transform(sqlContext:org.apache.spark.sql.SQLContext,df:org.apache.spark.sql.DataFrame,config:com.memsql.spark.etl.api.PhaseConfig,logger:com.memsql.spark.etl.utils.PhaseLogger):org.apache.spark.sql.DataFrame"></a>
@@ -427,7 +466,7 @@ The default implementation does nothing.
       <p class="shortcomment cmt">Transforms the incoming <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Transforms the incoming <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>.
 </p></div><dl class="paramcmts block"><dt class="param">sqlContext</dt><dd class="cmt"><p>The SQLContext that is used to run this pipeline.
                   NOTE: If the pipeline is running in MemSQL Streamliner, this is an instance of
-                  <a href="../../../../org/apache/spark/sql/memsql/MemSQLContext.html" class="extype" name="org.apache.spark.sql.memsql.MemSQLContext">org.apache.spark.sql.memsql.MemSQLContext</a>, which has additional metadata about the MemSQL cluster.</p></dd><dt class="param">df</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> generated by the Extractor for this batch.</p></dd><dt class="param">config</dt><dd class="cmt"><p>The Transformer configuration passed from MemSQL Ops.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.</p></dd><dt>returns</dt><dd class="cmt"><p>A <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> with the transformed data to be loaded.
+                  <a href="../connector/MemSQLContext.html" class="extype" name="com.memsql.spark.connector.MemSQLContext">com.memsql.spark.connector.MemSQLContext</a>, which has additional metadata about the MemSQL cluster.</p></dd><dt class="param">df</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> generated by the Extractor for this batch.</p></dd><dt class="param">config</dt><dd class="cmt"><p>The Transformer configuration passed from MemSQL Ops.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.</p></dd><dt>returns</dt><dd class="cmt"><p>A <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> with the transformed data to be loaded.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a> → <a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
@@ -495,7 +534,9 @@ The default implementation does nothing.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="com.memsql.spark.etl.api.StringTransformer">
+        <div class="parent" name="com.memsql.spark.phases.CSVTransformerBase">
+              <h3>Inherited from <a href="CSVTransformerBase.html" class="extype" name="com.memsql.spark.phases.CSVTransformerBase">CSVTransformerBase</a></h3>
+            </div><div class="parent" name="com.memsql.spark.etl.api.StringTransformer">
               <h3>Inherited from <a href="../etl/api/StringTransformer.html" class="extype" name="com.memsql.spark.etl.api.StringTransformer">StringTransformer</a></h3>
             </div><div class="parent" name="com.memsql.spark.etl.api.Transformer">
               <h3>Inherited from <a href="../etl/api/Transformer.html" class="extype" name="com.memsql.spark.etl.api.Transformer">Transformer</a></h3>

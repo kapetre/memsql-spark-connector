@@ -35,7 +35,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Pipeline</span><span class="params">(<span name="pipeline_id">pipeline_id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="state">state: <a href="PipelineState$.html#PipelineState=com.memsql.spark.interface.api.PipelineState.Value" class="extmbr" name="com.memsql.spark.interface.api.PipelineState.PipelineState">PipelineState.PipelineState</a></span>, <span name="batch_interval">batch_interval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="config">config: <a href="../../etl/api/configs/PipelineConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.PipelineConfig">PipelineConfig</a></span>, <span name="last_updated">last_updated: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="error">error: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <span class="name">Pipeline</span><span class="params">(<span name="pipeline_id">pipeline_id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="state">state: <a href="PipelineState$.html#PipelineState=com.memsql.spark.interface.api.PipelineState.Value" class="extmbr" name="com.memsql.spark.interface.api.PipelineState.PipelineState">PipelineState.PipelineState</a></span>, <span name="single_step">single_step: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="batch_interval">batch_interval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="config">config: <a href="../../etl/api/configs/PipelineConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.PipelineConfig">PipelineConfig</a></span>, <span name="last_updated">last_updated: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="error">error: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
       
@@ -80,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="com.memsql.spark.interface.api.Pipeline#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(pipeline_id:String,state:com.memsql.spark.interface.api.PipelineState.PipelineState,batch_interval:Long,config:com.memsql.spark.etl.api.configs.PipelineConfig,last_updated:Long,error:Option[String]):com.memsql.spark.interface.api.Pipeline"></a>
+      <a id="&lt;init&gt;(pipeline_id:String,state:com.memsql.spark.interface.api.PipelineState.PipelineState,single_step:Boolean,batch_interval:Long,config:com.memsql.spark.etl.api.configs.PipelineConfig,last_updated:Long,error:Option[String]):com.memsql.spark.interface.api.Pipeline"></a>
       <a id="&lt;init&gt;:Pipeline"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Pipeline</span><span class="params">(<span name="pipeline_id">pipeline_id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="state">state: <a href="PipelineState$.html#PipelineState=com.memsql.spark.interface.api.PipelineState.Value" class="extmbr" name="com.memsql.spark.interface.api.PipelineState.PipelineState">PipelineState.PipelineState</a></span>, <span name="batch_interval">batch_interval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="config">config: <a href="../../etl/api/configs/PipelineConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.PipelineConfig">PipelineConfig</a></span>, <span name="last_updated">last_updated: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="error">error: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>)</span>
+        <span class="name">Pipeline</span><span class="params">(<span name="pipeline_id">pipeline_id: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="state">state: <a href="PipelineState$.html#PipelineState=com.memsql.spark.interface.api.PipelineState.Value" class="extmbr" name="com.memsql.spark.interface.api.PipelineState.PipelineState">PipelineState.PipelineState</a></span>, <span name="single_step">single_step: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="batch_interval">batch_interval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="config">config: <a href="../../etl/api/configs/PipelineConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.PipelineConfig">PipelineConfig</a></span>, <span name="last_updated">last_updated: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="error">error: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">scala.None</span></span>)</span>
       </span>
       </h4>
       
@@ -370,6 +370,19 @@
       </span>
       <span class="symbol">
         <span class="name">pipeline_id</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.memsql.spark.interface.api.Pipeline#single_step" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="single_step:Boolean"></a>
+      <a id="single_step:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">single_step</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       </h4>
       
