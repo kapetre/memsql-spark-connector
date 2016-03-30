@@ -15,14 +15,11 @@
       <div class="name">CHECKPOINT_DATA_VERSION</div>
       <div class="occurrences"><a href="../com/memsql/spark/phases/ZookeeperManagedKafkaExtractor.html" class="extype" name="com.memsql.spark.phases.ZookeeperManagedKafkaExtractor">ZookeeperManagedKafkaExtractor</a> </div>
     </div><div class="entry">
+      <div class="name">COMMIT_HASH</div>
+      <div class="occurrences"><a href="../com/memsql/spark/interface/Main$.html" class="extype" name="com.memsql.spark.interface.Main">Main</a> </div>
+    </div><div class="entry">
       <div class="name">CSVSamplingException</div>
       <div class="occurrences"><a href="../com/memsql/sampling_utils/package.html" class="extype" name="com.memsql.sampling_utils">sampling_utils</a> </div>
-    </div><div class="entry">
-      <div class="name">CSVSamplingTransformer</div>
-      <div class="occurrences"><a href="../com/memsql/spark/phases/package.html" class="extype" name="com.memsql.spark.phases">phases</a> </div>
-    </div><div class="entry">
-      <div class="name">CSVSamplingTransformerConfig</div>
-      <div class="occurrences"><a href="../com/memsql/spark/phases/package.html" class="extype" name="com.memsql.spark.phases">phases</a> </div>
     </div><div class="entry">
       <div class="name">CSVTransformer</div>
       <div class="occurrences"><a href="../com/memsql/spark/phases/package.html" class="extype" name="com.memsql.spark.phases">phases</a> </div>
@@ -35,6 +32,9 @@
     </div><div class="entry">
       <div class="name">CSVTransformerException</div>
       <div class="occurrences"><a href="../com/memsql/spark/phases/package.html" class="extype" name="com.memsql.spark.phases">phases</a> </div>
+    </div><div class="entry">
+      <div class="name">Checkpoint</div>
+      <div class="occurrences"><a href="../com/memsql/spark/interface/util/package.html" class="extype" name="com.memsql.spark.interface.util">util</a> </div>
     </div><div class="entry">
       <div class="name">Clock</div>
       <div class="occurrences"><a href="../com/memsql/spark/interface/util/package.html" class="extype" name="com.memsql.spark.interface.util">util</a> </div>
@@ -61,9 +61,6 @@
       <div class="occurrences"><a href="../org/apache/spark/sql/memsql/package.html" class="extype" name="org.apache.spark.sql.memsql">memsql</a> <a href="../org/apache/spark/sql/memsql/CreateMode$.html" class="extype" name="org.apache.spark.sql.memsql.CreateMode">CreateMode</a> </div>
     </div><div class="entry">
       <div class="name">Csv</div>
-      <div class="occurrences"><a href="../com/memsql/spark/etl/api/configs/TransformPhaseKind$.html" class="extype" name="com.memsql.spark.etl.api.configs.TransformPhaseKind">TransformPhaseKind</a> </div>
-    </div><div class="entry">
-      <div class="name">CsvSampling</div>
       <div class="occurrences"><a href="../com/memsql/spark/etl/api/configs/TransformPhaseKind$.html" class="extype" name="com.memsql.spark.etl.api.configs.TransformPhaseKind">TransformPhaseKind</a> </div>
     </div><div class="entry">
       <div class="name">CurrentPipelineConfigVersion</div>
@@ -162,6 +159,9 @@
       <div class="name">com</div>
       <div class="occurrences"><a href="../package.html" class="extype" name="_root_">root</a> </div>
     </div><div class="entry">
+      <div class="name">commitHash</div>
+      <div class="occurrences"><a href="../com/memsql/spark/interface/meta/BuildInfo$.html" class="extype" name="com.memsql.spark.interface.meta.BuildInfo">BuildInfo</a> </div>
+    </div><div class="entry">
       <div class="name">common</div>
       <div class="occurrences"><a href="../ooyala/package.html" class="extype" name="ooyala">ooyala</a> </div>
     </div><div class="entry">
@@ -178,7 +178,7 @@
       <div class="occurrences"><a href="../com/memsql/spark/connector/MemSQLCluster.html" class="extype" name="com.memsql.spark.connector.MemSQLCluster">MemSQLCluster</a> <a href="../org/apache/spark/sql/memsql/IngestStrategy.html" class="extype" name="org.apache.spark.sql.memsql.IngestStrategy">IngestStrategy</a> <a href="../org/apache/spark/sql/memsql/InsertStrategy.html" class="extype" name="org.apache.spark.sql.memsql.InsertStrategy">InsertStrategy</a> <a href="../org/apache/spark/sql/memsql/LoadDataStrategy.html" class="extype" name="org.apache.spark.sql.memsql.LoadDataStrategy">LoadDataStrategy</a> <a href="../org/apache/spark/sql/memsql/MemSQLCatalog.html" class="extype" name="org.apache.spark.sql.memsql.MemSQLCatalog">MemSQLCatalog</a> </div>
     </div><div class="entry">
       <div class="name">config</div>
-      <div class="occurrences"><a href="../com/memsql/spark/etl/api/configs/Phase.html" class="extype" name="com.memsql.spark.etl.api.configs.Phase">Phase</a> <a href="../com/memsql/spark/interface/DefaultPipelineMonitor.html" class="extype" name="com.memsql.spark.interface.DefaultPipelineMonitor">DefaultPipelineMonitor</a> <a href="../com/memsql/spark/interface/PipelineMonitor.html" class="extype" name="com.memsql.spark.interface.PipelineMonitor">PipelineMonitor</a> <a href="../com/memsql/spark/interface/SparkInterface.html" class="extype" name="com.memsql.spark.interface.SparkInterface">SparkInterface</a> <a href="../com/memsql/spark/interface/api/ApiActor$$PipelinePut.html" class="extype" name="com.memsql.spark.interface.api.ApiActor.PipelinePut">PipelinePut</a> <a href="../com/memsql/spark/interface/api/ApiActor$$PipelineUpdate.html" class="extype" name="com.memsql.spark.interface.api.ApiActor.PipelineUpdate">PipelineUpdate</a> <a href="../com/memsql/spark/interface/api/Pipeline.html" class="extype" name="com.memsql.spark.interface.api.Pipeline">Pipeline</a> </div>
+      <div class="occurrences"><a href="../com/memsql/spark/etl/api/configs/Phase.html" class="extype" name="com.memsql.spark.etl.api.configs.Phase">Phase</a> <a href="../com/memsql/spark/interface/DefaultPipelineMonitor.html" class="extype" name="com.memsql.spark.interface.DefaultPipelineMonitor">DefaultPipelineMonitor</a> <a href="../com/memsql/spark/interface/PipelineMonitor.html" class="extype" name="com.memsql.spark.interface.PipelineMonitor">PipelineMonitor</a> <a href="../com/memsql/spark/interface/SparkInterface.html" class="extype" name="com.memsql.spark.interface.SparkInterface">SparkInterface</a> <a href="../com/memsql/spark/interface/api/ApiActor$$PipelinePut.html" class="extype" name="com.memsql.spark.interface.api.ApiActor.PipelinePut">PipelinePut</a> <a href="../com/memsql/spark/interface/api/ApiActor$$PipelineUpdate.html" class="extype" name="com.memsql.spark.interface.api.ApiActor.PipelineUpdate">PipelineUpdate</a> <a href="../com/memsql/spark/interface/api/Pipeline.html" class="extype" name="com.memsql.spark.interface.api.Pipeline">Pipeline</a> <a href="../com/memsql/spark/interface/util/Checkpoint$.html" class="extype" name="com.memsql.spark.interface.util.Checkpoint">Checkpoint</a> </div>
     </div><div class="entry">
       <div class="name">config_version</div>
       <div class="occurrences"><a href="../com/memsql/spark/etl/api/configs/PipelineConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.PipelineConfig">PipelineConfig</a> </div>
@@ -230,9 +230,6 @@
     </div><div class="entry">
       <div class="name">createTable</div>
       <div class="occurrences"><a href="../com/memsql/spark/connector/MemSQLCluster.html" class="extype" name="com.memsql.spark.connector.MemSQLCluster">MemSQLCluster</a> </div>
-    </div><div class="entry">
-      <div class="name">csvSamplingTransformerConfigFormat</div>
-      <div class="occurrences"><a href="../com/memsql/spark/etl/api/configs/TransformPhase$.html" class="extype" name="com.memsql.spark.etl.api.configs.TransformPhase">TransformPhase</a> </div>
     </div><div class="entry">
       <div class="name">csvTransformerConfigFormat</div>
       <div class="occurrences"><a href="../com/memsql/spark/etl/api/configs/TransformPhase$.html" class="extype" name="com.memsql.spark.etl.api.configs.TransformPhase">TransformPhase</a> </div>

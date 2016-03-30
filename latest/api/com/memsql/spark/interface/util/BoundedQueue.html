@@ -508,7 +508,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableLike → GenTraversableLike</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#collectFirst" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="collectFirst[B&lt;:&lt;?&gt;](pf:&lt;?&gt;):Option[B]"></a>
+      <a id="collectFirst[B](pf:PartialFunction[A,B]):Option[B]"></a>
       <a id="collectFirst[B](PartialFunction[A,B]):Option[B]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -547,7 +547,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Queue → MutableList → LinearSeq → LinearSeq → Seq → Iterable → Traversable → Seq → GenSeq → Iterable → GenIterable → Traversable → GenTraversable → GenericTraversableTemplate</dd></dl></div>
     </li><li name="scala.Function1#compose" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="compose[A&lt;:&lt;?&gt;](g:&lt;?&gt;):A=&gt;R"></a>
+      <a id="compose[A](g:A=&gt;T1):A=&gt;R"></a>
       <a id="compose[A]((A)⇒Int):(A)⇒A"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -628,7 +628,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.TraversableOnce#copyToBuffer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="copyToBuffer[B&lt;:&lt;?&gt;](dest:&lt;?&gt;):Unit"></a>
+      <a id="copyToBuffer[B&gt;:A](dest:scala.collection.mutable.Buffer[B]):Unit"></a>
       <a id="copyToBuffer[B&gt;:A](Buffer[B]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1027,7 +1027,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Queue</dd></dl></div>
     </li><li name="scala.collection.generic.GenericTraversableTemplate#genericBuilder" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="genericBuilder[B&lt;:&lt;?&gt;]:scala.collection.mutable.Builder[B,CC[B]]"></a>
+      <a id="genericBuilder[B]:scala.collection.mutable.Builder[B,CC[B]]"></a>
       <a id="genericBuilder[B]:Builder[B,Queue[B]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1079,7 +1079,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableLike → GenTraversableLike</dd></dl></div>
     </li><li name="scala.collection.IterableLike#grouped" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="grouped(size:&lt;?&gt;):Iterator[Repr]"></a>
+      <a id="grouped(size:Int):Iterator[Repr]"></a>
       <a id="grouped(Int):Iterator[Queue[A]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1521,7 +1521,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableLike → GenTraversableLike → FilterMonadic</dd></dl></div>
     </li><li name="scala.collection.mutable.Builder#mapResult" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="mapResult[NewTo&lt;:&lt;?&gt;](f:&lt;?&gt;):scala.collection.mutable.Builder[Elem,NewTo]"></a>
+      <a id="mapResult[NewTo](f:To=&gt;NewTo):scala.collection.mutable.Builder[Elem,NewTo]"></a>
       <a id="mapResult[NewTo]((MutableList[A])⇒NewTo):Builder[A,NewTo]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1690,7 +1690,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.PartialFunction#orElse" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="orElse[A1&lt;:&lt;?&gt;,B1&lt;:&lt;?&gt;](that:&lt;?&gt;):PartialFunction[A1,B1]"></a>
+      <a id="orElse[A1&lt;:A,B1&gt;:B](that:PartialFunction[A1,B1]):PartialFunction[A1,B1]"></a>
       <a id="orElse[A1&lt;:Int,B1&gt;:A](PartialFunction[A1,B1]):PartialFunction[A1,B1]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1976,7 +1976,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd><dt>Definition Classes</dt><dd>TraversableOnce</dd></dl></div>
     </li><li name="scala.PartialFunction#runWith" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="runWith[U&lt;:&lt;?&gt;](action:&lt;?&gt;):A=&gt;Boolean"></a>
+      <a id="runWith[U](action:B=&gt;U):A=&gt;Boolean"></a>
       <a id="runWith[U]((A)⇒U):(Int)⇒Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2083,7 +2083,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SeqLike → GenTraversableLike → TraversableOnce → GenTraversableOnce</dd></dl></div>
     </li><li name="scala.collection.mutable.Builder#sizeHint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sizeHint(coll:&lt;?&gt;,delta:&lt;?&gt;):Unit"></a>
+      <a id="sizeHint(coll:scala.collection.TraversableLike[_,_],delta:Int):Unit"></a>
       <a id="sizeHint(TraversableLike[_,_],Int):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2096,7 +2096,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Builder</dd></dl></div>
     </li><li name="scala.collection.mutable.Builder#sizeHint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sizeHint(coll:&lt;?&gt;):Unit"></a>
+      <a id="sizeHint(coll:scala.collection.TraversableLike[_,_]):Unit"></a>
       <a id="sizeHint(TraversableLike[_,_]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2109,7 +2109,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Builder</dd></dl></div>
     </li><li name="scala.collection.mutable.Builder#sizeHint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sizeHint(size:&lt;?&gt;):Unit"></a>
+      <a id="sizeHint(size:Int):Unit"></a>
       <a id="sizeHint(Int):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2122,7 +2122,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Builder</dd></dl></div>
     </li><li name="scala.collection.mutable.Builder#sizeHintBounded" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sizeHintBounded(size:&lt;?&gt;,boundingColl:&lt;?&gt;):Unit"></a>
+      <a id="sizeHintBounded(size:Int,boundingColl:scala.collection.TraversableLike[_,_]):Unit"></a>
       <a id="sizeHintBounded(Int,TraversableLike[_,_]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2603,7 +2603,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SeqLike</dd></dl></div>
     </li><li name="scala.collection.generic.GenericTraversableTemplate#transpose" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="transpose[B&lt;:&lt;?&gt;](implicitasTraversable:&lt;?&gt;):CC[CC[B]@scala.annotation.unchecked.uncheckedVariance]"></a>
+      <a id="transpose[B](implicitasTraversable:A=&gt;scala.collection.GenTraversableOnce[B]):CC[CC[B]@scala.annotation.unchecked.uncheckedVariance]"></a>
       <a id="transpose[B]((A)⇒GenTraversableOnce[B]):Queue[Queue[B]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2632,7 +2632,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SeqLike → GenSeqLike</dd></dl></div>
     </li><li name="scala.collection.generic.GenericTraversableTemplate#unzip" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="unzip[A1&lt;:&lt;?&gt;,A2&lt;:&lt;?&gt;](implicitasPair:&lt;?&gt;):(CC[A1],CC[A2])"></a>
+      <a id="unzip[A1,A2](implicitasPair:A=&gt;(A1,A2)):(CC[A1],CC[A2])"></a>
       <a id="unzip[A1,A2]((A)⇒(A1,A2)):(Queue[A1],Queue[A2])"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2645,7 +2645,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GenericTraversableTemplate</dd></dl></div>
     </li><li name="scala.collection.generic.GenericTraversableTemplate#unzip3" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="unzip3[A1&lt;:&lt;?&gt;,A2&lt;:&lt;?&gt;,A3&lt;:&lt;?&gt;](implicitasTriple:&lt;?&gt;):(CC[A1],CC[A2],CC[A3])"></a>
+      <a id="unzip3[A1,A2,A3](implicitasTriple:A=&gt;(A1,A2,A3)):(CC[A1],CC[A2],CC[A3])"></a>
       <a id="unzip3[A1,A2,A3]((A)⇒(A1,A2,A3)):(Queue[A1],Queue[A2],Queue[A3])"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -2826,7 +2826,7 @@
         <div id="values" class="values members">
               <h3>Deprecated Value Members</h3>
               <ol><li name="scala.collection.GenTraversableOnce#/:\" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="/:\[A1&lt;:&lt;?&gt;](z:&lt;?&gt;)(op:&lt;?&gt;):A1"></a>
+      <a id="/:\[A1&gt;:A](z:A1)(op:(A1,A1)=&gt;A1):A1"></a>
       <a id="/:\[A1&gt;:A](A1)((A1,A1)⇒A1):A1"></a>
       <h4 class="signature">
       <span class="modifier_kind">

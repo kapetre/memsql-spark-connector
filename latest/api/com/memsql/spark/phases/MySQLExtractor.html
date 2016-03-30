@@ -179,6 +179,39 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.memsql.spark.etl.api.Extractor#batchCheckpoint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="batchCheckpoint():Option[Map[String,Any]]"></a>
+      <a id="batchCheckpoint():Option[Map[String,Any]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">batchCheckpoint</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called at the end of a pipeline batch if it has succeeded.</p><div class="fullcomment"><div class="comment cmt"><p>Called at the end of a pipeline batch if it has succeeded. Override this and <a href="#batchRetry():Unit" class="extmbr" name="com.memsql.spark.phases.MySQLExtractor#batchRetry">batchRetry</a> to implement
+checkpointing for your Extractor. The default implementation will throw a <span class="extype" name="ExtractorCheckpointException">ExtractorCheckpointException</span>
+if the Extractor is run with checkpointing enabled.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The serialized data to be saved in the checkpoint database for the successful batch.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></dd></dl></div>
+    </li><li name="com.memsql.spark.etl.api.Extractor#batchRetry" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="batchRetry():Unit"></a>
+      <a id="batchRetry():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">batchRetry</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Called at the end of a pipeline batch if it has failed.</p><div class="fullcomment"><div class="comment cmt"><p>Called at the end of a pipeline batch if it has failed. Override this and <a href="#batchCheckpoint():Option[Map[String,Any]]" class="extmbr" name="com.memsql.spark.phases.MySQLExtractor#batchCheckpoint">batchCheckpoint</a> to implement
+checkpointing for your Extractor. The default implementation will throw a <span class="extype" name="ExtractorCheckpointException">ExtractorCheckpointException</span>
+if the Extractor is run with checkpointing enabled.</p><p>Use this to reset the Extractor state so it will retry the failed batch on the next call to <a href="#next(ssc:org.apache.spark.streaming.StreamingContext,time:Long,sqlContext:org.apache.spark.sql.SQLContext,config:com.memsql.spark.etl.api.PhaseConfig,batchInterval:Long,logger:com.memsql.spark.etl.utils.PhaseLogger):Option[org.apache.spark.sql.DataFrame]" class="extmbr" name="com.memsql.spark.phases.MySQLExtractor#next">next</a>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></dd></dl></div>
     </li><li name="com.memsql.spark.etl.api.Extractor#cleanup" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="cleanup(ssc:org.apache.spark.streaming.StreamingContext,sqlContext:org.apache.spark.sql.SQLContext,config:com.memsql.spark.etl.api.PhaseConfig,batchInterval:Long,logger:com.memsql.spark.etl.utils.PhaseLogger):Unit"></a>
       <a id="cleanup(StreamingContext,SQLContext,PhaseConfig,Long,PhaseLogger):Unit"></a>
@@ -188,13 +221,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">cleanup</span><span class="params">(<span name="ssc">ssc: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming_2.10/1.5.1/spark-streaming_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>, <span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="config">config: <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="batchInterval">batchInterval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="logger">logger: <a href="../etl/utils/PhaseLogger.html" class="extype" name="com.memsql.spark.etl.utils.PhaseLogger">PhaseLogger</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">cleanup</span><span class="params">(<span name="ssc">ssc: <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>, <span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="config">config: <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="batchInterval">batchInterval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="logger">logger: <a href="../etl/utils/PhaseLogger.html" class="extype" name="com.memsql.spark.etl.utils.PhaseLogger">PhaseLogger</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Cleanup code for your Extractor.</p><div class="fullcomment"><div class="comment cmt"><p>Cleanup code for your Extractor.
 This is called after your pipeline has stopped.
 The default implementation does nothing.
-</p></div><dl class="paramcmts block"><dt class="param">ssc</dt><dd class="cmt"><p>The <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming_2.10/1.5.1/spark-streaming_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">org.apache.spark.streaming.StreamingContext</a> that is used to run this pipeline.</p></dd><dt class="param">sqlContext</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">org.apache.spark.sql.SQLContext</a> that is used to run this pipeline.</p></dd><dt class="param">config</dt><dd class="cmt"><p>The Extractor configuration passed from MemSQL Ops.</p></dd><dt class="param">batchInterval</dt><dd class="cmt"><p>The batch interval passed from MemSQL Ops.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.
+</p></div><dl class="paramcmts block"><dt class="param">ssc</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">org.apache.spark.streaming.StreamingContext</a> that is used to run this pipeline.</p></dd><dt class="param">sqlContext</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">org.apache.spark.sql.SQLContext</a> that is used to run this pipeline.</p></dd><dt class="param">config</dt><dd class="cmt"><p>The Extractor configuration passed from MemSQL Ops.</p></dd><dt class="param">batchInterval</dt><dd class="cmt"><p>The batch interval passed from MemSQL Ops.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
@@ -295,13 +328,13 @@ The default implementation does nothing.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">initialize</span><span class="params">(<span name="ssc">ssc: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming_2.10/1.5.1/spark-streaming_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>, <span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="config">config: <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="batchInterval">batchInterval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="logger">logger: <a href="../etl/utils/PhaseLogger.html" class="extype" name="com.memsql.spark.etl.utils.PhaseLogger">PhaseLogger</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">initialize</span><span class="params">(<span name="ssc">ssc: <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>, <span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="config">config: <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="batchInterval">batchInterval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="logger">logger: <a href="../etl/utils/PhaseLogger.html" class="extype" name="com.memsql.spark.etl.utils.PhaseLogger">PhaseLogger</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Initialization code for your Extractor.</p><div class="fullcomment"><div class="comment cmt"><p>Initialization code for your Extractor.
 This is called after instantiation of your Extractor and before <a href="#next(ssc:org.apache.spark.streaming.StreamingContext,time:Long,sqlContext:org.apache.spark.sql.SQLContext,config:com.memsql.spark.etl.api.PhaseConfig,batchInterval:Long,logger:com.memsql.spark.etl.utils.PhaseLogger):Option[org.apache.spark.sql.DataFrame]" class="extmbr" name="com.memsql.spark.phases.MySQLExtractor#next">next</a>.
 The default implementation does nothing.
-</p></div><dl class="paramcmts block"><dt class="param">ssc</dt><dd class="cmt"><p>The <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming_2.10/1.5.1/spark-streaming_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">org.apache.spark.streaming.StreamingContext</a> that is used to run this pipeline.</p></dd><dt class="param">sqlContext</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">org.apache.spark.sql.SQLContext</a> that is used to run this pipeline.</p></dd><dt class="param">config</dt><dd class="cmt"><p>The Extractor configuration passed from MemSQL Ops.</p></dd><dt class="param">batchInterval</dt><dd class="cmt"><p>The batch interval passed from MemSQL Ops.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.
+</p></div><dl class="paramcmts block"><dt class="param">ssc</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">org.apache.spark.streaming.StreamingContext</a> that is used to run this pipeline.</p></dd><dt class="param">sqlContext</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">org.apache.spark.sql.SQLContext</a> that is used to run this pipeline.</p></dd><dt class="param">config</dt><dd class="cmt"><p>The Extractor configuration passed from MemSQL Ops.</p></dd><dt class="param">batchInterval</dt><dd class="cmt"><p>The batch interval passed from MemSQL Ops.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -316,6 +349,21 @@ The default implementation does nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.memsql.spark.etl.api.Extractor#lastCheckpoint" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="lastCheckpoint:Option[Map[String,Any]]"></a>
+      <a id="lastCheckpoint:Option[Map[String,Any]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lastCheckpoint</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The last checkpoint that this extractor saved.</p><div class="fullcomment"><div class="comment cmt"><p>The last checkpoint that this extractor saved. Value is <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.None$" class="extype" target="_top">scala.None</a> if there is no checkpoint data or it
+could not be deserialized.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -338,11 +386,11 @@ The default implementation does nothing.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">next</span><span class="params">(<span name="ssc">ssc: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming_2.10/1.5.1/spark-streaming_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>, <span name="time">time: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="config">config: <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="batchInterval">batchInterval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="logger">logger: <a href="../etl/utils/PhaseLogger.html" class="extype" name="com.memsql.spark.etl.utils.PhaseLogger">PhaseLogger</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a>]</span>
+        <span class="name">next</span><span class="params">(<span name="ssc">ssc: <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">StreamingContext</a></span>, <span name="time">time: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="sqlContext">sqlContext: <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">SQLContext</a></span>, <span name="config">config: <a href="../etl/api/PhaseConfig.html" class="extype" name="com.memsql.spark.etl.api.PhaseConfig">PhaseConfig</a></span>, <span name="batchInterval">batchInterval: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="logger">logger: <a href="../etl/utils/PhaseLogger.html" class="extype" name="com.memsql.spark.etl.utils.PhaseLogger">PhaseLogger</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">DataFrame</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Compute the next <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> of extracted data.</p><div class="fullcomment"><div class="comment cmt"><p>Compute the next <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> of extracted data.
-</p></div><dl class="paramcmts block"><dt class="param">ssc</dt><dd class="cmt"><p>The <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-streaming_2.10/1.5.1/spark-streaming_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">org.apache.spark.streaming.StreamingContext</a> that is used to run this pipeline.</p></dd><dt class="param">time</dt><dd class="cmt"><p>The timestamp from which data is being extracted.</p></dd><dt class="param">sqlContext</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">org.apache.spark.sql.SQLContext</a> that is used to create <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>s.</p></dd><dt class="param">config</dt><dd class="cmt"><p>The Extractor configuration passed from MemSQL Ops.</p></dd><dt class="param">batchInterval</dt><dd class="cmt"><p>The batch interval passed from MemSQL Ops.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.</p></dd><dt>returns</dt><dd class="cmt"><p>An optional <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> with your extracted data. If it is not <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.None$" class="extype" target="_top">scala.None</a>,
+      <p class="shortcomment cmt">Compute the next <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> of extracted data.</p><div class="fullcomment"><div class="comment cmt"><p>Compute the next <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> of extracted data.
+</p></div><dl class="paramcmts block"><dt class="param">ssc</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.streaming.StreamingContext" class="extype" target="_top">org.apache.spark.streaming.StreamingContext</a> that is used to run this pipeline.</p></dd><dt class="param">time</dt><dd class="cmt"><p>The timestamp from which data is being extracted.</p></dd><dt class="param">sqlContext</dt><dd class="cmt"><p>The <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.SQLContext" class="extype" target="_top">org.apache.spark.sql.SQLContext</a> that is used to create <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a>s.</p></dd><dt class="param">config</dt><dd class="cmt"><p>The Extractor configuration passed from MemSQL Ops.</p></dd><dt class="param">batchInterval</dt><dd class="cmt"><p>The batch interval passed from MemSQL Ops.</p></dd><dt class="param">logger</dt><dd class="cmt"><p>A logger instance that is integrated with MemSQL Ops.</p></dd><dt>returns</dt><dd class="cmt"><p>An optional <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.DataFrame" class="extype" target="_top">org.apache.spark.sql.DataFrame</a> with your extracted data. If it is not <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.None$" class="extype" target="_top">scala.None</a>,
         it will be passed through the rest of the pipeline.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.phases.MySQLExtractor">MySQLExtractor</a> → <a href="../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -397,6 +445,22 @@ The default implementation does nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="com.memsql.spark.etl.api.Extractor#usesCheckpointing" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="usesCheckpointing():Boolean"></a>
+      <a id="usesCheckpointing():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">usesCheckpointing</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Check if this extractor has overridden both <a href="#batchCheckpoint():Option[Map[String,Any]]" class="extmbr" name="com.memsql.spark.phases.MySQLExtractor#batchCheckpoint">batchCheckpoint</a> and <a href="#batchRetry():Unit" class="extmbr" name="com.memsql.spark.phases.MySQLExtractor#batchRetry">batchRetry</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Check if this extractor has overridden both <a href="#batchCheckpoint():Option[Map[String,Any]]" class="extmbr" name="com.memsql.spark.phases.MySQLExtractor#batchCheckpoint">batchCheckpoint</a> and <a href="#batchRetry():Unit" class="extmbr" name="com.memsql.spark.phases.MySQLExtractor#batchRetry">batchRetry</a>.
+This is used to determine if the Spark interface will enable checkpointing support for pipelines which use this
+extractor.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../etl/api/Extractor.html" class="extype" name="com.memsql.spark.etl.api.Extractor">Extractor</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>

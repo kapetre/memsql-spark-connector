@@ -71,6 +71,21 @@
       </span>
       </h4>
       <p class="comment cmt">Pipeline Extractor interface.</p>
+    </li><li name="com.memsql.spark.etl.api.ExtractorCheckpointException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExtractorCheckpointExceptionextendsException"></a>
+      <a id="ExtractorCheckpointException:ExtractorCheckpointException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ExtractorCheckpointException.html"><span class="name">ExtractorCheckpointException</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Thrown when an Extractor is checkpointed without overriding <a href="Extractor.html#batchCheckpoint():Option[Map[String,Any]]" class="extmbr" name="com.memsql.spark.etl.api.Extractor#batchCheckpoint">Extractor.batchCheckpoint</a>
+and <a href="Extractor.html#batchRetry():Unit" class="extmbr" name="com.memsql.spark.etl.api.Extractor#batchRetry">Extractor.batchRetry</a>
+</p>
     </li><li name="com.memsql.spark.etl.api.Loader" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="LoaderextendsSerializable"></a>
       <a id="Loader:Loader"></a>
@@ -200,7 +215,7 @@
         <a href="SimpleByteArrayTransformer.html"><span class="name deprecated" title="Deprecated: (Since version 1.2.0) Transformer interface supports DataFrames">SimpleByteArrayTransformer</span></a><span class="result"> extends <a href="ByteArrayTransformer.html" class="extype" name="com.memsql.spark.etl.api.ByteArrayTransformer">ByteArrayTransformer</a></span>
       </span>
       </h4>
-      <p class="comment cmt">Convenience wrapper around ByteArrayExtractor for initialization and transformation of extracted <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a>s.</p>
+      <p class="comment cmt">Convenience wrapper around ByteArrayExtractor for initialization and transformation of extracted <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.rdd.RDD" class="extype" target="_top">org.apache.spark.rdd.RDD</a>s.</p>
     </li><li name="com.memsql.spark.etl.api.StringTransformer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="StringTransformerextendsTransformer"></a>
       <a id="StringTransformer:StringTransformer"></a>

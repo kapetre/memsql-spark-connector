@@ -36,6 +36,9 @@
       <div class="name">DEFAULT_LOAD_DATA_COMPRESSION</div>
       <div class="occurrences"><a href="../com/memsql/spark/connector/MemSQLConf$.html" class="extype" name="com.memsql.spark.connector.MemSQLConf">MemSQLConf</a> </div>
     </div><div class="entry">
+      <div class="name">DEFAULT_METADATA_DBNAME</div>
+      <div class="occurrences"><a href="../com/memsql/spark/interface/Config$.html" class="extype" name="com.memsql.spark.interface.Config">Config</a> </div>
+    </div><div class="entry">
       <div class="name">DEFAULT_PASS</div>
       <div class="occurrences"><a href="../com/memsql/spark/connector/MemSQLConf$.html" class="extype" name="com.memsql.spark.connector.MemSQLConf">MemSQLConf</a> </div>
     </div><div class="entry">
@@ -44,9 +47,6 @@
     </div><div class="entry">
       <div class="name">DEFAULT_PUSHDOWN_ENABLED</div>
       <div class="occurrences"><a href="../com/memsql/spark/connector/MemSQLConf$.html" class="extype" name="com.memsql.spark.connector.MemSQLConf">MemSQLConf</a> </div>
-    </div><div class="entry">
-      <div class="name">DEFAULT_SAMPLE_SIZE</div>
-      <div class="occurrences"><a href="../com/memsql/spark/phases/CSVSamplingTransformer.html" class="extype" name="com.memsql.spark.phases.CSVSamplingTransformer">CSVSamplingTransformer</a> </div>
     </div><div class="entry">
       <div class="name">DEFAULT_SAVE_MODE</div>
       <div class="occurrences"><a href="../com/memsql/spark/connector/MemSQLConf$.html" class="extype" name="com.memsql.spark.connector.MemSQLConf">MemSQLConf</a> </div>
@@ -68,6 +68,12 @@
     </div><div class="entry">
       <div class="name">DatabaseAndTable</div>
       <div class="occurrences"><a href="../org/apache/spark/sql/memsql/CreateMode$.html" class="extype" name="org.apache.spark.sql.memsql.CreateMode">CreateMode</a> </div>
+    </div><div class="entry">
+      <div class="name">DatetimeType</div>
+      <div class="occurrences"><a href="../com/memsql/spark/connector/dataframe/package.html" class="extype" name="com.memsql.spark.connector.dataframe">dataframe</a> </div>
+    </div><div class="entry">
+      <div class="name">DatetimeValue</div>
+      <div class="occurrences"><a href="../com/memsql/spark/connector/dataframe/package.html" class="extype" name="com.memsql.spark.connector.dataframe">dataframe</a> </div>
     </div><div class="entry">
       <div class="name">DefaultPipelineMonitor</div>
       <div class="occurrences"><a href="../com/memsql/spark/interface/package.html" class="extype" name="com.memsql.spark.interface">interface</a> </div>
@@ -145,10 +151,10 @@
       <div class="occurrences"><a href="../com/memsql/spark/etl/api/configs/MemSQLColumnConfig.html" class="extype" name="com.memsql.spark.etl.api.configs.MemSQLColumnConfig">MemSQLColumnConfig</a> </div>
     </div><div class="entry">
       <div class="name">delimiter</div>
-      <div class="occurrences"><a href="../com/memsql/sampling_utils/HDFSConfig.html" class="extype" name="com.memsql.sampling_utils.HDFSConfig">HDFSConfig</a> <a href="../com/memsql/sampling_utils/S3Config.html" class="extype" name="com.memsql.sampling_utils.S3Config">S3Config</a> <a href="../com/memsql/spark/phases/CSVSamplingTransformerConfig.html" class="extype" name="com.memsql.spark.phases.CSVSamplingTransformerConfig">CSVSamplingTransformerConfig</a> <a href="../com/memsql/spark/phases/CSVTransformerConfig.html" class="extype" name="com.memsql.spark.phases.CSVTransformerConfig">CSVTransformerConfig</a> </div>
+      <div class="occurrences"><a href="../com/memsql/sampling_utils/HDFSConfig.html" class="extype" name="com.memsql.sampling_utils.HDFSConfig">HDFSConfig</a> <a href="../com/memsql/sampling_utils/S3Config.html" class="extype" name="com.memsql.sampling_utils.S3Config">S3Config</a> <a href="../com/memsql/spark/phases/CSVTransformerConfig.html" class="extype" name="com.memsql.spark.phases.CSVTransformerConfig">CSVTransformerConfig</a> </div>
     </div><div class="entry">
       <div class="name">deserialize</div>
-      <div class="occurrences"><a href="../com/memsql/spark/connector/dataframe/BigIntUnsignedType.html" class="extype" name="com.memsql.spark.connector.dataframe.BigIntUnsignedType">BigIntUnsignedType</a> <a href="../com/memsql/spark/connector/dataframe/GeographyPointType.html" class="extype" name="com.memsql.spark.connector.dataframe.GeographyPointType">GeographyPointType</a> <a href="../com/memsql/spark/connector/dataframe/GeographyType.html" class="extype" name="com.memsql.spark.connector.dataframe.GeographyType">GeographyType</a> <a href="../com/memsql/spark/connector/dataframe/JsonType.html" class="extype" name="com.memsql.spark.connector.dataframe.JsonType">JsonType</a> </div>
+      <div class="occurrences"><a href="../com/memsql/spark/connector/dataframe/BigIntUnsignedType.html" class="extype" name="com.memsql.spark.connector.dataframe.BigIntUnsignedType">BigIntUnsignedType</a> <a href="../com/memsql/spark/connector/dataframe/DatetimeType.html" class="extype" name="com.memsql.spark.connector.dataframe.DatetimeType">DatetimeType</a> <a href="../com/memsql/spark/connector/dataframe/GeographyPointType.html" class="extype" name="com.memsql.spark.connector.dataframe.GeographyPointType">GeographyPointType</a> <a href="../com/memsql/spark/connector/dataframe/GeographyType.html" class="extype" name="com.memsql.spark.connector.dataframe.GeographyType">GeographyType</a> <a href="../com/memsql/spark/connector/dataframe/JsonType.html" class="extype" name="com.memsql.spark.connector.dataframe.JsonType">JsonType</a> </div>
     </div><div class="entry">
       <div class="name">doExecute</div>
       <div class="occurrences"><a href="../com/memsql/spark/pushdown/MemSQLPhysicalRDD.html" class="extype" name="com.memsql.spark.pushdown.MemSQLPhysicalRDD">MemSQLPhysicalRDD</a> </div>

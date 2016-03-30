@@ -35,13 +35,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">MemSQLPushdownStrategy</span><span class="result"> extends <a href="../../../../org/apache/spark/sql/package.html#Strategy=org.apache.spark.sql.catalyst.planning.GenericStrategy[org.apache.spark.sql.execution.SparkPlan]" class="extmbr" name="org.apache.spark.sql.Strategy">Strategy</a> with <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a></span>
+        <span class="name">MemSQLPushdownStrategy</span><span class="result"> extends <a href="../../../../org/apache/spark/sql/package.html#Strategy=org.apache.spark.sql.catalyst.planning.GenericStrategy[org.apache.spark.sql.execution.SparkPlan]" class="extmbr" name="org.apache.spark.sql.Strategy">Strategy</a> with <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a></span>
       </span>
       </h4>
       
           <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.planning.GenericStrategy" class="extype" target="_top">GenericStrategy</a>[<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.execution.SparkPlan" class="extype" target="_top">SparkPlan</a>], <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.2/spark-catalyst_2.10-1.5.2-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.planning.GenericStrategy" class="extype" target="_top">GenericStrategy</a>[<a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.execution.SparkPlan" class="extype" target="_top">SparkPlan</a>], <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -88,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">MemSQLPushdownStrategy</span><span class="params">(<span name="sparkContext">sparkContext: <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>)</span>
+        <span class="name">MemSQLPushdownStrategy</span><span class="params">(<span name="sparkContext">sparkContext: <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.SparkContext" class="extype" target="_top">SparkContext</a></span>)</span>
       </span>
       </h4>
       
@@ -175,7 +175,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="plan">plan: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.plans.logical.LogicalPlan" class="extype" target="_top">LogicalPlan</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.execution.SparkPlan" class="extype" target="_top">SparkPlan</a>]</span>
+        <span class="name">apply</span><span class="params">(<span name="plan">plan: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.2/spark-catalyst_2.10-1.5.2-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.plans.logical.LogicalPlan" class="extype" target="_top">LogicalPlan</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.execution.SparkPlan" class="extype" target="_top">SparkPlan</a>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.memsql.spark.pushdown.MemSQLPushdownStrategy">MemSQLPushdownStrategy</a> → GenericStrategy</dd></dl></div>
@@ -201,7 +201,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">buildQueryTree</span><span class="params">(<span name="fieldIdIter">fieldIdIter: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="alias">alias: <a href="QueryAlias.html" class="extype" name="com.memsql.spark.pushdown.QueryAlias">QueryAlias</a></span>, <span name="plan">plan: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.plans.logical.LogicalPlan" class="extype" target="_top">LogicalPlan</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a>]</span>
+        <span class="name">buildQueryTree</span><span class="params">(<span name="fieldIdIter">fieldIdIter: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="alias">alias: <a href="QueryAlias.html" class="extype" name="com.memsql.spark.pushdown.QueryAlias">QueryAlias</a></span>, <span name="plan">plan: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.2/spark-catalyst_2.10-1.5.2-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.plans.logical.LogicalPlan" class="extype" target="_top">LogicalPlan</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.Option" class="extype" target="_top">Option</a>[<a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a>]</span>
       </span>
       </h4>
       
@@ -214,7 +214,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">buildSortLimit</span><span class="params">(<span name="limitExpr">limitExpr: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Expression" class="extype" target="_top">Expression</a></span>, <span name="orderExpr">orderExpr: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Expression" class="extype" target="_top">Expression</a>]</span>, <span name="alias">alias: <a href="QueryAlias.html" class="extype" name="com.memsql.spark.pushdown.QueryAlias">QueryAlias</a></span>, <span name="subTree">subTree: <a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a></span>)</span><span class="result">: <a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a></span>
+        <span class="name">buildSortLimit</span><span class="params">(<span name="limitExpr">limitExpr: <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.2/spark-catalyst_2.10-1.5.2-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Expression" class="extype" target="_top">Expression</a></span>, <span name="orderExpr">orderExpr: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.2/spark-catalyst_2.10-1.5.2-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.Expression" class="extype" target="_top">Expression</a>]</span>, <span name="alias">alias: <a href="QueryAlias.html" class="extype" name="com.memsql.spark.pushdown.QueryAlias">QueryAlias</a></span>, <span name="subTree">subTree: <a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a></span>)</span><span class="result">: <a href="AbstractQuery.html" class="extype" name="com.memsql.spark.pushdown.AbstractQuery">AbstractQuery</a></span>
       </span>
       </h4>
       
@@ -538,7 +538,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">renameExpressions</span><span class="params">(<span name="fieldIdIter">fieldIdIter: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="expressions">expressions: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.NamedExpression" class="extype" target="_top">NamedExpression</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.NamedExpression" class="extype" target="_top">NamedExpression</a>]</span>
+        <span class="name">renameExpressions</span><span class="params">(<span name="fieldIdIter">fieldIdIter: <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="expressions">expressions: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.2/spark-catalyst_2.10-1.5.2-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.NamedExpression" class="extype" target="_top">NamedExpression</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.2/spark-catalyst_2.10-1.5.2-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.expressions.NamedExpression" class="extype" target="_top">NamedExpression</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Assign field names to each expression for a given alias
@@ -636,9 +636,9 @@
 
         <div id="inheritedMembers">
         <div class="parent" name="org.apache.spark.sql.catalyst.planning.GenericStrategy">
-              <h3>Inherited from <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.1/spark-catalyst_2.10-1.5.1-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.planning.GenericStrategy" class="extype" target="_top">GenericStrategy</a>[<a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.sql.execution.SparkPlan" class="extype" target="_top">SparkPlan</a>]</h3>
+              <h3>Inherited from <a href="https://oss.sonatype.org/service/local/repositories/releases/archive/org/apache/spark/spark-catalyst_2.10/1.5.2/spark-catalyst_2.10-1.5.2-javadoc.jar/!/index.html#org.apache.spark.sql.catalyst.planning.GenericStrategy" class="extype" target="_top">GenericStrategy</a>[<a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.sql.execution.SparkPlan" class="extype" target="_top">SparkPlan</a>]</h3>
             </div><div class="parent" name="org.apache.spark.Logging">
-              <h3>Inherited from <a href="https://spark.apache.org/docs/1.5.1/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a></h3>
+              <h3>Inherited from <a href="https://spark.apache.org/docs/1.5.2/api/scala/index.html#org.apache.spark.Logging" class="extype" target="_top">Logging</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.5/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
