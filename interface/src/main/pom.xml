@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.memsql</groupId>
+    <artifactId>memsql_2.10</artifactId>
+    <packaging>jar</packaging>
+    <description>MemSQL-Kat</description>
+    <version>1.3.2-SNAPSHOT</version>
+    <name>MemSQL</name>
+    <organization>
+        <name>com.memsql</name>
+    </organization>
+    <url>http://memsql.github.io/spark-streamliner</url>
+    <licenses>
+        <license>
+            <name>Apache 2</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Repository Switchboard</name>
+            <layout>default</layout>
+            <url>http://repo1.maven.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <scm>
+        <connection>scm:git:github.com/kapetre/memsql-spark-connector.git</connection>
+        <developerConnection>scm:git:git@github.com:kapetre/memsql-spark-connector.git</developerConnection>
+        <url>github.com/kapetre/memsql-spark-connector</url>
+    </scm>
+    <developers>
+        <developer>
+            <name>Kat Petre</name>
+            <email>kat.petre@cloudera.com</email>
+            <organization>Cloudera</organization>
+            <organizationUrl>http://www.cloudera.com</organizationUrl>
+        </developer>
+    </developers>
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.10.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.memsql</groupId>
+            <artifactId>memsql-connector_2.10</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.memsql</groupId>
+            <artifactId>memsql-etl_2.10</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+ <!--       <dependency>
+            <groupId>com.memsql</groupId>
+            <artifactId>memsql-spark-interface_2.10</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+ -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.10</artifactId>
+            <version>1.5.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.10</artifactId>
+            <version>1.5.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.10</artifactId>
+            <version>1.5.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.34</version>
+        </dependency>
+    </dependencies>
+    </project>
